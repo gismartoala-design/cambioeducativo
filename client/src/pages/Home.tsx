@@ -5,6 +5,8 @@ import { WhyUs } from "@/pages/home/WhyUs";
 import { About } from "@/pages/home/About";
 import { Services } from "@/pages/home/Services";
 import { Contact } from "@/pages/home/Contact";
+import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
+import { ChatBot } from "@/components/ui/ChatBot";
 
 export default function Home() {
   return (
@@ -17,6 +19,8 @@ export default function Home() {
         <Services />
         <Contact />
       </main>
+      <WhatsAppButton />
+      <ChatBot />
       <Footer />
     </div>
   );
