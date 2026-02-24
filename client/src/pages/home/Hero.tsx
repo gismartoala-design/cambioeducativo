@@ -19,7 +19,7 @@ export const Hero = () => {
                 Innovación Educativa
               </span>
             </Reveal>
-            
+
             <Reveal delay={0.3}>
               <h1 className="text-5xl md:text-7xl font-bold font-display leading-[1.1] text-foreground">
                 Impulsamos el <span className="text-primary">cambio</span> que la educación necesita.
@@ -47,19 +47,19 @@ export const Hero = () => {
           <div className="relative">
             <Reveal delay={0.6} direction="left">
               <div className="relative aspect-[4/5] md:aspect-square rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src="/images/hero-bg.png" 
-                  alt="Educación del futuro" 
+                <img
+                  src="/images/image-1.jpg"
+                  alt="Educación del futuro"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-                
+
                 <div className="absolute bottom-8 left-8 right-8 text-white p-6 bg-white/10 backdrop-blur-md rounded-xl border border-white/20">
                   <p className="font-medium text-lg">"La educación no solo debe adaptarse al mundo… debe liderar su transformación."</p>
                 </div>
               </div>
             </Reveal>
-            
+
             {/* Floating Elements */}
             <div className="absolute -top-12 -right-12 w-24 h-24 bg-accent/10 rounded-full animate-pulse delay-700" />
             <div className="absolute bottom-12 -left-12 w-32 h-32 bg-primary/10 rounded-full animate-pulse delay-1000" />

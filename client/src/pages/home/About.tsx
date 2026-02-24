@@ -18,7 +18,7 @@ export const About = () => {
                 Nuestra esencia es <span className="text-blue-400">transformar</span> desde adentro.
               </h2>
             </Reveal>
-            
+
             <Reveal delay={0.3}>
               <p className="text-lg text-slate-300 leading-relaxed">
                 Somos un equipo apasionado por transformar la educación. Creemos en el poder de las ideas, en la innovación como motor de crecimiento y en las personas como el centro de todo proceso educativo.
@@ -44,12 +44,12 @@ export const About = () => {
           <div className="grid grid-cols-2 gap-4">
             <Reveal delay={0.4} className="mt-12">
               <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-slate-800 shadow-2xl">
-                 <img src="/images/team-1.jpg" alt="Team member" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                <img src="/images/image-3.jpg" alt="Team member" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
             </Reveal>
             <Reveal delay={0.6}>
               <div className="aspect-[3/4] rounded-2xl overflow-hidden bg-slate-800 shadow-2xl">
-                 <img src="/images/service-1.jpg" alt="Team member" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
+                <img src="/images/image-2.jpg" alt="Team member" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" />
               </div>
             </Reveal>
           </div>
