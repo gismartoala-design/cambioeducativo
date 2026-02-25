@@ -1,0 +1,151 @@
+/* Custom Styles and Animations */
+
+:root {
+    --primary: #3b82f6;
+    --accent: #f97316;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.font-display {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Glassmorphism Classes */
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-dark {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Reveal Animations */
+.reveal,
+.reveal-up,
+.reveal-left,
+.reveal-right {
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.21, 0.47, 0.32, 0.98);
+}
+
+.reveal {
+    transform: translateY(30px) scale(0.95);
+}
+
+.reveal-up {
+    transform: translateY(40px);
+}
+
+.reveal-left {
+    transform: translateX(40px);
+}
+
+.reveal-right {
+    transform: translateX(-40px);
+}
+
+.reveal.active,
+.reveal-up.active,
+.reveal-left.active,
+.reveal-right.active {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+}
+
+/* Connecting Line */
+.scroll-line-container {
+    position: fixed;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100vh;
+    transform: translateX(-50%);
+    pointer-events: none;
+    z-index: 5;
+    opacity: 0.1;
+}
+
+@media (max-width: 768px) {
+    .scroll-line-container {
+        left: 4%;
+    }
+}
+
+#scroll-progress-line {
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(to bottom, transparent, var(--primary), var(--accent), transparent);
+    transition: height 0.1s ease-out;
+}
+
+/* Parallax Elements */
+.parallax-bg {
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+    filter: blur(40px);
+    opacity: 0.15;
+    border-radius: 50%;
+}
+
+/* Improved Section Transitions */
+section {
+    position: relative;
+    z-index: 10;
+}
+
+/* Delays */
+.delay-100 {
+    transition-delay: 100ms;
+}
+
+.delay-200 {
+    transition-delay: 200ms;
+}
+
+.delay-300 {
+    transition-delay: 300ms;
+}
+
+.delay-400 {
+    transition-delay: 400ms;
+}
+
+.delay-500 {
+    transition-delay: 500ms;
+}
+
+.delay-600 {
+    transition-delay: 600ms;
+}
+
+/* Navbar Scrolled State */
+nav.scrolled {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+/* Chatbot Open State */
+#chatbot-window.open {
+    display: flex;
+    transform: scale(1);
+    opacity: 1;
+}
+
+/* Mobile Menu Open Animation */
+#mobile-menu.active {
+    transform: translateY(0);
+}

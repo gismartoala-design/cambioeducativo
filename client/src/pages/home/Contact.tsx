@@ -6,14 +6,14 @@ export const Contact = () => {
     <section id="contacto" className="py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-primary z-0" />
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 z-0 mix-blend-overlay" />
-      
+
       <div className="container mx-auto px-6 relative z-10 text-center text-white">
         <Reveal width="100%">
-          <h2 className="text-4xl md:text-6xl font-bold font-display mb-8">
-            El cambio empieza con una decisión.
+          <h2 className="text-4xl md:text-6xl font-extrabold font-display mb-8">
+            El cambio empieza con una <span className="text-blue-200">decisión</span>.
           </h2>
         </Reveal>
-        
+
         <Reveal delay={0.3} width="100%">
           <p className="text-xl md:text-2xl text-blue-100 mb-12 max-w-2xl mx-auto">
             La educación evoluciona. Tu institución también puede hacerlo.

@@ -1,5 +1,5 @@
 import { motion, useAnimation, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 
 interface RevealProps {
   children: React.ReactNode;
@@ -9,12 +9,12 @@ interface RevealProps {
   className?: string;
 }
 
-export const Reveal = ({ 
-  children, 
-  width = "100%", 
-  delay = 0.25, 
+export const Reveal = ({
+  children,
+  width = "100%",
+  delay = 0.25,
   direction = "up",
-  className = "" 
+  className = ""
 }: RevealProps) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -27,20 +27,22 @@ export const Reveal = ({
   }, [isInView, mainControls]);
 
   const variants = {
-    hidden: { 
-      opacity: 0, 
+    hidden: {
+      opacity: 0,
+      scale: 0.94,
       y: direction === "up" ? 40 : direction === "down" ? -40 : 0,
       x: direction === "left" ? 40 : direction === "right" ? -40 : 0,
     },
-    visible: { 
-      opacity: 1, 
-      y: 0, 
+    visible: {
+      opacity: 1,
+      scale: 1,
+      y: 0,
       x: 0,
-      transition: { 
-        duration: 0.8, 
+      transition: {
+        duration: 0.9,
         delay: delay,
-        ease: [0.21, 0.47, 0.32, 0.98], // Custom Cubic Bezier for smoother ease-out
-      } 
+        ease: [0.16, 1, 0.3, 1] as any, // More refined premium ease-out
+      }
     },
   };
 

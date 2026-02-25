@@ -7,21 +7,70 @@ import { Services } from "@/pages/home/Services";
 import { Contact } from "@/pages/home/Contact";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { ChatBot } from "@/components/ui/ChatBot";
+import { ScrollLine } from "@/components/ui/ScrollLine";
+import { MouseSpotlight } from "@/components/ui/MouseSpotlight";
+import { Preloader } from "@/components/ui/Preloader";
+import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1800);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="min-h-screen bg-background font-sans selection:bg-primary/20">
-      <Navbar />
-      <main>
-        <Hero />
-        <WhyUs />
-        <About />
-        <Services />
-        <Contact />
-      </main>
-      <WhatsAppButton />
-      <ChatBot />
-      <Footer />
+    <div className="min-h-screen bg-background font-sans selection:bg-primary/20 relative overflow-hidden">
+      <AnimatePresence mode="wait">
+        {isLoading ? (
+          <Preloader key="preloader" />
+        ) : (
+          <motion.div
+            key="content"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8 }}
+          >
+            <div className="noise-bg" />
+            <MouseSpotlight />
+
+            {/* Decorative Parallax Background Elements */}
+            <motion.div
+              className="absolute top-[10%] -right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"
+              animate={{
+                y: [0, 50, 0],
+                x: [0, -30, 0]
+              }}
+              transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+            />
+            <motion.div
+              className="absolute bottom-[20%] -left-20 w-80 h-80 bg-accent/5 rounded-full blur-3xl pointer-events-none"
+              animate={{
+                y: [0, -50, 0],
+                x: [0, 30, 0]
+              }}
+              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            />
+
+            <ScrollLine />
+            <Navbar />
+            <main>
+              <Hero />
+              <WhyUs />
+              <About />
+              <Services />
+              <Contact />
+            </main>
+            <WhatsAppButton />
+            <ChatBot />
+            <Footer />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
