@@ -18,6 +18,7 @@ COPY --from=build /app/dist ./dist
 COPY --from=build /app/package*.json ./
 COPY --from=build /app/nginx.conf ./nginx.conf.template
 COPY --from=build /app/start.sh ./start.sh
+COPY --from=build /app/static-site ./static-site
 
 # Install production dependencies only
 RUN npm install --production
