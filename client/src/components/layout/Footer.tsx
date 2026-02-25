@@ -10,6 +10,7 @@ export const Footer = () => {
             <a href="#" className="hover:text-white transition-colors">LinkedIn</a>
             <a href="#" className="hover:text-white transition-colors">Instagram</a>
             <a href="#" className="hover:text-white transition-colors">Email</a>
+        
           </div>
           <div className="text-sm">
             © 2026 Cambio Educativo.
