@@ -28,22 +28,28 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Reveal Animations - DISABLED: all elements visible immediately */
+/* Reveal Animations - DISABLED */
 .reveal,
 .reveal-up,
 .reveal-left,
 .reveal-right {
-    opacity: 1;
-    transform: none;
-    transition: none;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    visibility: visible !important;
 }
 
 .reveal.active,
 .reveal-up.active,
 .reveal-left.active,
 .reveal-right.active {
-    opacity: 1;
-    transform: none;
+    opacity: 1 !important;
+    transform: none !important;
+}
+
+/* Preloader Styles - REMOVED */
+#preloader {
+    display: none !important;
 }
 
 /* Connecting Line */

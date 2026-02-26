@@ -1,45 +1,4 @@
-// Interactions and Animations
-
-// Navbar Scroll Effect
-window.addEventListener('scroll', () => {
-    const nav = document.getElementById('navbar');
-    if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
-    } else {
-        nav.classList.remove('scrolled');
-    }
-});
-
 // Mobile Menu Logic
-const mobileMenu = document.getElementById('mobile-menu');
-const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-const closeMenuBtn = document.getElementById('close-menu-btn');
-
-function toggleMenu() {
-    mobileMenu.classList.toggle('active');
-}
-
-mobileMenuBtn.addEventListener('click', toggleMenu);
-closeMenuBtn.addEventListener('click', toggleMenu);
-
-// Reveal on Scroll using Intersection Observer
-const observerOptions = {
-    threshold: 0.15
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-            // Once revealed, we can stop observing this element
-            // observer.unobserve(entry.target); 
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.reveal, .reveal-up, .reveal-left, .reveal-right').forEach(el => {
-    observer.observe(el);
-});
 
 // Chatbot Logic
 const chatbotWindow = document.getElementById('chatbot-window');
