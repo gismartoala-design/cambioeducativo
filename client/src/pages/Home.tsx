@@ -3,6 +3,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/pages/home/Hero";
 import { WhyUs } from "@/pages/home/WhyUs";
 import { About } from "@/pages/home/About";
+import { Purpose } from "@/pages/home/Purpose";
 import { Services } from "@/pages/home/Services";
 import { Contact } from "@/pages/home/Contact";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
@@ -38,30 +39,13 @@ export default function Home() {
             <div className="noise-bg" />
             <MouseSpotlight />
 
-            {/* Decorative Parallax Background Elements */}
-            <motion.div
-              className="absolute top-[10%] -right-20 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none"
-              animate={{
-                y: [0, 50, 0],
-                x: [0, -30, 0]
-              }}
-              transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-            />
-            <motion.div
-              className="absolute bottom-[20%] -left-20 w-80 h-80 bg-accent/5 rounded-full blur-3xl pointer-events-none"
-              animate={{
-                y: [0, -50, 0],
-                x: [0, 30, 0]
-              }}
-              transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            />
-
             <ScrollLine />
             <Navbar />
             <main>
               <Hero />
-              <WhyUs />
               <About />
+              <Purpose />
+              <WhyUs />
               <Services />
               <Contact />
             </main>

@@ -1,83 +1,144 @@
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/button";
-import { motion } from "framer-motion";
+import { ArrowRight, HeartHandshake, Lightbulb, Network } from "lucide-react";
+
+const pillars = [
+  {
+    title: "Personas",
+    desc: "Fortalecemos capacidades con sentido humano.",
+    icon: HeartHandshake,
+  },
+  {
+    title: "Innovación",
+    desc: "Diseñamos soluciones aplicables y con propósito.",
+    icon: Lightbulb,
+  },
+  {
+    title: "Comunidad",
+    desc: "Activamos redes para lograr impacto sostenible.",
+    icon: Network,
+  },
+];
+
+const values = [
+  {
+    title: "Ética",
+    desc: "Integridad que construye una sociedad más justa y orientada al bien común.",
+  },
+  {
+    title: "Sentido humano",
+    desc: "Las personas y su dignidad son nuestro centro.",
+  },
+  {
+    title: "Esperanza activa",
+    desc: "Convicción de que todas las realidades pueden cambiar.",
+  },
+  {
+    title: "Coherencia",
+    desc: "Alineamos lo que pensamos, decimos y hacemos.",
+  },
+  {
+    title: "Transparencia",
+    desc: "Claridad en nuestros procesos, resultados y aprendizajes.",
+  },
+];
 
 export const About = () => {
   return (
-    <section id="quienes-somos" className="py-32 bg-slate-950 text-white overflow-hidden relative">
+    <section id="quienes-somos" className="relative overflow-hidden bg-slate-950 py-24 text-white md:py-28">
+      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(90deg,rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:64px_64px]" />
+      <div className="absolute inset-x-0 top-0 h-2 bg-[linear-gradient(90deg,hsl(var(--primary)),hsl(var(--turquoise)),hsl(var(--accent)))]" />
 
-      {/* Abstract Animated Shapes */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden opacity-30 pointer-events-none">
-        <motion.div
-          animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
-          transition={{ duration: 20, repeat: Infinity }}
-          className="absolute -top-20 left-1/4 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[120px]"
-        />
-        <motion.div
-          animate={{ scale: [1.2, 1, 1.2], rotate: [90, 0, 90] }}
-          transition={{ duration: 25, repeat: Infinity }}
-          className="absolute -bottom-20 right-1/4 w-[500px] h-[500px] bg-accent/20 rounded-full blur-[120px]"
-        />
-      </div>
-
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-12 gap-16 items-center">
-          <div className="lg:col-span-12 xl:col-span-6 space-y-10">
+      <div className="container relative z-10 mx-auto px-6">
+        <div className="grid gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
+          <div className="lg:sticky lg:top-28">
             <Reveal>
-              <span className="text-accent font-bold tracking-widest uppercase text-xs">Propósito de Vida</span>
-              <h2 className="text-5xl md:text-7xl font-extrabold font-display leading-[0.9] mt-4">
-                Redefinimos la <span className="text-blue-400">arquitectura</span> del aprendizaje.
+              <span className="text-xs font-black uppercase tracking-[0.28em] text-turquoise">Quiénes somos</span>
+              <h2 className="mt-4 max-w-2xl text-4xl font-black leading-tight md:text-6xl font-display">
+                Educación con propósito para transformar realidades.
               </h2>
             </Reveal>
 
-            <Reveal delay={0.3}>
-              <p className="text-xl text-slate-400 leading-relaxed border-l-2 border-white/10 pl-8 max-w-xl">
-                No somos solo consultores; somos arquitectos de experiencias capaces de <span className="text-white font-medium">transformar la cultura institucional</span> desde su núcleo pedagógico.
+            <Reveal delay={0.16}>
+              <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-300">
+                Somos una startup social que acompaña procesos de transformación educativa y organizacional a través de la innovación, el aprendizaje y la acción colectiva.
               </p>
             </Reveal>
 
-            <Reveal delay={0.4} className="grid sm:grid-cols-2 gap-6 max-w-2xl">
-              <div className="p-8 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 group hover:bg-white/10 transition-colors">
-                <div className="text-3xl mb-4 text-blue-400 font-bold">10+</div>
-                <h3 className="text-lg font-bold mb-2">Años de Impacto</h3>
-                <p className="text-sm text-slate-400">Guiando instituciones hacia la excelencia educativa.</p>
+            <Reveal delay={0.25}>
+              <div className="mt-8 grid gap-3">
+                {pillars.map((pillar, index) => {
+                  const Icon = pillar.icon;
+                  return (
+                    <div key={pillar.title} className="flex gap-4 rounded-lg border border-white/10 bg-white/[0.06] p-4">
+                      <div className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-lg ${index === 0 ? "bg-turquoise/20 text-turquoise" : index === 1 ? "bg-accent/20 text-accent" : "bg-primary/30 text-blue-200"}`}>
+                        <Icon className="h-5 w-5" />
+                      </div>
+                      <div>
+                        <h3 className="font-bold">{pillar.title}</h3>
+                        <p className="mt-1 text-sm leading-relaxed text-slate-400">{pillar.desc}</p>
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
-              <div className="p-8 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 group hover:bg-white/10 transition-colors">
-                <div className="text-3xl mb-4 text-orange-400 font-bold">500+</div>
-                <h3 className="text-lg font-bold mb-2">Docentes Formados</h3>
-                <p className="text-sm text-slate-400">Potenciando el talento humano en el aula.</p>
-              </div>
-            </Reveal>
-
-            <Reveal delay={0.5}>
-              <Button size="lg" className="rounded-full bg-white text-slate-950 font-bold px-10 h-16 hover:bg-blue-50 transition-all hover:scale-105 active:scale-95">
-                Nuestra Historia
-              </Button>
             </Reveal>
           </div>
 
-          <div className="lg:col-span-12 xl:col-span-6 relative">
-            <div className="grid grid-cols-12 gap-4 items-start">
-              <Reveal delay={0.4} className="col-span-7 mt-20" direction="right">
-                <div className="aspect-[4/5] rounded-[2.5rem] overflow-hidden bg-slate-800 shadow-2xl relative group">
-                  <img src="/images/image-3.jpg" alt="Innovación" className="w-full h-full object-cover grayscale-[0.5] group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" />
-                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/40 to-transparent" />
+          <div className="space-y-5">
+            <Reveal delay={0.12}>
+              <div className="rounded-lg border border-white/10 bg-white/[0.07] p-6 shadow-2xl shadow-black/10 md:p-8">
+                <span className="text-xs font-black uppercase tracking-[0.24em] text-accent">Nuestra historia</span>
+                <p className="mt-4 text-lg leading-relaxed text-slate-200">
+                  Cambio Educativo nació de una convicción compartida: la educación sí puede transformarlo todo. Unimos experiencia, innovación y propósito para acompañar procesos de cambio que devuelvan a la educación su poder más profundo: transformar vidas y construir mejores futuros.
+                </p>
+              </div>
+            </Reveal>
+
+            <div className="grid gap-5 md:grid-cols-2">
+              <Reveal delay={0.18}>
+                <div className="h-full rounded-lg border border-turquoise/25 bg-turquoise/10 p-6">
+                  <span className="text-xs font-black uppercase tracking-[0.24em] text-turquoise">Misión</span>
+                  <p className="mt-4 leading-relaxed text-slate-200">
+                    Acompañamos procesos de transformación social e institucional donde la innovación, la ética y el sentido humano son motores de impacto sostenible.
+                  </p>
                 </div>
               </Reveal>
-              <Reveal delay={0.6} className="col-span-5" direction="up">
-                <div className="aspect-[3/4] rounded-3xl overflow-hidden bg-slate-800 shadow-2xl relative group border-4 border-slate-950 -ml-12 z-10">
-                  <img src="/images/image-2.jpg" alt="Trabajo en equipo" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                  <div className="absolute inset-0 border-[16px] border-white/5 pointer-events-none" />
+              <Reveal delay={0.24}>
+                <div className="h-full rounded-lg border border-accent/25 bg-accent/10 p-6">
+                  <span className="text-xs font-black uppercase tracking-[0.24em] text-accent">Visión 2035</span>
+                  <p className="mt-4 leading-relaxed text-slate-200">
+                    Tejer una red latinoamericana de transformación educativa y social con comunidades, instituciones y personas que aprenden y lideran con propósito.
+                  </p>
                 </div>
               </Reveal>
             </div>
 
-            {/* Overlapping Badge */}
-            <div className="absolute -bottom-6 -right-6 md:-bottom-8 md:right-0 p-8 glass-card rounded-3xl shadow-2xl animate-float max-w-[280px] border-white/20 z-20 text-slate-950">
-              <p className="font-bold text-lg leading-snug">
-                "Innovamos no por la tecnología, sino por la <span className="text-primary italic">humanidad</span>."
-              </p>
-            </div>
+            <Reveal delay={0.3}>
+              <div className="rounded-lg border border-white/10 bg-white/[0.04] p-5">
+                <div className="mb-5 flex items-center justify-between gap-4">
+                  <h3 className="text-xl font-black font-display">Valores institucionales</h3>
+                  <div className="h-1 flex-1 bg-[linear-gradient(90deg,hsl(var(--turquoise)),hsl(var(--accent)))]" />
+                </div>
+                <div className="grid gap-3 md:grid-cols-2">
+                  {values.map((value) => (
+                    <div key={value.title} className="rounded-lg border border-white/10 bg-slate-950 p-4">
+                      <h4 className="text-sm font-bold text-white">{value.title}</h4>
+                      <p className="mt-2 text-sm leading-relaxed text-slate-400">{value.desc}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </Reveal>
+
+            <Reveal delay={0.35}>
+              <Button asChild size="lg" className="h-14 rounded-lg bg-white px-7 font-bold text-slate-950 hover:bg-turquoise">
+                <a href="#nos-mueve">
+                  Qué nos mueve
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </a>
+              </Button>
+            </Reveal>
           </div>
         </div>
       </div>

@@ -1,85 +1,105 @@
-import { motion } from "framer-motion";
+import { Compass, Layers3, LineChart, Puzzle, UsersRound } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 
+const threads = [
+  ["T", "Transformación", "Procesos que conectan propósito, estrategia y cambio real."],
+  ["E", "Ética", "Decisiones transparentes orientadas al bien común."],
+  ["J", "Juntos", "Aprendizaje colaborativo con instituciones, empresas y comunidades."],
+  ["I", "Innovación", "Soluciones creativas, aplicables y sostenibles."],
+  ["D", "Desarrollo humano", "Capacidades que fortalecen personas y equipos."],
+  ["O", "Organizaciones", "Culturas que aprenden, lideran y evolucionan."],
+  ["S", "Sostenibilidad", "Impacto que permanece en el tiempo."],
+];
+
+const differentiators = [
+  {
+    title: "Diagnóstico contextual",
+    desc: "Leemos cada realidad antes de diseñar soluciones.",
+    icon: Compass,
+  },
+  {
+    title: "Diseño a medida",
+    desc: "Creamos rutas de aprendizaje y transformación según el público.",
+    icon: Puzzle,
+  },
+  {
+    title: "Acompañamiento cercano",
+    desc: "Trabajamos con equipos, líderes y comunidades durante el proceso.",
+    icon: UsersRound,
+  },
+  {
+    title: "Resultados sostenibles",
+    desc: "Medimos avances y dejamos capacidades instaladas.",
+    icon: LineChart,
+  },
+];
+
 export const WhyUs = () => {
-  const features = [
-    {
-      title: "Soluciones Reales",
-      desc: "Diseñamos soluciones educativas reales y aplicables a tu contexto específico.",
-      icon: "🎯",
-      color: "from-blue-500/20 to-cyan-500/20"
-    },
-    {
-      title: "Innovación + Pedagogía",
-      desc: "Integramos innovación, tecnología y pedagogía de manera orgánica.",
-      icon: "🚀",
-      color: "from-orange-500/20 to-amber-500/20"
-    },
-    {
-      title: "Impacto Sostenible",
-      desc: "Trabajamos de la mano con cada institución para lograr cambios que perduren.",
-      icon: "🌱",
-      color: "from-green-500/20 to-emerald-500/20"
-    },
-    {
-      title: "Estrategias a Medida",
-      desc: "No ofrecemos fórmulas genéricas. Creamos estrategias únicas para ti.",
-      icon: "✨",
-      color: "from-purple-500/20 to-pink-500/20"
-    }
-  ];
-
   return (
-    <section className="py-32 bg-slate-50/50 relative overflow-hidden">
-      {/* Subtle Background pattern */}
-      <div className="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
+    <section id="tejidos" className="relative overflow-hidden bg-white py-24 md:py-28">
+      <div className="container mx-auto px-6">
+        <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
+          <div className="lg:sticky lg:top-28">
+            <Reveal>
+              <span className="text-xs font-black uppercase tracking-[0.28em] text-primary">Modelo TEJIDOS</span>
+              <h2 className="mt-4 text-4xl font-black leading-tight md:text-6xl font-display">
+                Cada hilo activa una forma de cambiar.
+              </h2>
+            </Reveal>
+            <Reveal delay={0.14}>
+              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
+                TEJIDOS es una metáfora viva del Cambio Educativo. Personas, ideas y acciones se entrelazan para transformar instituciones, organizaciones y comunidades.
+              </p>
+            </Reveal>
+            <Reveal delay={0.24}>
+              <div className="mt-8 rounded-lg border border-primary/10 bg-primary/5 p-6">
+                <Layers3 className="mb-5 h-8 w-8 text-primary" />
+                <p className="text-sm font-black uppercase tracking-[0.24em] text-primary">Visión conectada</p>
+                <p className="mt-4 leading-relaxed text-slate-700">
+                  Integramos innovación, tecnología, estrategia y desarrollo humano para acompañar procesos de transformación con impacto sostenible.
+                </p>
+              </div>
+            </Reveal>
+          </div>
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-20">
-          <Reveal>
-            <span className="text-primary font-bold tracking-widest uppercase text-xs mb-4 block">Diferenciales</span>
-            <h2 className="text-4xl md:text-6xl font-bold font-display mb-6">¿Por qué <span className="text-primary">Elegirnos</span>?</h2>
-          </Reveal>
-          <Reveal delay={0.3}>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Transformamos la educación mediante un enfoque centrado en la <span className="text-foreground font-semibold underline decoration-accent/30 underline-offset-4">experiencia humana</span> y resultados tangibles.
-            </p>
-          </Reveal>
+          <div>
+            <Reveal delay={0.18}>
+              <div className="grid gap-3">
+                {threads.map(([letter, title, desc], index) => (
+                  <div key={title} className="grid gap-4 rounded-lg border border-slate-200 bg-slate-50 p-4 shadow-sm md:grid-cols-[72px_1fr] md:items-center">
+                    <div className={`flex h-16 w-16 items-center justify-center rounded-lg text-2xl font-black ${
+                      index % 3 === 0
+                        ? "bg-primary text-white"
+                        : index % 3 === 1
+                          ? "bg-turquoise/25 text-primary"
+                          : "bg-accent/20 text-slate-900"
+                    }`}>
+                      {letter}
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-black text-foreground font-display">{title}</h3>
+                      <p className="mt-1 leading-relaxed text-muted-foreground">{desc}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
+          </div>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {features.map((feature, index) => (
-            <Reveal key={index} delay={index * 0.1 + 0.3} className="h-full">
-              <motion.div
-                whileHover={{
-                  y: -10,
-                  rotateX: 4,
-                  rotateY: -4,
-                  scale: 1.02
-                }}
-                className="h-full p-8 rounded-3xl bg-white border border-slate-200/60 shadow-[0_8px_30px_rgb(0,0,0,0.02)] hover:shadow-[0_20px_50px_rgba(59,130,246,0.08)] transition-all duration-500 group relative overflow-hidden flex flex-col min-h-[340px]"
-              >
-                {/* Background glow on hover */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0`} />
-
-                <div className="relative z-10 flex flex-col h-full">
-                  <div className="text-5xl mb-8 bg-white w-20 h-20 rounded-2xl flex items-center justify-center shadow-xl shadow-slate-100 group-hover:scale-110 group-hover:rotate-6 transition-all duration-500">
-                    {feature.icon}
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors">
-                    {feature.title}
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed group-hover:text-slate-700 transition-colors">
-                    {feature.desc}
-                  </p>
-
-                  <div className="mt-auto pt-8 opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">
-                    <div className="w-10 h-1 bg-primary rounded-full" />
-                  </div>
+        <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {differentiators.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <Reveal key={item.title} delay={index * 0.06}>
+                <div className="h-full rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-xl hover:shadow-primary/10">
+                  <Icon className="mb-5 h-7 w-7 text-accent" />
+                  <h3 className="text-lg font-black text-foreground font-display">{item.title}</h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
                 </div>
-              </motion.div>
-            </Reveal>
-          ))}
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>

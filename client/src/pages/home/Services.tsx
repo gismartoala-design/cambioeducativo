@@ -1,112 +1,126 @@
+import { ArrowUpRight, Building2, GraduationCap, Handshake, School, Users } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/button";
-import { ArrowUpRight, Check } from "lucide-react";
+
+const services = [
+  {
+    title: "Transformación institucional",
+    desc: "Acompañamos a escuelas, colegios, centros infantiles, institutos y universidades en procesos de innovación, liderazgo y mejora organizacional.",
+    img: "/images/image-4.jpg",
+    audience: "Instituciones educativas",
+    icon: School,
+  },
+  {
+    title: "Formación y capacitación docente",
+    desc: "Diseñamos experiencias de aprendizaje para fortalecer capacidades pedagógicas, tecnológicas, socioemocionales y de liderazgo educativo.",
+    img: "/images/image-2.jpg",
+    audience: "Docentes y directivos",
+    icon: GraduationCap,
+  },
+  {
+    title: "Aprendizaje organizacional",
+    desc: "Creamos soluciones de formación, cultura e innovación para empresas y organizaciones que quieren desarrollar equipos con propósito.",
+    img: "/images/image-5.jpg",
+    audience: "Empresas y organizaciones",
+    icon: Building2,
+  },
+  {
+    title: "Proyectos sociales y comunitarios",
+    desc: "Trabajamos con fundaciones, ONGs, organismos internacionales y comunidades para impulsar capacidades e impacto sostenible.",
+    img: "/images/image-3.jpg",
+    audience: "ONGs y comunidad",
+    icon: Handshake,
+  },
+];
+
+const audiences = [
+  "Instituciones educativas",
+  "Empresas",
+  "Docentes",
+  "Comunidad",
+  "ONGs",
+  "Profesionales en formación continua",
+];
 
 export const Services = () => {
-  const services = [
-    {
-      title: "Consultoría Estratégica",
-      desc: "Diagnósticos profundos para identificar brechas y oportunidades de transformación en tu modelo educativo actual.",
-      img: "/images/image-4.jpg",
-      tags: ["Diagnóstico", "Planificación", "Modelos"]
-    },
-    {
-      title: "Capacitación de Vanguardia",
-      desc: "Empoderamos a tu equipo docente con las metodologías y herramientas tecnológicas más disruptivas del sector.",
-      img: "/images/image-2.jpg",
-      tags: ["Pedagogía", "Tecnología", "Soft Skills"]
-    },
-    {
-      title: "Diseño de Experiencias",
-      desc: "Creamos ecosistemas de aprendizaje que cautivan, inspiran y generan resultados académicos extraordinarios.",
-      img: "/images/image-1.jpg",
-      tags: ["UX Learning", "Curriculum", "Innovación"]
-    },
-    {
-      title: "Arquitectura Institucional",
-      desc: "Acompañamos la evolución de tu organización hacia una cultura ágil, moderna y centrada en el estudiante.",
-      img: "/images/image-5.jpg",
-      tags: ["Liderazgo", "Cultura", "Gestión"]
-    }
-  ];
-
   return (
-    <section id="servicios" className="py-32 bg-white relative overflow-hidden">
-      <div className="container mx-auto px-6">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+    <section id="servicios" className="relative overflow-hidden bg-[#f7fbff] py-24 md:py-28">
+      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(90deg,rgba(13,73,196,0.06)_1px,transparent_1px),linear-gradient(180deg,rgba(13,73,196,0.05)_1px,transparent_1px)] bg-[size:72px_72px]" />
+
+      <div className="container relative z-10 mx-auto px-6">
+        <div className="mb-14 grid gap-8 lg:grid-cols-[1fr_0.72fr] lg:items-end">
           <Reveal>
-            <span className="text-primary font-bold tracking-widest uppercase text-xs">Portafolio de Impacto</span>
-            <h2 className="text-5xl md:text-7xl font-extrabold font-display mt-4 max-w-2xl leading-[0.9]">
-              Creamos el futuro <br /> <span className="text-gradient">junto a ti.</span>
+            <span className="text-xs font-black uppercase tracking-[0.28em] text-primary">Qué hacemos</span>
+            <h2 className="mt-4 max-w-3xl text-4xl font-black leading-tight md:text-6xl font-display">
+              Rutas de cambio para cada comunidad.
             </h2>
           </Reveal>
-          <Reveal delay={0.3}>
-            <p className="text-xl text-muted-foreground max-w-sm mb-2 border-l-2 border-primary/20 pl-6">
-              Estrategias holísticas para una educación en constante evolución.
+          <Reveal delay={0.16}>
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              Acompañamos el desarrollo de capacidades, la innovación con propósito y la construcción de cambios sostenibles.
             </p>
           </Reveal>
         </div>
 
-        <div className="space-y-32">
-          {services.map((service, index) => (
-            <div key={index} className={`flex flex-col ${index % 2 === 1 ? 'lg:flex-row-reverse' : 'lg:flex-row'} gap-16 lg:items-center group`}>
-              <div className="flex-1 relative">
-                <Reveal direction={index % 2 === 1 ? 'right' : 'left'}>
-                  <div className="relative">
-                    <div className="aspect-[16/10] rounded-[3rem] overflow-hidden shadow-2xl relative z-10">
-                      <img
-                        src={service.img}
-                        alt={service.title}
-                        className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        <div className="grid gap-5 md:grid-cols-2">
+          {services.map((service, index) => {
+            const Icon = service.icon;
+            return (
+              <Reveal key={service.title} delay={index * 0.06}>
+                <article className="group grid h-full overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition-all hover:-translate-y-1 hover:shadow-xl hover:shadow-primary/10 lg:grid-cols-[0.82fr_1.18fr]">
+                  <div className="relative min-h-[260px] overflow-hidden bg-slate-100">
+                    <img
+                      src={service.img}
+                      alt={service.title}
+                      className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-primary/70 to-transparent" />
+                    <div className="absolute bottom-4 left-4 flex h-12 w-12 items-center justify-center rounded-lg bg-white text-primary shadow-lg">
+                      <Icon className="h-6 w-6" />
                     </div>
-
-                    {/* Decorative Background Box */}
-                    <div className={`absolute -inset-4 border-2 border-primary/10 rounded-[3.5rem] -rotate-2 group-hover:rotate-0 transition-transform duration-700 z-0 ${index % 2 === 1 ? 'left-8' : 'right-8'}`} />
                   </div>
-                </Reveal>
-              </div>
-
-              <div className="flex-1 space-y-8 relative z-20">
-                <Reveal delay={0.2}>
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    {service.tags.map(tag => (
-                      <span key={tag} className="px-4 py-1.5 rounded-full bg-slate-50 text-slate-500 font-bold text-xs uppercase tracking-widest border border-slate-100 hover:bg-slate-100 transition-colors cursor-default">
-                        {tag}
-                      </span>
-                    ))}
+                  <div className="flex flex-1 flex-col p-6 md:p-7">
+                    <span className="text-xs font-black uppercase tracking-[0.22em] text-accent">{service.audience}</span>
+                    <h3 className="mt-3 text-3xl font-black text-foreground font-display">{service.title}</h3>
+                    <p className="mt-4 flex-1 leading-relaxed text-muted-foreground">{service.desc}</p>
+                    <Button asChild variant="outline" className="mt-7 h-11 w-fit rounded-lg border-2 px-5 font-bold hover:bg-primary hover:text-white">
+                      <a href="#contacto">
+                        Conversar
+                        <ArrowUpRight className="ml-2 h-4 w-4" />
+                      </a>
+                    </Button>
                   </div>
-                  <h3 className="text-4xl md:text-5xl font-extrabold font-display leading-tight group-hover:text-primary transition-colors">
-                    {service.title}
-                  </h3>
-                </Reveal>
-
-                <Reveal delay={0.3}>
-                  <p className="text-2xl text-muted-foreground leading-relaxed">
-                    {service.desc}
-                  </p>
-                </Reveal>
-
-                <Reveal delay={0.4}>
-                  <div className="flex flex-col gap-3 mb-8">
-                    {["Enfoque personalizado", "Resultados medibles", "Soporte constante"].map(item => (
-                      <div key={item} className="flex items-center gap-3 text-slate-700 font-medium">
-                        <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                          <Check className="w-3 h-3" />
-                        </div>
-                        {item}
-                      </div>
-                    ))}
-                  </div>
-                  <Button variant="outline" className="rounded-full px-10 h-16 border-2 font-bold text-lg hover:bg-primary hover:text-white hover:shadow-2xl hover:shadow-primary/30 transition-all hover:scale-105 group">
-                    Descubrir servicio <ArrowUpRight className="ml-2 w-6 h-6" />
-                  </Button>
-                </Reveal>
-              </div>
-            </div>
-          ))}
+                </article>
+              </Reveal>
+            );
+          })}
         </div>
+
+        <Reveal delay={0.2}>
+          <div className="mt-12 rounded-lg border border-primary/10 bg-white p-6 shadow-sm md:p-8">
+            <div className="mb-5 flex items-center gap-3">
+              <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary text-white">
+                <Users className="h-5 w-5" />
+              </div>
+              <h3 className="text-2xl font-black text-foreground font-display">Públicos que acompañamos</h3>
+            </div>
+            <div className="mb-6 grid gap-5 lg:grid-cols-2">
+              <p className="leading-relaxed text-muted-foreground">
+                Cambio Educativo está dirigido principalmente a instituciones educativas como escuelas, colegios, centros infantiles, institutos y universidades, así como a docentes, directivos y líderes educativos que buscan fortalecer sus procesos de aprendizaje, innovación, liderazgo y transformación institucional.
+              </p>
+              <p className="leading-relaxed text-muted-foreground">
+                También trabajamos con empresas, fundaciones, ONGs, organismos internacionales y organizaciones que requieren soluciones de formación, innovación, transformación cultural y aprendizaje organizacional con propósito, aplicabilidad y enfoque en resultados sostenibles.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3">
+              {audiences.map((audience) => (
+                <span key={audience} className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-bold text-slate-700">
+                  {audience}
+                </span>
+              ))}
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
