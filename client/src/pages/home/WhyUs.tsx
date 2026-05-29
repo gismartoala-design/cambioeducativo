@@ -17,43 +17,43 @@ import { Reveal } from "@/components/ui/Reveal";
 const threads = [
   {
     letter: "T",
-    title: "Transformar",
+    title: "Transformar.",
     desc: "Convertimos necesidades educativas en rutas claras de cambio.",
     icon: Sparkles,
   },
   {
     letter: "E",
-    title: "Escuchar",
+    title: "Escuchar.",
     desc: "Partimos del contexto, la voz de las personas y sus desafíos reales.",
     icon: BookOpenCheck,
   },
   {
     letter: "J",
-    title: "Juntar",
+    title: "Juntar.",
     desc: "Conectamos instituciones, equipos y comunidades para aprender mejor.",
     icon: Network,
   },
   {
     letter: "I",
-    title: "Innovar",
+    title: "Innovar.",
     desc: "Diseñamos experiencias aplicables, creativas y con propósito.",
     icon: BrainCircuit,
   },
   {
     letter: "D",
-    title: "Desarrollar",
+    title: "Desarrollar.",
     desc: "Fortalecemos capacidades humanas, pedagógicas y organizacionales.",
     icon: UsersRound,
   },
   {
     letter: "O",
-    title: "Orientar",
+    title: "Orientar.",
     desc: "Acompañamos decisiones con estrategia, seguimiento y evidencia.",
     icon: Route,
   },
   {
     letter: "S",
-    title: "Sostener",
+    title: "Sostener.",
     desc: "Dejamos aprendizajes instalados para que el impacto permanezca.",
     icon: Target,
   },
@@ -61,22 +61,22 @@ const threads = [
 
 const differentiators = [
   {
-    title: "Diagnóstico contextual",
+    title: "Diagnóstico contextual.",
     desc: "Leemos cada realidad antes de diseñar soluciones.",
     icon: Compass,
   },
   {
-    title: "Diseño a medida",
+    title: "Diseño a medida.",
     desc: "Creamos rutas de aprendizaje y transformación según el público.",
     icon: Puzzle,
   },
   {
-    title: "Acompañamiento cercano",
+    title: "Acompañamiento cercano.",
     desc: "Trabajamos con equipos, líderes y comunidades durante el proceso.",
     icon: UsersRound,
   },
   {
-    title: "Resultados sostenibles",
+    title: "Resultados sostenibles.",
     desc: "Medimos avances y dejamos capacidades instaladas.",
     icon: LineChart,
   },

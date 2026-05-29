@@ -5,56 +5,57 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/Reveal";
+import { BrandSectionDivider } from "@/components/ui/BrandSectionDivider";
 
 const storyMoments = [
   {
     number: "1",
-    title: "Nace una convicción",
+    title: "Nace una convicción.",
     text: "Cambio Educativo surge de una idea simple y profunda: la educación sí puede transformar realidades cuando se trabaja con propósito.",
     image: "/images/image-1.jpg",
-    className: "lg:left-[3%] lg:top-[2%] lg:w-[29%]",
+    className: "lg:left-[2%] lg:top-[2%] lg:w-[28%]",
   },
   {
     number: "2",
-    title: "Escuchamos el contexto",
+    title: "Escuchamos el contexto.",
     text: "Antes de diseñar soluciones, miramos a las personas, las instituciones y las comunidades que sostienen cada proceso.",
     image: "/images/image-3.jpg",
-    className: "lg:left-[29%] lg:top-[13%] lg:z-20 lg:w-[28%]",
+    className: "lg:left-[28%] lg:top-[15%] lg:z-20 lg:w-[27%]",
   },
   {
     number: "3",
-    title: "Tejemos capacidades",
+    title: "Tejemos capacidades.",
     text: "Acompañamos formación, innovación y liderazgo para que el cambio no sea un discurso, sino una práctica cotidiana.",
     image: "/images/ANAI%2010mo.jpeg",
-    className: "lg:left-[63%] lg:top-0 lg:w-[26%]",
+    className: "lg:left-[62%] lg:top-[1%] lg:w-[27%]",
   },
   {
     number: "4",
-    title: "Activamos comunidad",
+    title: "Activamos comunidad.",
     text: "Conectamos ideas, equipos y experiencias para construir aprendizaje colectivo con impacto sostenible.",
     image: "/images/image-4.jpg",
-    className: "lg:left-0 lg:top-[43%] lg:w-[33%]",
+    className: "lg:left-0 lg:top-[40%] lg:w-[32%]",
   },
   {
     number: "5",
-    title: "Creamos rutas de cambio",
+    title: "Creamos rutas de cambio.",
     text: "Cada acompañamiento se convierte en una ruta concreta: diagnóstico, diseño, acción, medición y mejora.",
     image: "/images/image-2.jpg",
-    className: "lg:left-[31%] lg:top-[57%] lg:z-20 lg:w-[27%]",
+    className: "lg:left-[32%] lg:top-[56%] lg:z-20 lg:w-[27%]",
   },
   {
     number: "6",
-    title: "Miramos hacia adelante",
+    title: "Miramos hacia adelante.",
     text: "Nuestra visión es tejer una red latinoamericana de transformación educativa y social con sentido humano.",
     image: "/images/image-5.jpg",
-    className: "lg:left-[61%] lg:top-[40%] lg:w-[29%]",
+    className: "lg:left-[64%] lg:top-[38%] lg:w-[28%]",
   },
   {
     number: "7",
-    title: "Transformamos con propósito",
+    title: "Transformamos con propósito.",
     text: "Cada experiencia deja aprendizajes, vínculos y capacidades instaladas para seguir avanzando.",
     image: "/images/service-1.jpg",
-    className: "lg:left-[58%] lg:top-[75%] lg:w-[30%]",
+    className: "lg:left-[62%] lg:top-[72%] lg:w-[28%]",
   },
 ];
 
@@ -120,17 +121,19 @@ export default function Story() {
           </div>
         </section>
 
+        <BrandSectionDivider tone="brand" />
+
         <section className="relative overflow-hidden bg-white py-20 md:py-28">
           <div className="container mx-auto px-6">
             <Reveal>
               <div className="mb-12 max-w-xl lg:mx-auto lg:w-[760px]">
-                <h2 className="font-display text-3xl font-black uppercase leading-[0.9] text-slate-950 md:text-4xl">
-                  Cambio Educativo en acción
+                <h2 className="font-display text-3xl font-black uppercase leading-[0.9] text-primary md:text-4xl">
+                  Cambio Educativo en acción.
                 </h2>
               </div>
             </Reveal>
 
-            <div className="relative mx-auto grid max-w-[360px] gap-8 sm:max-w-[560px] lg:h-[900px] lg:max-w-[1120px] lg:block">
+            <div className="relative mx-auto grid max-w-[360px] gap-10 sm:max-w-[560px] lg:h-[1040px] lg:max-w-[1120px] lg:block">
               {storyMoments.map((moment, index) => (
                 <motion.article
                   key={moment.number}
@@ -162,13 +165,13 @@ export default function Story() {
                           d="M48 52c10 7 18 16 25 26l-23-5-10 15c-4 6-13 4-14-3-1-3 0-6 2-8l20-25Z"
                         />
                       </svg>
-                      <span className="absolute bottom-4 left-6 font-display text-5xl font-black leading-none text-white drop-shadow-md md:text-6xl">
+                      <span className="absolute bottom-4 left-6 font-display text-5xl font-black leading-none text-white [text-shadow:0_5px_16px_rgba(0,0,0,0.82),0_2px_4px_rgba(0,0,0,0.95)] md:text-6xl">
                         {moment.number}
                       </span>
                     </div>
                   </div>
-                  <div className="relative z-30 bg-white pr-3 pt-2">
-                    <h3 className="max-w-[14rem] text-[0.7rem] font-black uppercase leading-[0.95] text-slate-950 md:text-sm">
+                  <div className="relative z-30 min-h-[3.15rem] bg-white pr-3 pt-2">
+                    <h3 className="max-w-[16rem] text-[0.62rem] font-black uppercase leading-[1.02] text-slate-950 md:text-xs">
                       {moment.title}
                     </h3>
                     <p className="mt-2 text-xs font-bold leading-tight text-slate-600 lg:hidden">{moment.text}</p>
@@ -178,6 +181,8 @@ export default function Story() {
             </div>
           </div>
         </section>
+
+        <BrandSectionDivider tone="orange" flip />
 
         <section className="relative overflow-hidden bg-slate-950 py-20 text-white md:py-24">
           <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(90deg,rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:72px_72px]" />
@@ -216,6 +221,8 @@ export default function Story() {
             </div>
           </div>
         </section>
+
+        <BrandSectionDivider tone="turquoise" />
 
         <section className="bg-[#f7fbff] py-18 md:py-24">
           <div className="container mx-auto grid gap-8 px-6 lg:grid-cols-[1fr_0.85fr] lg:items-center">

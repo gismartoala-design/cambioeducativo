@@ -15,9 +15,9 @@ import { Button } from "@/components/ui/button";
 const audiences = ["Instituciones educativas", "Empresas", "Comunidades"];
 
 const valuePoints = [
-  "Diagnóstico y ruta de cambio",
-  "Formación docente y organizacional",
-  "Innovación con impacto medible",
+  "Diagnóstico y ruta de cambio.",
+  "Formación docente y organizacional.",
+  "Innovación con impacto medible.",
 ];
 
 const impactPaths = [
@@ -40,17 +40,7 @@ const impactPaths = [
 
 export const Hero = () => {
   return (
-    <section id="propuesta" className="relative h-[100svh] overflow-hidden bg-[#f7fbff] text-slate-950">
-      <div className="absolute inset-0 pointer-events-none">
-        <img
-          src="/images/hero-bg.png"
-          alt=""
-          aria-hidden="true"
-          className="h-full w-full object-cover object-left-bottom opacity-90"
-        />
-      </div>
-      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(90deg,rgba(247,251,255,0.98)_0%,rgba(247,251,255,0.95)_42%,rgba(247,251,255,0.78)_67%,rgba(247,251,255,0.42)_100%)]" />
-      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(circle_at_72%_30%,rgba(45,230,169,0.22),transparent_30%),linear-gradient(180deg,rgba(255,255,255,0.72)_0%,rgba(255,255,255,0)_34%,rgba(13,73,196,0.12)_100%)]" />
+    <section id="propuesta" className="relative h-[100svh] overflow-hidden bg-white text-slate-950">
       <div className="absolute bottom-0 left-0 right-0 h-2 bg-[linear-gradient(90deg,hsl(var(--accent)),hsl(var(--turquoise)),hsl(var(--primary)))]" />
 
       <div className="container relative z-10 mx-auto flex h-full items-center px-4 pb-5 pt-24 sm:px-6 sm:pb-6 lg:pb-8 lg:pt-28 [@media(max-height:720px)]:pt-20">
@@ -59,7 +49,7 @@ export const Hero = () => {
             <Reveal>
               <span className="inline-flex max-w-full items-center gap-2 rounded-lg border border-primary/15 bg-white/88 px-3 py-1.5 text-xs font-black text-primary shadow-sm backdrop-blur sm:text-sm">
                 <Sparkles className="h-4 w-4 shrink-0 text-accent" />
-                <span className="truncate">Transformación educativa con propósito</span>
+                <span className="truncate">Transformación educativa con propósito.</span>
               </span>
             </Reveal>
 
@@ -117,7 +107,7 @@ export const Hero = () => {
                   </div>
                   <div>
                     <p className="text-xs font-black uppercase tracking-[0.24em] text-accent">
-                      Ruta de transformación
+                      Ruta de transformación.
                     </p>
                     <p className="mt-1 font-display text-2xl font-black leading-tight text-primary [@media(max-height:760px)]:text-xl">
                       De la intención al cambio real.

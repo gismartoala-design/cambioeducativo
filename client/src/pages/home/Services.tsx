@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    title: "Transformación institucional",
+    title: "Transformación institucional.",
     desc: "Acompañamos a escuelas, colegios, centros infantiles, institutos y universidades en procesos de innovación, liderazgo y mejora organizacional.",
     img: "/images/image-4.jpg",
     audience: "Instituciones educativas",
@@ -12,7 +12,7 @@ const services = [
     icon: School,
   },
   {
-    title: "Formación y capacitación docente",
+    title: "Formación y capacitación docente.",
     desc: "Diseñamos experiencias de aprendizaje para fortalecer capacidades pedagógicas, tecnológicas, socioemocionales y de liderazgo educativo.",
     img: "/images/image-2.jpg",
     audience: "Docentes y directivos",
@@ -20,7 +20,7 @@ const services = [
     icon: GraduationCap,
   },
   {
-    title: "Aprendizaje organizacional",
+    title: "Aprendizaje organizacional.",
     desc: "Creamos soluciones de formación, cultura e innovación para empresas y organizaciones que quieren desarrollar equipos con propósito.",
     img: "/images/image-5.jpg",
     audience: "Empresas y organizaciones",
@@ -28,7 +28,7 @@ const services = [
     icon: Building2,
   },
   {
-    title: "Proyectos sociales y comunitarios",
+    title: "Proyectos sociales y comunitarios.",
     desc: "Trabajamos con fundaciones, ONGs, organismos internacionales y comunidades para impulsar capacidades e impacto sostenible.",
     img: "/images/image-3.jpg",
     audience: "ONGs y comunidad",
