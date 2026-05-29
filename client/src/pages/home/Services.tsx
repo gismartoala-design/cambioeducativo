@@ -8,6 +8,7 @@ const services = [
     desc: "Acompañamos a escuelas, colegios, centros infantiles, institutos y universidades en procesos de innovación, liderazgo y mejora organizacional.",
     img: "/images/image-4.jpg",
     audience: "Instituciones educativas",
+    result: "Instituciones con una ruta de mejora clara, equipos alineados y capacidades instaladas para sostener el cambio.",
     icon: School,
   },
   {
@@ -15,6 +16,7 @@ const services = [
     desc: "Diseñamos experiencias de aprendizaje para fortalecer capacidades pedagógicas, tecnológicas, socioemocionales y de liderazgo educativo.",
     img: "/images/image-2.jpg",
     audience: "Docentes y directivos",
+    result: "Docentes y líderes con herramientas aplicables para mejorar sus prácticas y acompañar aprendizajes significativos.",
     icon: GraduationCap,
   },
   {
@@ -22,6 +24,7 @@ const services = [
     desc: "Creamos soluciones de formación, cultura e innovación para empresas y organizaciones que quieren desarrollar equipos con propósito.",
     img: "/images/image-5.jpg",
     audience: "Empresas y organizaciones",
+    result: "Equipos fortalecidos, cultura de aprendizaje activa y procesos formativos conectados con objetivos institucionales.",
     icon: Building2,
   },
   {
@@ -29,6 +32,7 @@ const services = [
     desc: "Trabajamos con fundaciones, ONGs, organismos internacionales y comunidades para impulsar capacidades e impacto sostenible.",
     img: "/images/image-3.jpg",
     audience: "ONGs y comunidad",
+    result: "Proyectos con enfoque humano, participación comunitaria y resultados sostenibles en el territorio.",
     icon: Handshake,
   },
 ];
@@ -83,6 +87,10 @@ export const Services = () => {
                     <span className="text-xs font-black uppercase tracking-[0.22em] text-accent">{service.audience}</span>
                     <h3 className="mt-3 text-3xl font-black text-foreground font-display">{service.title}</h3>
                     <p className="mt-4 flex-1 leading-relaxed text-muted-foreground">{service.desc}</p>
+                    <div className="mt-5 rounded-lg border border-primary/10 bg-primary/5 p-4">
+                      <p className="text-xs font-black uppercase tracking-[0.18em] text-primary">Resultado esperado</p>
+                      <p className="mt-2 text-sm font-semibold leading-relaxed text-slate-700">{service.result}</p>
+                    </div>
                     <Button asChild variant="outline" className="mt-7 h-11 w-fit rounded-lg border-2 px-5 font-bold hover:bg-primary hover:text-white">
                       <a href="#contacto">
                         Conversar

@@ -24,11 +24,11 @@ const socialLinks = [
 ];
 
 const footerLinks = [
-  { label: "Quiénes somos", href: "#quienes-somos" },
-  { label: "Qué nos mueve", href: "#nos-mueve" },
-  { label: "TEJIDOS", href: "#tejidos" },
-  { label: "Servicios", href: "#servicios" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Quiénes somos", href: "/historia" },
+  { label: "Qué nos mueve", href: "/#nos-mueve" },
+  { label: "TEJIDOS", href: "/#tejidos" },
+  { label: "Servicios", href: "/#servicios" },
+  { label: "Contacto", href: "/#contacto" },
 ];
 
 export const Footer = () => {

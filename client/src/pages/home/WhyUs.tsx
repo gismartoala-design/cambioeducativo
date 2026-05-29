@@ -1,14 +1,62 @@
-import { Compass, Layers3, LineChart, Puzzle, UsersRound } from "lucide-react";
+import {
+  BookOpenCheck,
+  BrainCircuit,
+  Compass,
+  Handshake,
+  Layers3,
+  LineChart,
+  Network,
+  Puzzle,
+  Route,
+  Sparkles,
+  Target,
+  UsersRound,
+} from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 
 const threads = [
-  ["T", "Transformación", "Procesos que conectan propósito, estrategia y cambio real."],
-  ["E", "Ética", "Decisiones transparentes orientadas al bien común."],
-  ["J", "Juntos", "Aprendizaje colaborativo con instituciones, empresas y comunidades."],
-  ["I", "Innovación", "Soluciones creativas, aplicables y sostenibles."],
-  ["D", "Desarrollo humano", "Capacidades que fortalecen personas y equipos."],
-  ["O", "Organizaciones", "Culturas que aprenden, lideran y evolucionan."],
-  ["S", "Sostenibilidad", "Impacto que permanece en el tiempo."],
+  {
+    letter: "T",
+    title: "Transformar",
+    desc: "Convertimos necesidades educativas en rutas claras de cambio.",
+    icon: Sparkles,
+  },
+  {
+    letter: "E",
+    title: "Escuchar",
+    desc: "Partimos del contexto, la voz de las personas y sus desafíos reales.",
+    icon: BookOpenCheck,
+  },
+  {
+    letter: "J",
+    title: "Juntar",
+    desc: "Conectamos instituciones, equipos y comunidades para aprender mejor.",
+    icon: Network,
+  },
+  {
+    letter: "I",
+    title: "Innovar",
+    desc: "Diseñamos experiencias aplicables, creativas y con propósito.",
+    icon: BrainCircuit,
+  },
+  {
+    letter: "D",
+    title: "Desarrollar",
+    desc: "Fortalecemos capacidades humanas, pedagógicas y organizacionales.",
+    icon: UsersRound,
+  },
+  {
+    letter: "O",
+    title: "Orientar",
+    desc: "Acompañamos decisiones con estrategia, seguimiento y evidencia.",
+    icon: Route,
+  },
+  {
+    letter: "S",
+    title: "Sostener",
+    desc: "Dejamos aprendizajes instalados para que el impacto permanezca.",
+    icon: Target,
+  },
 ];
 
 const differentiators = [
@@ -36,58 +84,53 @@ const differentiators = [
 
 export const WhyUs = () => {
   return (
-    <section id="tejidos" className="relative overflow-hidden bg-white py-24 md:py-28">
+    <section id="tejidos" className="relative overflow-hidden bg-[#f7fbff] py-24 md:py-28">
+      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(90deg,rgba(13,73,196,0.055)_1px,transparent_1px),linear-gradient(180deg,rgba(13,73,196,0.04)_1px,transparent_1px)] bg-[size:76px_76px]" />
       <div className="container mx-auto px-6">
-        <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:items-start">
-          <div className="lg:sticky lg:top-28">
-            <Reveal>
-              <span className="text-xs font-black uppercase tracking-[0.28em] text-primary">Modelo TEJIDOS</span>
-              <h2 className="mt-4 text-4xl font-black leading-tight md:text-6xl font-display">
-                Cada hilo activa una forma de cambiar.
-              </h2>
-            </Reveal>
-            <Reveal delay={0.14}>
-              <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                TEJIDOS es una metáfora viva del Cambio Educativo. Personas, ideas y acciones se entrelazan para transformar instituciones, organizaciones y comunidades.
-              </p>
-            </Reveal>
-            <Reveal delay={0.24}>
-              <div className="mt-8 rounded-lg border border-primary/10 bg-primary/5 p-6">
-                <Layers3 className="mb-5 h-8 w-8 text-primary" />
-                <p className="text-sm font-black uppercase tracking-[0.24em] text-primary">Visión conectada</p>
-                <p className="mt-4 leading-relaxed text-slate-700">
-                  Integramos innovación, tecnología, estrategia y desarrollo humano para acompañar procesos de transformación con impacto sostenible.
-                </p>
-              </div>
-            </Reveal>
-          </div>
-
-          <div>
-            <Reveal delay={0.18}>
-              <div className="grid gap-3">
-                {threads.map(([letter, title, desc], index) => (
-                  <div key={title} className="grid gap-4 rounded-lg border border-slate-200 bg-slate-50 p-4 shadow-sm md:grid-cols-[72px_1fr] md:items-center">
-                    <div className={`flex h-16 w-16 items-center justify-center rounded-lg text-2xl font-black ${
-                      index % 3 === 0
-                        ? "bg-primary text-white"
-                        : index % 3 === 1
-                          ? "bg-turquoise/25 text-primary"
-                          : "bg-accent/20 text-slate-900"
-                    }`}>
-                      {letter}
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-black text-foreground font-display">{title}</h3>
-                      <p className="mt-1 leading-relaxed text-muted-foreground">{desc}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </Reveal>
-          </div>
+        <div className="relative z-10 mx-auto max-w-4xl text-center">
+          <Reveal>
+            <span className="brand-kicker text-xs text-primary">Modelo TEJIDOS</span>
+            <h2 className="mt-4 text-4xl font-black leading-tight md:text-6xl font-display">
+              Una forma propia de acompañar el cambio.
+            </h2>
+          </Reveal>
+          <Reveal delay={0.14}>
+            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+              TEJIDOS organiza nuestra manera de trabajar: escuchar, conectar y transformar cada proceso educativo con propósito.
+            </p>
+          </Reveal>
         </div>
 
-        <div className="mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        <div className="relative z-10 mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {threads.map((thread, index) => {
+            const Icon = thread.icon;
+            const isLast = index === threads.length - 1;
+
+            return (
+              <Reveal key={thread.letter} delay={index * 0.04}>
+                <article className={`group h-full overflow-hidden rounded-lg bg-white shadow-[0_18px_45px_-30px_rgba(13,73,196,0.65)] ring-1 ring-primary/10 transition-transform hover:-translate-y-1 ${isLast ? "lg:col-start-2" : ""}`}>
+                  <div className="relative flex min-h-[150px] items-center justify-center overflow-hidden bg-primary p-7 text-white">
+                    <div className="absolute -right-9 -top-9 h-28 w-28 rounded-full bg-turquoise/18" />
+                    <div className="absolute -bottom-12 left-5 h-28 w-28 rotate-12 rounded-[45%_55%_48%_52%] bg-accent/25" />
+                    <Icon className="relative z-10 h-14 w-14 stroke-[1.8]" />
+                    <span className="absolute left-4 top-3 font-display text-5xl font-black leading-none text-white/16">
+                      {thread.letter}
+                    </span>
+                  </div>
+                  <div className="p-5 text-center">
+                    <div className="mx-auto -mt-9 mb-4 flex h-12 w-12 items-center justify-center rounded-lg bg-white font-display text-2xl font-black text-primary shadow-lg ring-1 ring-primary/10">
+                      {thread.letter}
+                    </div>
+                    <h3 className="text-lg font-black uppercase leading-tight text-slate-950 font-display">{thread.title}</h3>
+                    <p className="mt-3 text-sm font-medium leading-relaxed text-slate-600">{thread.desc}</p>
+                  </div>
+                </article>
+              </Reveal>
+            );
+          })}
+        </div>
+
+        <div className="relative z-10 mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {differentiators.map((item, index) => {
             const Icon = item.icon;
             return (

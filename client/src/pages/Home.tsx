@@ -1,8 +1,8 @@
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { IntroCarousel } from "@/pages/home/IntroCarousel";
 import { Hero } from "@/pages/home/Hero";
 import { WhyUs } from "@/pages/home/WhyUs";
-import { About } from "@/pages/home/About";
 import { Purpose } from "@/pages/home/Purpose";
 import { Services } from "@/pages/home/Services";
 import { Contact } from "@/pages/home/Contact";
@@ -42,8 +42,8 @@ export default function Home() {
             <ScrollLine />
             <Navbar />
             <main>
+              <IntroCarousel />
               <Hero />
-              <About />
               <Purpose />
               <WhyUs />
               <Services />
