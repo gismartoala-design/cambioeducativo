@@ -5,7 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
 import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/Reveal";
-import { BrandSectionDivider } from "@/components/ui/BrandSectionDivider";
+import { SectionPatternDivider } from "@/components/ui/SectionPatternDivider";
 
 const storyMoments = [
   {
@@ -121,7 +121,7 @@ export default function Story() {
           </div>
         </section>
 
-        <BrandSectionDivider tone="brand" />
+        <SectionPatternDivider tone="brand" />
 
         <section className="relative overflow-hidden bg-white py-20 md:py-28">
           <div className="container mx-auto px-6">
@@ -182,7 +182,7 @@ export default function Story() {
           </div>
         </section>
 
-        <BrandSectionDivider tone="orange" flip />
+        <SectionPatternDivider tone="orange" />
 
         <section className="relative overflow-hidden bg-slate-950 py-20 text-white md:py-24">
           <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(90deg,rgba(255,255,255,0.045)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:72px_72px]" />
@@ -222,7 +222,7 @@ export default function Story() {
           </div>
         </section>
 
-        <BrandSectionDivider tone="turquoise" />
+        <SectionPatternDivider tone="turquoise" />
 
         <section className="bg-[#f7fbff] py-18 md:py-24">
           <div className="container mx-auto grid gap-8 px-6 lg:grid-cols-[1fr_0.85fr] lg:items-center">

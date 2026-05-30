@@ -11,6 +11,7 @@ import { ChatBot } from "@/components/ui/ChatBot";
 import { ScrollLine } from "@/components/ui/ScrollLine";
 import { MouseSpotlight } from "@/components/ui/MouseSpotlight";
 import { Preloader } from "@/components/ui/Preloader";
+import { SectionPatternDivider } from "@/components/ui/SectionPatternDivider";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
 
@@ -43,10 +44,15 @@ export default function Home() {
             <Navbar />
             <main>
               <IntroCarousel />
+              <SectionPatternDivider tone="brand" />
               <Hero />
+              <SectionPatternDivider tone="orange" />
               <Purpose />
+              <SectionPatternDivider tone="blue" />
               <WhyUs />
+              <SectionPatternDivider tone="turquoise" />
               <Services />
+              <SectionPatternDivider tone="brand" />
               <Contact />
             </main>
             <WhatsAppButton />
