@@ -41,8 +41,6 @@ const impactPaths = [
 export const Hero = () => {
   return (
     <section id="propuesta" className="relative h-[100svh] overflow-hidden bg-white text-slate-950">
-      <div className="absolute bottom-0 left-0 right-0 h-2 bg-[linear-gradient(90deg,hsl(var(--accent)),hsl(var(--turquoise)),hsl(var(--primary)))]" />
-
       <div className="container relative z-10 mx-auto flex h-full items-center px-4 pb-5 pt-24 sm:px-6 sm:pb-6 lg:pb-8 lg:pt-28 [@media(max-height:720px)]:pt-20">
         <div className="grid w-full items-center gap-5 lg:grid-cols-[1.05fr_0.95fr] xl:gap-10">
           <div className="min-w-0">

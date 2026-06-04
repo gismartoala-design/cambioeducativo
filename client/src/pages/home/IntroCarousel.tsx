@@ -48,7 +48,6 @@ export const IntroCarousel = () => {
       </AnimatePresence>
 
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,23,0.28)_0%,rgba(2,6,23,0.04)_38%,rgba(2,6,23,0.48)_100%)]" />
-      <div className="absolute bottom-0 left-0 right-0 h-2 bg-[linear-gradient(90deg,hsl(var(--accent)),hsl(var(--turquoise)),hsl(var(--primary)))]" />
 
       <button
         type="button"

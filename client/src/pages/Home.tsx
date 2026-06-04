@@ -44,7 +44,6 @@ export default function Home() {
             <Navbar />
             <main>
               <IntroCarousel />
-              <SectionPatternDivider tone="brand" />
               <Hero />
               <SectionPatternDivider tone="orange" />
               <Purpose />

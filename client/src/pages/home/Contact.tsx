@@ -33,7 +33,6 @@ export const Contact = () => {
   return (
     <section id="contacto" className="relative overflow-hidden bg-slate-950 py-24 text-white md:py-28">
       <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(90deg,rgba(255,255,255,0.04)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.035)_1px,transparent_1px)] bg-[size:72px_72px]" />
-      <div className="absolute inset-x-0 top-0 h-2 bg-[linear-gradient(90deg,hsl(var(--primary)),hsl(var(--turquoise)),hsl(var(--accent)))]" />
 
       <div className="container relative z-10 mx-auto px-6">
         <div className="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-stretch">
