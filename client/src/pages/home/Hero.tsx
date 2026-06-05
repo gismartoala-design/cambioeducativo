@@ -96,10 +96,8 @@ export const Hero = () => {
 
           <Reveal delay={0.22} direction="left">
             <div className="relative mx-auto hidden w-full max-w-[480px] lg:block xl:max-w-[520px] [@media(max-height:760px)]:max-w-[440px]">
-              <div className="absolute -left-3 top-8 hidden h-[78%] w-2 rounded-lg bg-[linear-gradient(180deg,hsl(var(--accent)),hsl(var(--turquoise)),hsl(var(--primary)))] shadow-xl sm:block" />
-
-              <div className="relative overflow-hidden rounded-lg border border-white/75 bg-white/82 p-4 shadow-[0_35px_100px_-48px_rgba(13,73,196,0.95)] backdrop-blur-xl [@media(max-height:760px)]:p-3">
-                <div className="grid gap-3 border-b border-slate-200/80 pb-3 sm:grid-cols-[3.25rem_1fr]">
+              <div className="relative overflow-hidden rounded-lg border border-primary/12 bg-white p-4 shadow-[0_35px_100px_-48px_rgba(13,73,196,0.78)] [@media(max-height:760px)]:p-3">
+                <div className="grid gap-3 rounded-lg bg-primary/5 p-3 sm:grid-cols-[3.25rem_1fr]">
                   <div className="flex h-[3.25rem] w-[3.25rem] items-center justify-center rounded-lg bg-primary text-white shadow-lg shadow-primary/25">
                     <GraduationCap className="h-6 w-6" />
                   </div>
@@ -117,7 +115,7 @@ export const Hero = () => {
                   {valuePoints.map((point, index) => (
                     <motion.div
                       key={point}
-                      className="flex items-start gap-3 rounded-lg border border-slate-200/80 bg-white/86 p-3 shadow-sm [@media(max-height:760px)]:p-2.5"
+                      className="flex items-start gap-3 rounded-lg border border-primary/10 bg-white p-3 shadow-sm [@media(max-height:760px)]:p-2.5"
                       animate={{ y: [0, index === 1 ? -3 : 3, 0] }}
                       transition={{ duration: 5 + index, repeat: Infinity, ease: "easeInOut" }}
                     >

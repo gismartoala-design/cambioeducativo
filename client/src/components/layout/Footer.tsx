@@ -26,18 +26,20 @@ const socialLinks = [
 const footerLinks = [
   { label: "Quiénes somos", href: "/historia" },
   { label: "Qué nos mueve", href: "/#nos-mueve" },
+  { label: "Públicos", href: "/#publicos" },
   { label: "TEJIDOS", href: "/#tejidos" },
+  { label: "Impacto", href: "/#impacto" },
   { label: "Servicios", href: "/#servicios" },
   { label: "Contacto", href: "/#contacto" },
 ];
 
 export const Footer = () => {
   return (
-    <footer className="border-t border-slate-900 bg-slate-950 py-12 text-slate-400">
+    <footer className="border-t border-primary/20 bg-primary py-12 text-blue-100">
       <div className="container mx-auto px-6">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.8fr_1fr] lg:items-start">
           <div>
-            <img src="/images/logo.png" alt="Cambio Educativo" className="h-10 w-auto brightness-0 invert opacity-85" />
+            <img src="/images/logo.png" alt="Cambio Educativo" className="h-11 w-auto brightness-0 invert" />
             <p className="mt-5 max-w-sm text-sm leading-relaxed">
               Educación que se teje con propósito para transformar personas, instituciones y comunidades.
             </p>
@@ -61,7 +63,7 @@ export const Footer = () => {
                     href={link.href}
                     target={link.href.startsWith("http") ? "_blank" : undefined}
                     rel={link.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/10 text-slate-300 transition-colors hover:border-turquoise hover:text-turquoise"
+                    className="flex h-10 w-10 items-center justify-center rounded-lg border border-white/20 text-white transition-colors hover:border-turquoise hover:bg-white/10 hover:text-turquoise"
                     aria-label={link.name}
                   >
                     <Icon className="h-4 w-4" />
@@ -77,7 +79,7 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-white/10 pt-6 text-sm">
+        <div className="mt-10 border-t border-white/15 pt-6 text-sm text-blue-100">
           © 2026 Cambio Educativo. Todos los derechos reservados.
         </div>
       </div>

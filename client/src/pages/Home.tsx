@@ -4,6 +4,8 @@ import { IntroCarousel } from "@/pages/home/IntroCarousel";
 import { Hero } from "@/pages/home/Hero";
 import { WhyUs } from "@/pages/home/WhyUs";
 import { Purpose } from "@/pages/home/Purpose";
+import { Audiences } from "@/pages/home/Audiences";
+import { ImpactPortfolio } from "@/pages/home/ImpactPortfolio";
 import { Services } from "@/pages/home/Services";
 import { Contact } from "@/pages/home/Contact";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
@@ -47,9 +49,12 @@ export default function Home() {
               <Hero />
               <SectionPatternDivider tone="orange" />
               <Purpose />
+              <Audiences />
               <SectionPatternDivider tone="blue" />
               <WhyUs />
               <SectionPatternDivider tone="turquoise" />
+              <ImpactPortfolio />
+              <SectionPatternDivider tone="orange" />
               <Services />
               <SectionPatternDivider tone="brand" />
               <Contact />
