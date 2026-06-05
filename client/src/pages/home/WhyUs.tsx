@@ -12,6 +12,8 @@ import {
   Target,
   UsersRound,
 } from "lucide-react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 
 const threads = [
@@ -83,6 +85,14 @@ const differentiators = [
 ];
 
 export const WhyUs = () => {
+  const threadAreaRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: threadAreaRef,
+    offset: ["start 72%", "end 48%"],
+  });
+  const threadProgress = useTransform(scrollYProgress, [0, 1], [0.04, 1]);
+  const threadGlow = useTransform(scrollYProgress, [0, 0.16, 1], [0, 0.95, 1]);
+
   const threadOffsets = [
     "lg:ml-[4%] lg:-rotate-1",
     "lg:ml-auto lg:mr-[6%] lg:rotate-1",
@@ -91,15 +101,6 @@ export const WhyUs = () => {
     "lg:ml-[5%] lg:rotate-1",
     "lg:ml-auto lg:mr-[7%] lg:-rotate-[0.5deg]",
     "lg:ml-auto lg:mr-[24%] lg:rotate-[0.5deg]",
-  ];
-
-  const connectorSegments = [
-    "top-[7%] left-8 h-20 w-28 rotate-90 lg:left-[26%] lg:top-[7%] lg:h-16 lg:w-[55%] lg:rotate-[8deg]",
-    "top-[20%] left-8 h-20 w-28 rotate-90 lg:left-[21%] lg:top-[20%] lg:h-16 lg:w-[59%] lg:-rotate-[7deg]",
-    "top-[33%] left-8 h-20 w-28 rotate-90 lg:left-[24%] lg:top-[34%] lg:h-16 lg:w-[55%] lg:rotate-[6deg]",
-    "top-[46%] left-8 h-20 w-28 rotate-90 lg:left-[20%] lg:top-[48%] lg:h-16 lg:w-[60%] lg:-rotate-[6deg]",
-    "top-[59%] left-8 h-20 w-28 rotate-90 lg:left-[25%] lg:top-[62%] lg:h-16 lg:w-[55%] lg:rotate-[7deg]",
-    "top-[72%] left-8 h-20 w-28 rotate-90 lg:left-[30%] lg:top-[76%] lg:h-16 lg:w-[42%] lg:-rotate-[8deg]",
   ];
 
   return (
@@ -120,18 +121,50 @@ export const WhyUs = () => {
           </Reveal>
         </div>
 
-        <div className="relative z-10 mx-auto mt-14 max-w-7xl">
-          <div className="pointer-events-none absolute inset-0 z-0 overflow-visible" aria-hidden="true">
-            {connectorSegments.map((className, index) => (
-              <div key={`connector-${index}`} className={`absolute overflow-hidden ${className}`}>
-                <img
-                  src="/images/foto-01-tramo.png"
-                  alt=""
-                  className="h-full w-full object-fill drop-shadow-[0_5px_9px_rgba(255,132,35,0.2)]"
-                />
-              </div>
-            ))}
-          </div>
+        <div ref={threadAreaRef} className="relative z-10 mx-auto mt-14 max-w-7xl overflow-visible">
+          <svg
+            className="pointer-events-none absolute inset-0 z-0 h-full w-full overflow-visible"
+            viewBox="0 0 1200 980"
+            fill="none"
+            preserveAspectRatio="none"
+            aria-hidden="true"
+          >
+            <defs>
+              <pattern id="tejidos-texture" width="360" height="260" patternUnits="userSpaceOnUse">
+                <image href="/images/foto-01-transparente.png" width="360" height="260" preserveAspectRatio="xMidYMid slice" opacity="0.92" />
+              </pattern>
+              <linearGradient id="tejidos-energy" x1="80" y1="90" x2="1060" y2="900" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stopColor="hsl(var(--accent))" />
+                <stop offset="48%" stopColor="hsl(var(--turquoise))" />
+                <stop offset="100%" stopColor="hsl(var(--accent))" />
+              </linearGradient>
+            </defs>
+            <path
+              d="M82 96 C276 34 438 112 604 166 C808 232 966 196 1084 112 C1158 60 1126 26 1078 50 C1018 82 1146 172 1038 250 C878 366 392 250 198 354 C44 438 220 562 492 526 C730 496 974 566 940 700 C904 836 652 882 526 780 C418 692 510 560 690 604 C868 646 788 816 1014 896"
+              stroke="url(#tejidos-texture)"
+              strokeWidth="46"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              opacity="0.16"
+            />
+            <motion.path
+              d="M82 96 C276 34 438 112 604 166 C808 232 966 196 1084 112 C1158 60 1126 26 1078 50 C1018 82 1146 172 1038 250 C878 366 392 250 198 354 C44 438 220 562 492 526 C730 496 974 566 940 700 C904 836 652 882 526 780 C418 692 510 560 690 604 C868 646 788 816 1014 896"
+              stroke="url(#tejidos-energy)"
+              strokeWidth="34"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              style={{ pathLength: threadProgress, opacity: threadGlow }}
+            />
+            <motion.path
+              d="M82 96 C276 34 438 112 604 166 C808 232 966 196 1084 112 C1158 60 1126 26 1078 50 C1018 82 1146 172 1038 250 C878 366 392 250 198 354 C44 438 220 562 492 526 C730 496 974 566 940 700 C904 836 652 882 526 780 C418 692 510 560 690 604 C868 646 788 816 1014 896"
+              stroke="rgba(255,255,255,0.54)"
+              strokeWidth="11"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeDasharray="24 20"
+              style={{ pathLength: threadProgress, opacity: threadGlow }}
+            />
+          </svg>
 
           <div className="relative z-10 grid gap-7 lg:gap-8">
             {threads.map((thread, index) => {
