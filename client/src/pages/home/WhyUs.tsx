@@ -1,15 +1,13 @@
 import {
-  BookOpenCheck,
-  BrainCircuit,
   Compass,
+  Gauge,
   Handshake,
-  Layers3,
   LineChart,
-  Network,
+  Link,
   Puzzle,
-  Route,
-  Sparkles,
-  Target,
+  Rocket,
+  ShieldCheck,
+  Sprout,
   UsersRound,
 } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
@@ -21,43 +19,43 @@ const threads = [
     letter: "T",
     title: "T - TRAZAR.",
     desc: "Diseñamos la ruta de cambio identificando las necesidades, desafíos y realidades específicas de cada entorno educativo u organizacional.",
-    icon: Sparkles,
+    icon: Compass,
   },
   {
     letter: "E",
     title: "E - ENTRELAZAR.",
     desc: "Conectamos de forma empática a los actores clave: docentes, directivos, empresas y comunidades para activar la escucha activa.",
-    icon: BookOpenCheck,
+    icon: Handshake,
   },
   {
     letter: "J",
     title: "J - JUNTAR.",
     desc: "Unimos voluntades, capacidades y recursos bajo un mismo propósito, potenciando la fuerza de la acción colectiva.",
-    icon: Network,
+    icon: Link,
   },
   {
     letter: "I",
     title: "I - IMPULSAR.",
     desc: "Activamos la innovación pedagógica y social a través de experiencias de aprendizaje creativas, dinámicas y aplicables.",
-    icon: BrainCircuit,
+    icon: Rocket,
   },
   {
     letter: "D",
     title: "D - DESARROLLAR.",
     desc: "Fortalecemos el talento humano, las competencias pedagógicas y la cultura organizacional con un profundo sentido ético.",
-    icon: UsersRound,
+    icon: Sprout,
   },
   {
     letter: "O",
     title: "O - OPTIMIZAR.",
     desc: "Evaluamos y refinamos los procesos implementados, asegurando un acompañamiento estratégico basado en evidencias y resultados reales.",
-    icon: Route,
+    icon: Gauge,
   },
   {
     letter: "S",
     title: "S - SOSTENER.",
     desc: "Garantizamos que los aprendizajes queden firmemente instalados en el tejido institucional para que el impacto positivo permanezca en el tiempo.",
-    icon: Target,
+    icon: ShieldCheck,
   },
 ];
 
@@ -130,38 +128,41 @@ export const WhyUs = () => {
             aria-hidden="true"
           >
             <defs>
-              <pattern id="tejidos-texture" width="360" height="260" patternUnits="userSpaceOnUse">
-                <image href="/images/foto-01-transparente.png" width="360" height="260" preserveAspectRatio="xMidYMid slice" opacity="0.92" />
+              <pattern id="tejidos-texture" width="720" height="58" patternUnits="userSpaceOnUse">
+                <image href="/images/franja-02-transparente.png" width="720" height="58" preserveAspectRatio="none" opacity="1" />
               </pattern>
-              <linearGradient id="tejidos-energy" x1="80" y1="90" x2="1060" y2="900" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stopColor="hsl(var(--accent))" />
-                <stop offset="48%" stopColor="hsl(var(--turquoise))" />
-                <stop offset="100%" stopColor="hsl(var(--accent))" />
+              <linearGradient id="tejidos-thread" x1="82" y1="96" x2="1014" y2="896" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stopColor="rgba(255,128,31,0.7)" />
+                <stop offset="54%" stopColor="rgba(255,128,31,0.5)" />
+                <stop offset="100%" stopColor="rgba(80,235,192,0.58)" />
               </linearGradient>
+              <filter id="tejidos-thread-shadow" x="-8%" y="-8%" width="116%" height="116%">
+                <feDropShadow dx="0" dy="8" stdDeviation="8" floodColor="rgba(13,73,196,0.16)" />
+              </filter>
             </defs>
             <path
-              d="M82 96 C276 34 438 112 604 166 C808 232 966 196 1084 112 C1158 60 1126 26 1078 50 C1018 82 1146 172 1038 250 C878 366 392 250 198 354 C44 438 220 562 492 526 C730 496 974 566 940 700 C904 836 652 882 526 780 C418 692 510 560 690 604 C868 646 788 816 1014 896"
-              stroke="url(#tejidos-texture)"
-              strokeWidth="46"
+              d="M98 92 C292 42 456 102 612 164 C812 244 972 212 1086 116 C1126 82 1136 128 1080 190 C968 318 470 246 214 360 C58 430 174 558 456 528 C718 500 982 552 952 688 C916 846 650 884 528 774 C438 692 500 602 674 612 C842 622 826 782 1030 894"
+              stroke="url(#tejidos-thread)"
+              strokeWidth="20"
               strokeLinecap="round"
               strokeLinejoin="round"
-              opacity="0.16"
+              opacity="0.34"
             />
             <motion.path
-              d="M82 96 C276 34 438 112 604 166 C808 232 966 196 1084 112 C1158 60 1126 26 1078 50 C1018 82 1146 172 1038 250 C878 366 392 250 198 354 C44 438 220 562 492 526 C730 496 974 566 940 700 C904 836 652 882 526 780 C418 692 510 560 690 604 C868 646 788 816 1014 896"
-              stroke="url(#tejidos-energy)"
-              strokeWidth="34"
+              d="M98 92 C292 42 456 102 612 164 C812 244 972 212 1086 116 C1126 82 1136 128 1080 190 C968 318 470 246 214 360 C58 430 174 558 456 528 C718 500 982 552 952 688 C916 846 650 884 528 774 C438 692 500 602 674 612 C842 622 826 782 1030 894"
+              stroke="url(#tejidos-thread)"
+              strokeWidth="20"
               strokeLinecap="round"
               strokeLinejoin="round"
               style={{ pathLength: threadProgress, opacity: threadGlow }}
             />
             <motion.path
-              d="M82 96 C276 34 438 112 604 166 C808 232 966 196 1084 112 C1158 60 1126 26 1078 50 C1018 82 1146 172 1038 250 C878 366 392 250 198 354 C44 438 220 562 492 526 C730 496 974 566 940 700 C904 836 652 882 526 780 C418 692 510 560 690 604 C868 646 788 816 1014 896"
-              stroke="rgba(255,255,255,0.54)"
-              strokeWidth="11"
+              d="M98 92 C292 42 456 102 612 164 C812 244 972 212 1086 116 C1126 82 1136 128 1080 190 C968 318 470 246 214 360 C58 430 174 558 456 528 C718 500 982 552 952 688 C916 846 650 884 528 774 C438 692 500 602 674 612 C842 622 826 782 1030 894"
+              stroke="url(#tejidos-texture)"
+              strokeWidth="54"
               strokeLinecap="round"
               strokeLinejoin="round"
-              strokeDasharray="24 20"
+              filter="url(#tejidos-thread-shadow)"
               style={{ pathLength: threadProgress, opacity: threadGlow }}
             />
           </svg>

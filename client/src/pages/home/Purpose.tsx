@@ -1,12 +1,12 @@
-import { ArrowRight, CircleCheck, Sprout } from "lucide-react";
+import { ArrowRight, CircleCheck } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/button";
 
 const commitments = [
-  "Fortalecer personas, instituciones y comunidades.",
-  "Acompañar el desarrollo de capacidades.",
-  "Innovar con propósito y aplicabilidad.",
-  "Construir soluciones con cambios reales y sostenibles.",
+  "Comunidades conectadas: Tejemos redes de apoyo y colaboración entre el entorno escolar, social y empresarial.",
+  "Formación Docente: Potenciamos habilidades y competencias prácticas en los líderes del aula.",
+  "Herramientas de Innovación: Diseñamos metodologías y soluciones creativas adaptadas a cada contexto.",
+  "Impacto Sostenible: Aseguramos que las estrategias sigan funcionando a largo plazo.",
 ];
 
 export const Purpose = () => {
@@ -19,7 +19,9 @@ export const Purpose = () => {
           <Reveal>
             <div className="flex h-full flex-col justify-between rounded-lg bg-primary p-8 text-white md:p-10">
               <div>
-                <Sprout className="mb-8 h-10 w-10 text-turquoise" />
+                <div className="mb-8 inline-flex rounded-lg bg-white px-4 py-3 shadow-lg shadow-slate-950/10">
+                  <img src="/images/logo.png" alt="Cambio Educativo" className="h-14 w-auto" />
+                </div>
                 <span className="text-xs font-black uppercase tracking-[0.28em] text-turquoise">Qué nos mueve</span>
                 <h2 className="mt-4 text-4xl font-black leading-tight md:text-6xl font-display">
                   Cambiar la educación para cambiar realidades.
