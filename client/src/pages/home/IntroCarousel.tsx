@@ -14,6 +14,13 @@ export const IntroCarousel = () => {
   const [current, setCurrent] = useState(0);
 
   useEffect(() => {
+    slides.forEach((slide) => {
+      const image = new Image();
+      image.src = slide;
+    });
+  }, []);
+
+  useEffect(() => {
     const timer = window.setInterval(() => {
       setCurrent((index) => (index + 1) % slides.length);
     }, 9000);
@@ -29,22 +36,27 @@ export const IntroCarousel = () => {
     setCurrent((index) => (index + 1) % slides.length);
   };
 
-  const slide = slides[current];
-
   return (
     <section id="inicio" className="relative min-h-[100svh] overflow-hidden bg-slate-950 text-white">
-      <AnimatePresence mode="wait">
-        <motion.img
-          key={slide}
-          src={slide}
-          alt=""
-          aria-hidden="true"
-          className="absolute inset-0 h-full w-full object-cover"
-          initial={{ opacity: 0, scale: 1.04 }}
-          animate={{ opacity: 1, scale: 1 }}
-          exit={{ opacity: 0, scale: 1.02 }}
-          transition={{ duration: 3, ease: "easeInOut" }}
-        />
+      <AnimatePresence initial={false}>
+        {slides.map((item, index) => (
+          <motion.img
+            key={item}
+            src={item}
+            alt=""
+            aria-hidden="true"
+            loading="eager"
+            decoding="async"
+            fetchPriority={index === 0 ? "high" : "auto"}
+            className="absolute inset-0 h-full w-full object-cover object-center"
+            initial={false}
+            animate={{
+              opacity: index === current ? 1 : 0,
+              scale: index === current ? 1 : 1.015,
+            }}
+            transition={{ duration: 0.8, ease: "easeInOut" }}
+          />
+        ))}
       </AnimatePresence>
 
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(2,6,23,0.28)_0%,rgba(2,6,23,0.04)_38%,rgba(2,6,23,0.48)_100%)]" />

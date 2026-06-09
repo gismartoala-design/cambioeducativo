@@ -1,12 +1,14 @@
-import { Link } from "wouter";
+import { Link, useLocation } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ArrowUpRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export const Navbar = () => {
+  const [location] = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const showHeroLogoShadow = !scrolled && location === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,7 +42,11 @@ export const Navbar = () => {
               whileHover={{ scale: 1.05 }}
               src="/images/logo.png"
               alt="Cambio Educativo"
-              className="h-10 w-auto object-contain transition-all md:h-12"
+              className={`h-10 w-auto object-contain transition-all md:h-12 ${
+                showHeroLogoShadow
+                  ? "drop-shadow-[0_4px_18px_rgba(255,255,255,0.95)] [filter:drop-shadow(0_2px_10px_rgba(0,0,0,0.38))_drop-shadow(0_0_18px_rgba(255,255,255,0.92))]"
+                  : ""
+              }`}
             />
           </a>
         </Link>
@@ -64,7 +70,7 @@ export const Navbar = () => {
             className={`h-11 rounded-lg px-5 font-black shadow-lg transition-all ${
               scrolled
                 ? "bg-primary text-white shadow-primary/20 hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30"
-                : "bg-white/92 text-primary shadow-black/30 backdrop-blur hover:bg-turquoise hover:text-primary"
+                : "bg-white/92 text-primary shadow-black/30 backdrop-blur hover:bg-primary/90 hover:text-white"
             }`}
           >
             <a href="/#contacto">Agendar</a>

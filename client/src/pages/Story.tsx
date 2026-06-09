@@ -224,7 +224,7 @@ export default function Story() {
 
         <SectionPatternDivider tone="turquoise" />
 
-        <section className="bg-[#f7fbff] py-18 md:py-24">
+        <section className="bg-primary/5 py-18 md:py-24">
           <div className="container mx-auto grid gap-8 px-6 lg:grid-cols-[1fr_0.85fr] lg:items-center">
             <Reveal>
               <div>

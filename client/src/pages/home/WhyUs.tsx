@@ -102,8 +102,8 @@ export const WhyUs = () => {
   ];
 
   return (
-    <section id="tejidos" className="relative overflow-hidden bg-[#f7fbff] py-24 md:py-28">
-      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(90deg,rgba(13,73,196,0.055)_1px,transparent_1px),linear-gradient(180deg,rgba(13,73,196,0.04)_1px,transparent_1px)] bg-[size:76px_76px]" />
+    <section id="tejidos" className="relative overflow-hidden bg-primary/5 py-24 md:py-28">
+      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(90deg,rgba(22,78,135,0.055)_1px,transparent_1px),linear-gradient(180deg,rgba(22,78,135,0.04)_1px,transparent_1px)] bg-[size:76px_76px]" />
       <div className="container mx-auto px-6">
         <div className="relative z-10 mx-auto max-w-4xl text-center">
           <Reveal>
@@ -127,42 +127,19 @@ export const WhyUs = () => {
             preserveAspectRatio="none"
             aria-hidden="true"
           >
-            <defs>
-              <pattern id="tejidos-texture" width="720" height="58" patternUnits="userSpaceOnUse">
-                <image href="/images/franja-02-transparente.png" width="720" height="58" preserveAspectRatio="none" opacity="1" />
-              </pattern>
-              <linearGradient id="tejidos-thread" x1="82" y1="96" x2="1014" y2="896" gradientUnits="userSpaceOnUse">
-                <stop offset="0%" stopColor="rgba(255,128,31,0.7)" />
-                <stop offset="54%" stopColor="rgba(255,128,31,0.5)" />
-                <stop offset="100%" stopColor="rgba(80,235,192,0.58)" />
-              </linearGradient>
-              <filter id="tejidos-thread-shadow" x="-8%" y="-8%" width="116%" height="116%">
-                <feDropShadow dx="0" dy="8" stdDeviation="8" floodColor="rgba(13,73,196,0.16)" />
-              </filter>
-            </defs>
             <path
               d="M98 92 C292 42 456 102 612 164 C812 244 972 212 1086 116 C1126 82 1136 128 1080 190 C968 318 470 246 214 360 C58 430 174 558 456 528 C718 500 982 552 952 688 C916 846 650 884 528 774 C438 692 500 602 674 612 C842 622 826 782 1030 894"
-              stroke="url(#tejidos-thread)"
+              stroke="rgba(255,128,31,0.34)"
               strokeWidth="20"
               strokeLinecap="round"
               strokeLinejoin="round"
-              opacity="0.34"
             />
             <motion.path
               d="M98 92 C292 42 456 102 612 164 C812 244 972 212 1086 116 C1126 82 1136 128 1080 190 C968 318 470 246 214 360 C58 430 174 558 456 528 C718 500 982 552 952 688 C916 846 650 884 528 774 C438 692 500 602 674 612 C842 622 826 782 1030 894"
-              stroke="url(#tejidos-thread)"
+              stroke="#FF801F"
               strokeWidth="20"
               strokeLinecap="round"
               strokeLinejoin="round"
-              style={{ pathLength: threadProgress, opacity: threadGlow }}
-            />
-            <motion.path
-              d="M98 92 C292 42 456 102 612 164 C812 244 972 212 1086 116 C1126 82 1136 128 1080 190 C968 318 470 246 214 360 C58 430 174 558 456 528 C718 500 982 552 952 688 C916 846 650 884 528 774 C438 692 500 602 674 612 C842 622 826 782 1030 894"
-              stroke="url(#tejidos-texture)"
-              strokeWidth="54"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              filter="url(#tejidos-thread-shadow)"
               style={{ pathLength: threadProgress, opacity: threadGlow }}
             />
           </svg>
@@ -175,7 +152,7 @@ export const WhyUs = () => {
                 <Reveal key={thread.letter} delay={index * 0.04}>
                   <article className={`relative max-w-xl rounded-lg bg-white p-5 shadow-md ring-1 ring-primary/10 transition-transform duration-300 hover:scale-[1.015] md:max-w-[34rem] lg:w-[28rem] ${threadOffsets[index]}`}>
                     <div className="flex gap-4">
-                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-[#0D49C4] text-white shadow-lg shadow-[#0D49C4]/20">
+                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-[#164E87] text-white shadow-lg shadow-[#164E87]/20">
                         <Icon className="h-7 w-7 stroke-[1.9]" />
                       </div>
                       <div className="min-w-0">

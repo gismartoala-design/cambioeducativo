@@ -17,13 +17,17 @@ export const Purpose = () => {
       <div className="container relative z-10 mx-auto px-6">
         <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-stretch">
           <Reveal>
-            <div className="flex h-full flex-col justify-between rounded-lg bg-primary p-8 text-white md:p-10">
+            <div className="flex h-full flex-col justify-between rounded-lg bg-[#164E87] p-8 text-white md:p-10">
               <div>
-                <div className="mb-8 inline-flex rounded-lg bg-white px-4 py-3 shadow-lg shadow-slate-950/10">
+                <div className="inline-flex rounded-lg bg-white px-4 py-3 shadow-lg shadow-slate-950/10">
                   <img src="/images/logo.png" alt="Cambio Educativo" className="h-14 w-auto" />
                 </div>
-                <span className="text-xs font-black uppercase tracking-[0.28em] text-turquoise">Qué nos mueve</span>
-                <h2 className="mt-4 text-4xl font-black leading-tight md:text-6xl font-display">
+                <div className="mt-7 md:mt-8">
+                  <span className="block text-xs font-black uppercase tracking-[0.28em] text-turquoise md:text-sm">
+                    Qué nos mueve
+                  </span>
+                </div>
+                <h2 className="mt-5 font-display text-4xl font-black leading-tight md:text-6xl">
                   Cambiar la educación para cambiar realidades.
                 </h2>
               </div>
@@ -35,7 +39,7 @@ export const Purpose = () => {
 
           <div className="rounded-lg border border-primary/10 bg-white p-6 shadow-xl shadow-primary/5 md:p-8">
             <Reveal delay={0.12}>
-              <p className="text-2xl font-bold leading-relaxed text-slate-800 font-display">
+              <p className="font-display text-2xl font-bold leading-relaxed text-slate-800">
                 Acompañamos el desarrollo de capacidades, la innovación con propósito y la construcción de soluciones que generen cambios reales y sostenibles en el tiempo.
               </p>
             </Reveal>
