@@ -26,7 +26,7 @@ export const Navbar = () => {
     { name: "TEJIDOS", href: "/#tejidos" },
     { name: "Servicios", href: "/#servicios" },
   ];
- 
+
   return (
     <nav
       className={`fixed left-0 right-0 top-0 z-50 transition-all duration-500 ease-in-out ${
@@ -73,7 +73,7 @@ export const Navbar = () => {
                 : "bg-white/92 text-primary shadow-black/30 backdrop-blur hover:bg-primary/90 hover:text-white"
             }`}
           >
-            <a href="/#contacto">Agendar</a>
+            <a href="/#contacto">Conversemos</a>
           </Button>
         </div>
 
@@ -112,7 +112,7 @@ export const Navbar = () => {
                 </motion.a>
               ))}
               <Button asChild className="mt-2 h-14 w-full rounded-lg bg-primary text-lg font-black text-white shadow-xl">
-                <a href="/#contacto" onClick={() => setIsOpen(false)}>Agendar ahora</a>
+                <a href="/#contacto" onClick={() => setIsOpen(false)}>Conversemos</a>
               </Button>
             </div>
           </motion.div>

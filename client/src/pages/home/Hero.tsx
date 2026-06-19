@@ -6,7 +6,6 @@ import {
   GraduationCap,
   Lightbulb,
   Network,
-  Sparkles,
   UsersRound,
 } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
@@ -15,9 +14,9 @@ import { Button } from "@/components/ui/button";
 const audiences = ["Instituciones educativas", "Empresas", "Comunidades"];
 
 const valuePoints = [
-  "Diagnóstico y ruta de cambio.",
-  "Formación docente y organizacional.",
-  "Innovación con impacto medible.",
+  "Diagnóstico y ruta de cambio",
+  "Formación docente y organizacional",
+  "Innovación con impacto medible",
 ];
 
 const impactPaths = [
@@ -44,40 +43,27 @@ export const Hero = () => {
       <div className="container relative z-10 mx-auto flex h-full items-center px-4 pb-5 pt-24 sm:px-6 sm:pb-6 lg:pb-8 lg:pt-28 [@media(max-height:720px)]:pt-20">
         <div className="grid w-full items-center gap-5 lg:grid-cols-[1.05fr_0.95fr] xl:gap-10">
           <div className="min-w-0">
-            <Reveal>
-              <span className="inline-flex max-w-full items-center gap-2 rounded-lg border border-primary/15 bg-white/88 px-3 py-1.5 text-xs font-black text-primary shadow-sm backdrop-blur sm:text-sm">
-                <Sparkles className="h-4 w-4 shrink-0 text-accent" />
-                <span className="truncate">Transformación educativa con propósito.</span>
-              </span>
-            </Reveal>
-
             <Reveal delay={0.1}>
-              <div className="mt-3 sm:mt-4 [@media(max-height:720px)]:mt-2">
-                <p className="text-[0.7rem] font-black uppercase tracking-[0.28em] text-accent sm:text-xs">
-                  Cambio Educativo
-                </p>
-                <h1 className="mt-2 max-w-4xl font-display text-[clamp(1.9rem,5.7vw,4.25rem)] font-black leading-[0.98] text-foreground [@media(max-height:720px)]:text-[clamp(1.65rem,5.1vw,3.45rem)]">
-                  Tejemos educación con propósito para transformar realidades.
+              <div className="sm:mt-4 [@media(max-height:720px)]:mt-2">
+                <h1 className="max-w-4xl font-display text-[clamp(1.9rem,5.7vw,4.25rem)] font-black leading-[0.98] text-foreground [@media(max-height:720px)]:text-[clamp(1.65rem,5.1vw,3.45rem)]">
+                  Tejemos educación con propósito
                 </h1>
               </div>
             </Reveal>
 
             <Reveal delay={0.18}>
               <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-700 sm:text-base lg:text-[1.02rem] lg:leading-7 [@media(max-height:720px)]:line-clamp-4 [@media(max-height:720px)]:text-sm [@media(max-height:720px)]:leading-5">
-                Somos una start-up social que acompaña procesos de transformación educativa y organizacional a través de la innovación, el aprendizaje y la acción colectiva. Trabajamos junto a instituciones, empresas y comunidades que creen que educar no es solo enseñar, sino crear oportunidades, fortalecer capacidades y generar cambios sostenibles con impacto real.
+                Acompañamos a instituciones y comunidades que sueñan con transformar la educación, generando impacto real y con sentido
               </p>
             </Reveal>
 
             <Reveal delay={0.26}>
               <div className="mt-4 flex flex-col gap-2.5 sm:flex-row [@media(max-height:720px)]:mt-3">
                 <Button asChild size="lg" className="h-11 rounded-lg bg-primary px-5 text-sm font-black text-white shadow-xl shadow-primary/25 transition-transform hover:-translate-y-0.5 hover:bg-primary/90 sm:h-12 sm:text-base">
-                  <a href="#contacto">
-                    Agenda una asesoría
+                  <a href="#servicios">
+                    Descubre cómo podemos acompañarte
                     <ArrowRight className="ml-1 h-5 w-5" />
                   </a>
-                </Button>
-                <Button asChild variant="outline" size="lg" className="h-11 rounded-lg border-2 border-primary/20 bg-white/85 px-5 text-sm font-black text-primary shadow-sm backdrop-blur transition-transform hover:-translate-y-0.5 hover:bg-primary/5 sm:h-12 sm:text-base">
-                  <a href="#servicios">Ver servicios</a>
                 </Button>
               </div>
             </Reveal>
@@ -96,17 +82,17 @@ export const Hero = () => {
 
           <Reveal delay={0.22} direction="left">
             <div className="relative mx-auto hidden w-full max-w-[480px] lg:block xl:max-w-[520px] [@media(max-height:760px)]:max-w-[440px]">
-              <div className="relative overflow-hidden rounded-lg border border-primary/12 bg-white p-4 shadow-[0_35px_100px_-48px_rgba(13,73,196,0.78)] [@media(max-height:760px)]:p-3">
+              <div className="relative overflow-hidden rounded-lg border border-primary/12 bg-white p-4 shadow-[0_35px_100px_-48px_rgba(22,78,135,0.78)] [@media(max-height:760px)]:p-3">
                 <div className="grid gap-3 rounded-lg bg-primary/5 p-3 sm:grid-cols-[3.25rem_1fr]">
                   <div className="flex h-[3.25rem] w-[3.25rem] items-center justify-center rounded-lg bg-primary text-white shadow-lg shadow-primary/25">
                     <GraduationCap className="h-6 w-6" />
                   </div>
                   <div>
                     <p className="text-xs font-black uppercase tracking-[0.24em] text-accent">
-                      Ruta de transformación.
+                      Ruta de transformación
                     </p>
                     <p className="mt-1 font-display text-2xl font-black leading-tight text-primary [@media(max-height:760px)]:text-xl">
-                      De la intención al cambio real.
+                      De la intención al cambio real
                     </p>
                   </div>
                 </div>

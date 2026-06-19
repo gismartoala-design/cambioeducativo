@@ -1,10 +1,10 @@
-import { ArrowUpRight, Building2, GraduationCap, Handshake, School, Users } from "lucide-react";
+import { ArrowUpRight, Building2, GraduationCap, Handshake, School } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    title: "Transformación institucional.",
+    title: "Acompañamiento para la transformación",
     desc: "Acompañamos a escuelas, colegios, centros infantiles, institutos y universidades en procesos de innovación, liderazgo y mejora organizacional.",
     img: "/images/image-4.jpg",
     audience: "Instituciones educativas",
@@ -12,7 +12,7 @@ const services = [
     icon: School,
   },
   {
-    title: "Formación y capacitación docente.",
+    title: "Formación y capacitación",
     desc: "Diseñamos experiencias de aprendizaje para fortalecer capacidades pedagógicas, tecnológicas, socioemocionales y de liderazgo educativo.",
     img: "/images/image-2.jpg",
     audience: "Docentes y directivos",
@@ -23,12 +23,12 @@ const services = [
     title: "Aprendizaje organizacional.",
     desc: "Creamos soluciones de formación, cultura e innovación para empresas y organizaciones que quieren desarrollar equipos con propósito.",
     img: "/images/image-5.jpg",
-    audience: "Empresas y organizaciones",
+    audience: "Crecimiento y desarrollo",
     result: "Equipos fortalecidos, cultura de aprendizaje activa y procesos formativos conectados con objetivos institucionales.",
     icon: Building2,
   },
   {
-    title: "Proyectos sociales y comunitarios.",
+    title: "Proyectos sociales y comunitarios",
     desc: "Trabajamos con fundaciones, ONGs, organismos internacionales y comunidades para impulsar capacidades e impacto sostenible.",
     img: "/images/image-3.jpg",
     audience: "ONGs y comunidad",
@@ -37,32 +37,18 @@ const services = [
   },
 ];
 
-const audiences = [
-  "Instituciones educativas",
-  "Empresas",
-  "Docentes",
-  "Comunidad",
-  "ONGs",
-  "Profesionales en formación continua",
-];
-
 export const Services = () => {
   return (
-    <section id="servicios" className="relative overflow-hidden bg-[#f7fbff] py-24 md:py-28">
-      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(90deg,rgba(13,73,196,0.06)_1px,transparent_1px),linear-gradient(180deg,rgba(13,73,196,0.05)_1px,transparent_1px)] bg-[size:72px_72px]" />
+    <section id="servicios" className="relative overflow-hidden bg-primary/5 py-24 md:py-28">
+      <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(90deg,rgba(22,78,135,0.06)_1px,transparent_1px),linear-gradient(180deg,rgba(22,78,135,0.05)_1px,transparent_1px)] bg-[size:72px_72px]" />
 
       <div className="container relative z-10 mx-auto px-6">
-        <div className="mb-14 grid gap-8 lg:grid-cols-[1fr_0.72fr] lg:items-end">
+        <div className="mb-14">
           <Reveal>
             <span className="text-xs font-black uppercase tracking-[0.28em] text-primary">Qué hacemos</span>
             <h2 className="mt-4 max-w-3xl text-4xl font-black leading-tight md:text-6xl font-display">
-              Rutas de cambio para cada comunidad.
+              Rutas de cambio para cada comunidad
             </h2>
-          </Reveal>
-          <Reveal delay={0.16}>
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              Acompañamos el desarrollo de capacidades, la innovación con propósito y la construcción de cambios sostenibles.
-            </p>
           </Reveal>
         </div>
 
@@ -103,32 +89,6 @@ export const Services = () => {
             );
           })}
         </div>
-
-        <Reveal delay={0.2}>
-          <div className="mt-12 rounded-lg border border-primary/10 bg-white p-6 shadow-sm md:p-8">
-            <div className="mb-5 flex items-center gap-3">
-              <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary text-white">
-                <Users className="h-5 w-5" />
-              </div>
-              <h3 className="text-2xl font-black text-foreground font-display">Públicos que acompañamos</h3>
-            </div>
-            <div className="mb-6 grid gap-5 lg:grid-cols-2">
-              <p className="leading-relaxed text-muted-foreground">
-                Cambio Educativo está dirigido principalmente a instituciones educativas como escuelas, colegios, centros infantiles, institutos y universidades, así como a docentes, directivos y líderes educativos que buscan fortalecer sus procesos de aprendizaje, innovación, liderazgo y transformación institucional.
-              </p>
-              <p className="leading-relaxed text-muted-foreground">
-                También trabajamos con empresas, fundaciones, ONGs, organismos internacionales y organizaciones que requieren soluciones de formación, innovación, transformación cultural y aprendizaje organizacional con propósito, aplicabilidad y enfoque en resultados sostenibles.
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              {audiences.map((audience) => (
-                <span key={audience} className="rounded-lg border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-bold text-slate-700">
-                  {audience}
-                </span>
-              ))}
-            </div>
-          </div>
-        </Reveal>
       </div>
     </section>
   );

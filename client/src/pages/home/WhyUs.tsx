@@ -1,189 +1,80 @@
-import {
-  Compass,
-  Gauge,
-  Handshake,
-  LineChart,
-  Link,
-  Puzzle,
-  Rocket,
-  ShieldCheck,
-  Sprout,
-  UsersRound,
-} from "lucide-react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { useRef } from "react";
 import { Reveal } from "@/components/ui/Reveal";
 
 const threads = [
   {
     letter: "T",
-    title: "T - TRAZAR.",
-    desc: "Diseñamos la ruta de cambio identificando las necesidades, desafíos y realidades específicas de cada entorno educativo u organizacional.",
-    icon: Compass,
+    title: "Tecnología educativa con propósito",
+    tone: "from-[#f78c16] to-[#ef6a00]",
   },
   {
     letter: "E",
-    title: "E - ENTRELAZAR.",
-    desc: "Conectamos de forma empática a los actores clave: docentes, directivos, empresas y comunidades para activar la escucha activa.",
-    icon: Handshake,
+    title: "Educación para la transformación",
+    tone: "from-[#48d3df] to-[#19a9ce]",
   },
   {
     letter: "J",
-    title: "J - JUNTAR.",
-    desc: "Unimos voluntades, capacidades y recursos bajo un mismo propósito, potenciando la fuerza de la acción colectiva.",
-    icon: Link,
+    title: "Justicia social",
+    tone: "from-[#1e5d9f] to-[#15457c]",
   },
   {
     letter: "I",
-    title: "I - IMPULSAR.",
-    desc: "Activamos la innovación pedagógica y social a través de experiencias de aprendizaje creativas, dinámicas y aplicables.",
-    icon: Rocket,
+    title: "Innovación e investigación",
+    tone: "from-[#71e2eb] to-[#31b9d2]",
   },
   {
     letter: "D",
-    title: "D - DESARROLLAR.",
-    desc: "Fortalecemos el talento humano, las competencias pedagógicas y la cultura organizacional con un profundo sentido ético.",
-    icon: Sprout,
+    title: "Desarrollo comunitario",
+    tone: "from-[#0f8e92] to-[#0a6c74]",
   },
   {
     letter: "O",
-    title: "O - OPTIMIZAR.",
-    desc: "Evaluamos y refinamos los procesos implementados, asegurando un acompañamiento estratégico basado en evidencias y resultados reales.",
-    icon: Gauge,
+    title: "Organización estratégica con impacto",
+    tone: "from-[#ff9b1f] to-[#ff7b00]",
   },
   {
     letter: "S",
-    title: "S - SOSTENER.",
-    desc: "Garantizamos que los aprendizajes queden firmemente instalados en el tejido institucional para que el impacto positivo permanezca en el tiempo.",
-    icon: ShieldCheck,
-  },
-];
-
-const differentiators = [
-  {
-    title: "Diagnostico contextual.",
-    desc: "Leemos cada realidad antes de disenar soluciones.",
-    icon: Compass,
-  },
-  {
-    title: "Diseno a medida.",
-    desc: "Creamos rutas de aprendizaje y transformacion segun el publico.",
-    icon: Puzzle,
-  },
-  {
-    title: "Acompanamiento cercano.",
-    desc: "Trabajamos con equipos, lideres y comunidades durante el proceso.",
-    icon: UsersRound,
-  },
-  {
-    title: "Resultados sostenibles.",
-    desc: "Medimos avances y dejamos capacidades instaladas.",
-    icon: LineChart,
+    title: "Saberes compartidos y sostenibles",
+    tone: "from-[#2a73c9] to-[#124c97]",
   },
 ];
 
 export const WhyUs = () => {
-  const threadAreaRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: threadAreaRef,
-    offset: ["start 72%", "end 48%"],
-  });
-  const threadProgress = useTransform(scrollYProgress, [0, 1], [0.04, 1]);
-  const threadGlow = useTransform(scrollYProgress, [0, 0.16, 1], [0, 0.95, 1]);
-
-  const threadOffsets = [
-    "lg:ml-[4%] lg:-rotate-1",
-    "lg:ml-auto lg:mr-[6%] lg:rotate-1",
-    "lg:ml-[12%] lg:rotate-[0.5deg]",
-    "lg:ml-auto lg:mr-[14%] lg:-rotate-1",
-    "lg:ml-[5%] lg:rotate-1",
-    "lg:ml-auto lg:mr-[7%] lg:-rotate-[0.5deg]",
-    "lg:ml-auto lg:mr-[24%] lg:rotate-[0.5deg]",
-  ];
-
   return (
     <section id="tejidos" className="relative overflow-hidden bg-primary/5 py-24 md:py-28">
       <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(90deg,rgba(22,78,135,0.055)_1px,transparent_1px),linear-gradient(180deg,rgba(22,78,135,0.04)_1px,transparent_1px)] bg-[size:76px_76px]" />
-      <div className="container mx-auto px-6">
-        <div className="relative z-10 mx-auto max-w-4xl text-center">
+
+      <div className="container relative z-10 mx-auto px-6">
+        <div className="mx-auto max-w-5xl text-center">
           <Reveal>
-            <span className="brand-kicker text-xs text-primary">Modelo TEJIDOS</span>
-            <h2 className="mt-4 text-4xl font-black leading-tight md:text-6xl font-display">
-              Una forma propia de acompanar el cambio.
+            <h2 className="text-4xl font-black leading-tight text-slate-950 md:text-6xl font-display">
+              TEJIDOS
             </h2>
           </Reveal>
-          <Reveal delay={0.14}>
-            <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              TEJIDOS organiza nuestra manera de trabajar: escuchar, conectar y transformar cada proceso educativo con proposito.
+
+          <Reveal delay={0.08}>
+            <p className="mt-5 max-w-4xl text-lg leading-relaxed text-slate-700 md:text-2xl">
+              Un modelo donde cada hilo representa <strong>personas, ideas y acciones</strong> que, al entrelazarse, hacen posible la transformación de instituciones, organizaciones y comunidades.
             </p>
           </Reveal>
         </div>
 
-        <div ref={threadAreaRef} className="relative z-10 mx-auto mt-14 max-w-7xl overflow-visible">
-          <svg
-            className="pointer-events-none absolute inset-0 z-0 h-full w-full overflow-visible"
-            viewBox="0 0 1200 980"
-            fill="none"
-            preserveAspectRatio="none"
-            aria-hidden="true"
-          >
-            <path
-              d="M98 92 C292 42 456 102 612 164 C812 244 972 212 1086 116 C1126 82 1136 128 1080 190 C968 318 470 246 214 360 C58 430 174 558 456 528 C718 500 982 552 952 688 C916 846 650 884 528 774 C438 692 500 602 674 612 C842 622 826 782 1030 894"
-              stroke="rgba(255,128,31,0.34)"
-              strokeWidth="20"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <motion.path
-              d="M98 92 C292 42 456 102 612 164 C812 244 972 212 1086 116 C1126 82 1136 128 1080 190 C968 318 470 246 214 360 C58 430 174 558 456 528 C718 500 982 552 952 688 C916 846 650 884 528 774 C438 692 500 602 674 612 C842 622 826 782 1030 894"
-              stroke="#FF801F"
-              strokeWidth="20"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              style={{ pathLength: threadProgress, opacity: threadGlow }}
-            />
-          </svg>
-
-          <div className="relative z-10 grid gap-7 lg:gap-8">
-            {threads.map((thread, index) => {
-              const Icon = thread.icon;
-
-              return (
-                <Reveal key={thread.letter} delay={index * 0.04}>
-                  <article className={`relative max-w-xl rounded-lg bg-white p-5 shadow-md ring-1 ring-primary/10 transition-transform duration-300 hover:scale-[1.015] md:max-w-[34rem] lg:w-[28rem] ${threadOffsets[index]}`}>
-                    <div className="flex gap-4">
-                      <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-[#164E87] text-white shadow-lg shadow-[#164E87]/20">
-                        <Icon className="h-7 w-7 stroke-[1.9]" />
-                      </div>
-                      <div className="min-w-0">
-                        <h3 className="font-display text-base font-black uppercase leading-tight text-slate-950">
-                          {thread.title}
-                        </h3>
-                        <p className="mt-2 text-sm font-medium leading-relaxed text-slate-600">
-                          {thread.desc}
-                        </p>
-                      </div>
-                    </div>
-                  </article>
-                </Reveal>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className="relative z-10 mt-14 grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-          {differentiators.map((item, index) => {
-            const Icon = item.icon;
-            return (
-              <Reveal key={item.title} delay={index * 0.06}>
-                <div className="h-full rounded-lg border border-slate-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-xl hover:shadow-primary/10">
-                  <Icon className="mb-5 h-7 w-7 text-accent" />
-                  <h3 className="text-lg font-black text-foreground font-display">{item.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.desc}</p>
+        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7">
+          {threads.map((thread, index) => (
+            <Reveal key={thread.letter} delay={index * 0.05}>
+              <article className="flex h-full flex-col items-center text-center">
+                <div className={`flex aspect-[0.8] w-full max-w-[120px] items-center justify-center rounded-[0.35rem] bg-gradient-to-br ${thread.tone} p-2 shadow-lg shadow-primary/10`}>
+                  <div className="flex h-full w-full items-center justify-center rounded-[0.2rem] border border-white/25 bg-white/8">
+                    <span className="font-display text-6xl font-black leading-none text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.16)] md:text-7xl">
+                      {thread.letter}
+                    </span>
+                  </div>
                 </div>
-              </Reveal>
-            );
-          })}
+                <p className="mt-4 max-w-[150px] text-sm font-bold leading-snug text-slate-800">
+                  {thread.title}
+                </p>
+              </article>
+            </Reveal>
+          ))}
         </div>
       </div>
     </section>
