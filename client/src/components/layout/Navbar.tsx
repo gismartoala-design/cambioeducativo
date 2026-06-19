@@ -22,7 +22,6 @@ export const Navbar = () => {
     { name: "Inicio", href: "/#inicio" },
     { name: "Quiénes somos", href: "/historia" },
     { name: "Nos mueve", href: "/#nos-mueve" },
-    { name: "Públicos", href: "/#publicos" },
     { name: "TEJIDOS", href: "/#tejidos" },
     { name: "Servicios", href: "/#servicios" },
   ];

@@ -1,4 +1,4 @@
-import { Clock, Mail, MessageCircle, Phone, Send } from "lucide-react";
+import { Mail, MessageCircle, Send } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 import { Button } from "@/components/ui/button";
 
@@ -10,22 +10,10 @@ const contactItems = [
     icon: MessageCircle,
   },
   {
-    label: "Teléfono",
-    value: "099 776 9984",
-    href: "tel:+593997769984",
-    icon: Phone,
-  },
-  {
     label: "Correo",
     value: "contacto@cambioeducativo.com",
     href: "mailto:contacto@cambioeducativo.com",
     icon: Mail,
-  },
-  {
-    label: "Horario",
-    value: "Lun - Vie 8h00-18h00",
-    href: "#contacto",
-    icon: Clock,
   },
 ];
 
@@ -41,11 +29,11 @@ export const Contact = () => {
               <div>
                 <span className="text-xs font-black uppercase tracking-[0.28em] text-turquoise">Trabajemos juntos</span>
                 <h2 className="mt-5 max-w-2xl font-display text-4xl font-black leading-tight md:text-6xl">
-                  Empecemos a tejer tu próximo cambio.
+                  Empecemos a tejer tu próximo cambio
                 </h2>
               </div>
               <p className="mt-10 max-w-xl text-lg leading-relaxed text-blue-50">
-                Déjanos tus datos y cuéntanos qué proceso quieres iniciar. Así podremos preparar una conversación estratégica y una ruta inicial de colaboración.
+                Déjanos tus datos y cuéntanos cómo crees que podemos acompañarte.
               </p>
             </div>
           </Reveal>
@@ -81,8 +69,8 @@ export const Contact = () => {
                 </div>
 
                 <label className="grid gap-2 text-sm font-bold text-blue-50">
-                  ¿En qué proyecto te gustaría que colaboremos?
-                  <textarea name="proyecto" required rows={5} className="resize-none rounded-lg border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-turquoise" placeholder="Cuéntanos si buscas formación docente, innovación educativa, desarrollo organizacional o un proyecto de impacto." />
+                  ¿Qué deseas lograr junto a Cambio Educativo?
+                  <textarea name="proyecto" required rows={5} className="resize-none rounded-lg border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-turquoise" placeholder="Cuéntanos qué reto, objetivo o proceso te gustaría impulsar." />
                 </label>
 
                 <Button type="submit" size="lg" className="mt-2 h-14 rounded-lg bg-accent px-7 font-black text-white hover:bg-accent/90">

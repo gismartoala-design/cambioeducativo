@@ -26,9 +26,7 @@ const socialLinks = [
 const footerLinks = [
   { label: "Quiénes somos", href: "/historia" },
   { label: "Qué nos mueve", href: "/#nos-mueve" },
-  { label: "Públicos", href: "/#publicos" },
   { label: "TEJIDOS", href: "/#tejidos" },
-  { label: "Impacto", href: "/#impacto" },
   { label: "Servicios", href: "/#servicios" },
   { label: "Contacto", href: "/#contacto" },
 ];
@@ -70,11 +68,6 @@ export const Footer = () => {
                   </a>
                 );
               })}
-            </div>
-            <div className="mt-6 text-sm leading-relaxed">
-              <p>contacto@cambioeducativo.com</p>
-              <p>WhatsApp: 099 776 9984</p>
-              <p>Lun - Vie 8h00-18h00</p>
             </div>
           </div>
         </div>
