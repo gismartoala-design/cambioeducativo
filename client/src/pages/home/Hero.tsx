@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button";
 const audiences = ["Instituciones educativas", "Empresas", "Comunidades"];
 
 const valuePoints = [
-  "Diagn\u00f3stico y ruta de cambio",
-  "Formaci\u00f3n docente y organizacional",
-  "Innovaci\u00f3n con impacto medible",
+  "Escuela de transformaci\u00f3n educativa",
+  "Consultor\u00edas, asesor\u00edas y proyectos",
+  "Gesti\u00f3n de transformaci\u00f3n educativa",
 ];
 
 export const Hero = () => {
