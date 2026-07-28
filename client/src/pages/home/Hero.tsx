@@ -6,9 +6,9 @@ import { Button } from "@/components/ui/button";
 const audiences = ["Instituciones educativas", "Empresas", "Comunidades"];
 
 const valuePoints = [
-  "Escuela de transformacion educativa",
-  "Consultorias, asesorias y proyectos",
-  "Gestion de transformacion educativa",
+  "Diagnóstico y ruta de cambio",
+  "Formación docente y organizacional",
+  "Innovación con impacto medible",
 ];
 
 export const Hero = () => {
@@ -19,19 +19,19 @@ export const Hero = () => {
           <div className="min-w-0">
             <Reveal delay={0.1}>
               <div className="sm:mt-4 [@media(max-height:720px)]:mt-2">
-                <h1 className="max-w-4xl font-display text-[clamp(1.9rem,5.7vw,4.25rem)] font-black leading-[0.98] text-foreground [@media(max-height:720px)]:text-[clamp(1.65rem,5.1vw,3.45rem)]">Tejemos educacion con proposito.</h1>
+                <h1 className="max-w-4xl font-display text-[clamp(1.9rem,5.7vw,4.25rem)] font-black leading-[0.98] text-foreground [@media(max-height:720px)]:text-[clamp(1.65rem,5.1vw,3.45rem)]">Tejemos educación con propósito.</h1>
               </div>
             </Reveal>
 
             <Reveal delay={0.18}>
-              <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-700 sm:text-base lg:text-[1.02rem] lg:leading-7 [@media(max-height:720px)]:line-clamp-4 [@media(max-height:720px)]:text-sm [@media(max-height:720px)]:leading-5">Acompanamos a instituciones y comunidades que suenan con transformar la educacion, generando impacto real y con sentido</p>
+              <p className="mt-3 max-w-3xl text-sm leading-6 text-slate-700 sm:text-base lg:text-[1.02rem] lg:leading-7 [@media(max-height:720px)]:line-clamp-4 [@media(max-height:720px)]:text-sm [@media(max-height:720px)]:leading-5">Acompañamos a instituciones y comunidades que sueñan con transformar la educación, generando impacto real y con sentido.</p>
             </Reveal>
 
             <Reveal delay={0.26}>
               <div className="mt-4 flex flex-col gap-2.5 sm:flex-row [@media(max-height:720px)]:mt-3">
                 <Button asChild size="lg" className="h-11 rounded-lg bg-primary px-5 text-sm font-black text-white shadow-xl shadow-primary/25 transition-transform hover:-translate-y-0.5 hover:bg-primary/90 sm:h-12 sm:text-base">
                   <a href="#servicios">
-                    Descubre como podemos acompanarte
+                    Descubre cómo podemos acompañarte
                     <ArrowRight className="ml-1 h-5 w-5" />
                   </a>
                 </Button>
@@ -58,18 +58,20 @@ export const Hero = () => {
                     <GraduationCap className="h-6 w-6" />
                   </div>
                   <div>
-                    <p className="text-xs font-black uppercase tracking-[0.24em] text-accent">Ruta de transformacion</p>
-                    <p className="mt-1 font-display text-2xl font-black leading-tight text-primary [@media(max-height:760px)]:text-xl">De la intencion al cambio real</p>
+                    <p className="text-xs font-black uppercase tracking-[0.24em] text-accent">Ruta de transformación</p>
+                    <p className="mt-1 font-display text-2xl font-black leading-tight text-primary [@media(max-height:760px)]:text-xl">De la intención al cambio real</p>
                   </div>
                 </div>
 
-                <div className="mt-4 space-y-3">
+                <div className="mt-3 grid gap-2.5">
                   {valuePoints.map((point, index) => (
                     <motion.div key={point} className="flex items-start gap-3 rounded-lg border border-primary/10 bg-white p-3 shadow-sm [@media(max-height:760px)]:p-2.5" animate={{ y: [0, index === 1 ? -3 : 3, 0] }} transition={{ duration: 5 + index, repeat: Infinity, ease: "easeInOut" }}>
                       <div className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg ${index === 0 ? "bg-accent text-white" : index === 1 ? "bg-turquoise text-primary" : "bg-primary text-white"}`}>
                         {index === 0 ? <Lightbulb className="h-4 w-4" /> : <CheckCircle2 className="h-4 w-4" />}
                       </div>
-                      <p className="pt-1 font-black leading-snug text-slate-950">{point}</p>
+                      <div>
+                        <p className="font-black text-slate-950">{point}</p>
+                      </div>
                     </motion.div>
                   ))}
                 </div>
@@ -81,3 +83,4 @@ export const Hero = () => {
     </section>
   );
 };
+

@@ -25,18 +25,18 @@ const actionGallery = [
 ];
 
 const impactMetrics = [
-  { value: 24, suffix: "", label: "Proyectos de transformacion educativa" },
+  { value: 24, suffix: "", label: "Proyectos de transformación educativa" },
   { value: 4200, suffix: "", label: "Personas impactadas" },
-  { value: 120, suffix: "", label: "Recursos pedagogicos" },
+  { value: 120, suffix: "", label: "Recursos pedagógicos" },
   { value: 1500, suffix: "+", label: "Capacitaciones a docentes" },
-  { value: 50, suffix: "+", label: "Consultorias nacionales e internacionales" },
+  { value: 50, suffix: "+", label: "Consultorías nacionales e internacionales" },
 ];
 
 const institutionalPrinciples = [
-  "Sentido Humano: Ponemos a las personas en el corazon de cada proceso educativo.",
+  "Sentido Humano: Ponemos a las personas en el corazón de cada proceso educativo.",
   "Esperanza activa: Trabajamos para encender en otros la esperanza en que pueden transformar su realidad.",
-  "Transformacion social: Creemos que toda innovacion solo tiene sentido si contribuye a construir una sociedad mas justa y equitativa.",
-  "Coherencia: Vivimos lo que ensenamos y ensenamos lo que creemos.",
+  "Transformación social: Creemos que toda innovación solo tiene sentido si contribuye a construir una sociedad más justa y equitativa.",
+  "Coherencia: Vivimos lo que enseñamos y enseñamos lo que creemos.",
 ];
 
 function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
@@ -82,7 +82,7 @@ export default function Story() {
             <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
               <Reveal>
                 <div>
-                  <p className="brand-kicker text-xs text-turquoise">Quienes somos</p>
+                  <p className="brand-kicker text-xs text-turquoise">Quiénes somos</p>
                   <h1 className="mt-5 max-w-5xl font-display text-[clamp(2.55rem,7.4vw,7rem)] font-black leading-[0.88]">
                     <span className="block text-white/78">La</span>
                     <span className="block text-white">Historia</span>
@@ -94,7 +94,7 @@ export default function Story() {
 
               <Reveal delay={0.14}>
                 <p className="max-w-2xl text-lg leading-8 text-white/82 md:text-xl">
-                  Somos una empresa con horizonte social, que acompana la transformacion de personas, instituciones y organizaciones que quieren tejer educacion con proposito para cambiar el Ecuador, la region y el mundo.
+                  Somos una empresa con horizonte social, que acompaña la transformación de personas, instituciones y organizaciones que quieren tejer educación con propósito para cambiar el Ecuador, la región y el mundo.
                 </p>
               </Reveal>
             </div>
@@ -108,7 +108,7 @@ export default function Story() {
             <Reveal>
               <div className="mb-12 max-w-4xl">
                 <h2 className="font-display text-3xl font-black leading-[0.9] text-primary md:text-4xl lg:whitespace-nowrap">
-                  Cambio Educativo en Accion
+                  Cambio Educativo en Acción
                 </h2>
               </div>
             </Reveal>
@@ -152,7 +152,7 @@ export default function Story() {
               <Reveal>
                 <div>
                   <p className="brand-kicker text-xs text-turquoise">Valores institucionales</p>
-                  <h2 className="mt-4 max-w-xl font-display text-4xl font-black leading-tight md:text-5xl">Lo que guia cada proceso que acompanamos.</h2>
+                  <h2 className="mt-4 max-w-xl font-display text-4xl font-black leading-tight md:text-5xl">Lo que guía cada proceso que acompañamos.</h2>
                 </div>
               </Reveal>
 
@@ -177,13 +177,13 @@ export default function Story() {
             <Reveal>
               <div>
                 <p className="text-xs font-black uppercase tracking-[0.28em] text-primary">Lo que creemos</p>
-                <h2 className="mt-4 max-w-3xl font-display text-4xl font-black leading-tight md:text-5xl">El cambio se sostiene cuando las personas aprenden, lideran y actuan juntas.</h2>
+                <h2 className="mt-4 max-w-3xl font-display text-4xl font-black leading-tight md:text-5xl">El cambio se sostiene cuando las personas aprenden, lideran y actúan juntas.</h2>
               </div>
             </Reveal>
 
             <Reveal delay={0.12}>
               <div className="rounded-lg border border-primary/10 bg-white p-6 shadow-xl shadow-primary/5 md:p-8">
-                <p className="text-lg leading-relaxed text-slate-700">Nuestra mision es impulsar procesos de transformacion colectiva a traves de la educacion con sentido, la innovacion con proposito y la justicia como base de toda accion.</p>
+                <p className="text-lg leading-relaxed text-slate-700">Nuestra misión es impulsar procesos de transformación colectiva a través de la educación con sentido, la innovación con propósito y la justicia como base de toda acción.</p>
               </div>
             </Reveal>
           </div>
@@ -194,3 +194,4 @@ export default function Story() {
     </div>
   );
 }
+

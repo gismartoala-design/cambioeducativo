@@ -34,11 +34,11 @@ export const Ecosystem = () => {
       <div className="container relative z-10 mx-auto px-6">
         <div className="max-w-4xl">
           <Reveal>
-            <span className="text-xs font-black uppercase tracking-[0.28em] text-primary">Ecosistema de transformacion educativa</span>
+            <span className="text-xs font-black uppercase tracking-[0.28em] text-primary">Ecosistema de transformación educativa</span>
           </Reveal>
           <Reveal delay={0.12}>
-            <p className="mt-5 max-w-4xl text-lg leading-relaxed text-muted-foreground md:text-xl">Espacios donde tejemos la educacion que sonamos.</p>
-            <p className="mt-4 max-w-4xl text-lg leading-relaxed text-muted-foreground">Promovemos comunidades que aprenden juntas, instituciones que lideran con coherencia y personas que encuentran en la educacion una oportunidad para construir su futuro con dignidad y esperanza.</p>
+            <p className="mt-5 max-w-4xl text-lg leading-relaxed text-muted-foreground md:text-xl">Espacios donde tejemos la educación que soñamos.</p>
+            <p className="mt-4 max-w-4xl text-lg leading-relaxed text-muted-foreground">Promovemos comunidades que aprenden juntas, instituciones que lideran con coherencia y personas que encuentran en la educación una oportunidad para construir su futuro con dignidad y esperanza.</p>
           </Reveal>
         </div>
 
@@ -48,7 +48,7 @@ export const Ecosystem = () => {
               <div className="flex transition-transform duration-700 ease-out" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
                 {ecosystemPhotos.map((photo) => (
                   <div key={photo} className="min-w-full">
-                    <img src={photo} alt="Escenas del ecosistema de transformacion educativa" className="h-[280px] w-full object-cover md:h-[420px]" />
+                    <img src={photo} alt="Escenas del ecosistema de transformación educativa" className="h-[280px] w-full object-cover md:h-[420px]" />
                   </div>
                 ))}
               </div>
@@ -76,3 +76,4 @@ export const Ecosystem = () => {
     </section>
   );
 };
+
