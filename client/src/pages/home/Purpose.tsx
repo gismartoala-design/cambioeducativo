@@ -30,7 +30,7 @@ export const Purpose = () => {
           <div className="rounded-lg border border-primary/10 bg-white p-6 shadow-xl shadow-primary/5 md:p-8">
             <Reveal delay={0.12}>
               <p className="font-display text-2xl font-bold leading-relaxed text-slate-800">
-                Te acompaÃ±amos a generar cambios, a travÃ©s del desarrollo de capacidades, la innovaciÃ³n con propÃ³sito y la construcciÃ³n de soluciones.
+                Te acompañamos a generar cambios, a través del desarrollo de capacidades, la innovación con propósito y la construcción de soluciones.
               </p>
             </Reveal>
 
@@ -50,3 +50,4 @@ export const Purpose = () => {
     </section>
   );
 };
+

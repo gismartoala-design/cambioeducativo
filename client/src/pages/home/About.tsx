@@ -10,7 +10,7 @@ const pillars = [
   },
   {
     title: "Innovaci√≥n",
-    desc: "Dise√±amos soluciones aplicables y con prop√≥sito.",
+    desc: "DiseÒamos soluciones aplicables y con propÛsito.",
     icon: Lightbulb,
   },
   {
@@ -23,7 +23,7 @@ const pillars = [
 const values = [
   {
     title: "√âtica",
-    desc: "Integridad que construye una sociedad m√°s justa y orientada al bien com√∫n.",
+    desc: "Integridad que construye una sociedad m·s justa y orientada al bien com√∫n.",
   },
   {
     title: "Sentido humano",
@@ -54,13 +54,13 @@ export const About = () => {
             <Reveal>
               <span className="text-xs font-black uppercase tracking-[0.28em] text-turquoise">Qui√©nes somos</span>
               <h2 className="mt-4 max-w-2xl text-4xl font-black leading-tight md:text-6xl font-display">
-                Educaci√≥n con prop√≥sito para transformar realidades.
+                Educaci√≥n con propÛsito para transformar realidades.
               </h2>
             </Reveal>
 
             <Reveal delay={0.16}>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-300">
-                Somos una startup social que acompa√±a procesos de transformaci√≥n educativa y organizacional a trav√©s de la innovaci√≥n, el aprendizaje y la acci√≥n colectiva.
+                Somos una startup social que acompaÒa procesos de transformaciÛn educativa y organizacional a travÈs de la innovaciÛn, el aprendizaje y la acciÛn colectiva.
               </p>
             </Reveal>
 
@@ -89,7 +89,7 @@ export const About = () => {
               <div className="rounded-lg border border-white/10 bg-white/[0.07] p-6 shadow-2xl shadow-black/10 md:p-8">
                 <span className="text-xs font-black uppercase tracking-[0.24em] text-accent">Nuestra historia</span>
                 <p className="mt-4 text-lg leading-relaxed text-slate-200">
-                  Cambio Educativo naci√≥ de una convicci√≥n compartida: la educaci√≥n s√≠ puede transformarlo todo. Unimos experiencia, innovaci√≥n y prop√≥sito para acompa√±ar procesos de cambio que devuelvan a la educaci√≥n su poder m√°s profundo: transformar vidas y construir mejores futuros.
+                  Cambio Educativo naciÛ de una convicciÛn compartida: la educaciÛn sÌ puede transformarlo todo. Unimos experiencia, innovaciÛn y propÛsito para acompaÒar procesos de cambio que devuelvan a la educaciÛn su poder m·s profundo: transformar vidas y construir mejores futuros.
                 </p>
               </div>
             </Reveal>
@@ -99,7 +99,7 @@ export const About = () => {
                 <div className="h-full rounded-lg border border-turquoise/25 bg-turquoise/10 p-6">
                   <span className="text-xs font-black uppercase tracking-[0.24em] text-turquoise">Misi√≥n</span>
                   <p className="mt-4 leading-relaxed text-slate-200">
-                    Acompa√±amos procesos de transformaci√≥n social e institucional donde la innovaci√≥n, la √©tica y el sentido humano son motores de impacto sostenible.
+                    Acompa√±amos procesos de transformaciÛn social e institucional donde la innovaciÛn, la √©tica y el sentido humano son motores de impacto sostenible.
                   </p>
                 </div>
               </Reveal>
@@ -107,7 +107,7 @@ export const About = () => {
                 <div className="h-full rounded-lg border border-accent/25 bg-accent/10 p-6">
                   <span className="text-xs font-black uppercase tracking-[0.24em] text-accent">Visi√≥n 2035</span>
                   <p className="mt-4 leading-relaxed text-slate-200">
-                    Tejer una red latinoamericana de transformaci√≥n educativa y social con comunidades, instituciones y personas que aprenden y lideran con prop√≥sito.
+                    Tejer una red latinoamericana de transformaciÛn educativa y social con comunidades, instituciones y personas que aprenden y lideran con propÛsito.
                   </p>
                 </div>
               </Reveal>
@@ -144,3 +144,5 @@ export const About = () => {
     </section>
   );
 };
+
+

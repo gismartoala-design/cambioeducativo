@@ -6,7 +6,7 @@ const audiences = [
   {
     title: "Instituciones Educativas",
     question: "驴Eres una Instituci贸n Educativa?",
-    desc: "Acompa帽amos colegios, equipos directivos y docentes con rutas pedag贸gicas, innovaci贸n y formaci贸n aplicada.",
+    desc: "Acompa帽amos colegios, equipos directivos y docentes con rutas pedag贸gicas, innovaci髇 y formaci髇 aplicada.",
     action: "Ver soluciones pedag贸gicas",
     href: "#servicios",
     icon: GraduationCap,
@@ -15,7 +15,7 @@ const audiences = [
   {
     title: "Empresas u Organizaciones",
     question: "驴Eres una Empresa u Organizaci贸n?",
-    desc: "Dise帽amos experiencias para fortalecer cultura, liderazgo, aprendizaje organizacional y gesti贸n del cambio.",
+    desc: "Dise馻mos experiencias para fortalecer cultura, liderazgo, aprendizaje organizacional y gesti髇 del cambio.",
     action: "Ver desarrollo organizacional",
     href: "#servicios",
     icon: Building2,
@@ -47,7 +47,7 @@ export const Audiences = () => {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              Organizamos nuestras soluciones para que colegios, empresas y organizaciones sociales encuentren r谩pidamente el camino adecuado.
+              Organizamos nuestras soluciones para que colegios, empresas y organizaciones sociales encuentren r醦idamente el camino adecuado.
             </p>
           </Reveal>
         </div>
@@ -86,3 +86,5 @@ export const Audiences = () => {
     </section>
   );
 };
+
+

@@ -33,7 +33,7 @@ export const Contact = () => {
                 </h2>
               </div>
               <p className="mt-10 max-w-xl text-lg leading-relaxed text-blue-50">
-                DÃ©janos tus datos y cuÃ©ntanos cÃ³mo crees que podemos acompaÃ±arte.
+                Déjanos tus datos y cuéntanos cómo crees que podemos acompañarte.
               </p>
             </div>
           </Reveal>
@@ -106,3 +106,4 @@ export const Contact = () => {
     </section>
   );
 };
+

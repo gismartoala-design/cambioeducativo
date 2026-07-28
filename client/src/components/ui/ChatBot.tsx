@@ -11,11 +11,11 @@ type Message = {
 
 const replies: Record<string, string> = {
   institution:
-    "Podemos acompañar procesos de transformación institucional, innovación educativa, liderazgo y fortalecimiento pedagógico. Escríbenos por WhatsApp para agendar una asesoría.",
+    "Podemos acompa�ar procesos de transformaci�n institucional, innovaci�n educativa, liderazgo y fortalecimiento pedagógico. Escríbenos por WhatsApp para agendar una asesoría.",
   training:
-    "Diseñamos capacitaciones docentes a medida: pedagogía, tecnología educativa, liderazgo, habilidades socioemocionales y aprendizaje activo.",
+    "Dise�amos capacitaciones docentes a medida: pedagogía, tecnología educativa, liderazgo, habilidades socioemocionales y aprendizaje activo.",
   organization:
-    "Trabajamos con empresas, fundaciones y ONGs en formación, transformación cultural, aprendizaje organizacional y proyectos sociales con impacto sostenible.",
+    "Trabajamos con empresas, fundaciones y ONGs en formaci�n, transformaci�n cultural, aprendizaje organizacional y proyectos sociales con impacto sostenible.",
 };
 
 export const ChatBot = () => {
@@ -145,3 +145,4 @@ export const ChatBot = () => {
     </div>
   );
 };
+
