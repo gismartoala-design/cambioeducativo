@@ -7,9 +7,27 @@ import { Reveal } from "@/components/ui/Reveal";
 import { SectionPatternDivider } from "@/components/ui/SectionPatternDivider";
 
 const actionGallery = [
-  { number: "1", title: "Hacemos conviccion.", image: "/images/image-1.jpg" },
-  { number: "2", title: "Tejemos comunidad.", image: "/images/ANAI%2010mo.jpeg" },
-  { number: "3", title: "Tejemos capacidades.", image: "/images/image-3.jpg" },
+  {
+    number: "1",
+    title: "Hacemos conviccion.",
+    image: "/images/image-1.jpg",
+    frame: "lg:w-[24%] lg:left-[3%] lg:top-[4rem] lg:z-10",
+    imageHeight: "lg:h-[320px]",
+  },
+  {
+    number: "2",
+    title: "Tejemos comunidad.",
+    image: "/images/image-3.jpg",
+    frame: "lg:w-[31%] lg:left-[30%] lg:top-0 lg:z-20",
+    imageHeight: "lg:h-[420px]",
+  },
+  {
+    number: "3",
+    title: "Tejemos capacidades.",
+    image: "/images/ANAI%2010mo.jpeg",
+    frame: "lg:w-[24%] lg:right-[4%] lg:top-[2.75rem] lg:z-10",
+    imageHeight: "lg:h-[340px]",
+  },
 ];
 
 const impactMetrics = [
@@ -101,14 +119,21 @@ export default function Story() {
               </div>
             </Reveal>
 
-            <div className="grid gap-6 lg:grid-cols-3">
+            <div className="relative mx-auto grid max-w-[420px] gap-6 sm:max-w-[560px] lg:h-[470px] lg:max-w-[1220px] lg:block">
               {actionGallery.map((moment, index) => (
-                <motion.article key={moment.number} className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-[0_25px_65px_-45px_rgba(15,23,42,0.5)]" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.65, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}>
-                  <div className="relative aspect-[0.95/1] overflow-hidden bg-slate-100">
+                <motion.article
+                  key={moment.number}
+                  className={`group relative overflow-hidden rounded-[1.9rem] border border-slate-200 bg-white shadow-[0_28px_70px_-45px_rgba(15,23,42,0.45)] lg:absolute ${moment.frame}`}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, amount: 0.25 }}
+                  transition={{ duration: 0.65, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
+                >
+                  <div className={`relative h-[320px] overflow-hidden bg-slate-100 ${moment.imageHeight}`}>
                     <img src={moment.image} alt={moment.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
-                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent p-6">
-                      <span className="text-sm font-black uppercase tracking-[0.24em] text-white/80">{moment.number}</span>
-                      <h3 className="mt-2 max-w-[16rem] font-display text-2xl font-black leading-tight text-white">{moment.title}</h3>
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/85 via-slate-950/15 to-transparent p-6">
+                      <span className="text-sm font-black text-white/85">{moment.number}</span>
+                      <h3 className="mt-2 font-display text-[1.9rem] font-black leading-none text-white md:text-[2.1rem]">{moment.title}</h3>
                     </div>
                   </div>
                 </motion.article>
