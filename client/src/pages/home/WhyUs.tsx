@@ -1,12 +1,12 @@
 import { Reveal } from "@/components/ui/Reveal";
 
 const threads = [
-  { letter: "T", title: "Tecnología educativa con propósito", tone: "from-[#f78c16] to-[#ef6a00]" },
-  { letter: "E", title: "Educación para la transformación", tone: "from-[#48d3df] to-[#19a9ce]" },
+  { letter: "T", title: "Tecnolog\u00eda educativa con prop\u00f3sito", tone: "from-[#f78c16] to-[#ef6a00]" },
+  { letter: "E", title: "Educaci\u00f3n para la transformaci\u00f3n", tone: "from-[#48d3df] to-[#19a9ce]" },
   { letter: "J", title: "Justicia social", tone: "from-[#1e5d9f] to-[#15457c]" },
-  { letter: "I", title: "Innovación e investigación", tone: "from-[#71e2eb] to-[#31b9d2]" },
+  { letter: "I", title: "Innovaci\u00f3n e investigaci\u00f3n", tone: "from-[#71e2eb] to-[#31b9d2]" },
   { letter: "D", title: "Desarrollo comunitario", tone: "from-[#0f8e92] to-[#0a6c74]" },
-  { letter: "O", title: "Organización estratégica con impacto", tone: "from-[#ff9b1f] to-[#ff7b00]" },
+  { letter: "O", title: "Organizaci\u00f3n estrat\u00e9gica con impacto", tone: "from-[#ff9b1f] to-[#ff7b00]" },
   { letter: "S", title: "Saberes compartidos y sostenibles", tone: "from-[#2a73c9] to-[#124c97]" },
 ];
 
@@ -20,7 +20,7 @@ export const WhyUs = () => {
             <h2 className="font-display text-4xl font-black leading-tight text-slate-950 md:text-6xl">TEJIDOS</h2>
           </Reveal>
           <Reveal delay={0.08}>
-            <p className="mt-5 max-w-4xl text-lg leading-relaxed text-slate-700 md:text-2xl">Cada hilo representa un principio educativo que, al entrelazarse, hace posible la transformación de instituciones, organizaciones y comunidades.</p>
+            <p className="mt-5 max-w-4xl text-lg leading-relaxed text-slate-700 md:text-2xl">{"Cada hilo representa un principio educativo que, al entrelazarse, hace posible la transformaci\u00f3n de instituciones, organizaciones y comunidades."}</p>
           </Reveal>
         </div>
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-7">
@@ -41,4 +41,3 @@ export const WhyUs = () => {
     </section>
   );
 };
-

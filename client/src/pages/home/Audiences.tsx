@@ -5,25 +5,25 @@ import { Button } from "@/components/ui/button";
 const audiences = [
   {
     title: "Instituciones Educativas",
-    question: "驴Eres una Instituci贸n Educativa?",
-    desc: "Acompa帽amos colegios, equipos directivos y docentes con rutas pedag贸gicas, innovaci髇 y formaci髇 aplicada.",
-    action: "Ver soluciones pedag贸gicas",
+    question: "\u00bfEres una Instituci\u00f3n Educativa?",
+    desc: "Acompa\u00f1amos colegios, equipos directivos y docentes con rutas pedag\u00f3gicas, innovaci\u00f3n y formaci\u00f3n aplicada.",
+    action: "Ver soluciones pedag\u00f3gicas",
     href: "#servicios",
     icon: GraduationCap,
     accent: "bg-primary text-white",
   },
   {
     title: "Empresas u Organizaciones",
-    question: "驴Eres una Empresa u Organizaci贸n?",
-    desc: "Dise馻mos experiencias para fortalecer cultura, liderazgo, aprendizaje organizacional y gesti髇 del cambio.",
+    question: "\u00bfEres una Empresa u Organizaci\u00f3n?",
+    desc: "Dise\u00f1amos experiencias para fortalecer cultura, liderazgo, aprendizaje organizacional y gesti\u00f3n del cambio.",
     action: "Ver desarrollo organizacional",
     href: "#servicios",
     icon: Building2,
     accent: "bg-accent text-white",
   },
   {
-    title: "ONG o Fundaci贸n",
-    question: "驴Eres una ONG o Fundaci贸n?",
+    title: "ONG o Fundaci\u00f3n",
+    question: "\u00bfEres una ONG o Fundaci\u00f3n?",
     desc: "Co-creamos proyectos de impacto educativo y social con comunidades, aliados y objetivos medibles.",
     action: "Ver proyectos de impacto",
     href: "#impacto",
@@ -40,14 +40,14 @@ export const Audiences = () => {
       <div className="container relative z-10 mx-auto px-6">
         <div className="mx-auto max-w-3xl text-center">
           <Reveal>
-            <span className="brand-kicker text-xs text-primary">Soluciones por p煤blico</span>
+            <span className="brand-kicker text-xs text-primary">{"Soluciones por p\u00fablico"}</span>
             <h2 className="mt-4 font-display text-4xl font-black leading-tight text-slate-950 md:text-5xl">
               Cada contexto necesita una ruta distinta.
             </h2>
           </Reveal>
           <Reveal delay={0.12}>
             <p className="mx-auto mt-5 max-w-2xl text-lg leading-relaxed text-muted-foreground">
-              Organizamos nuestras soluciones para que colegios, empresas y organizaciones sociales encuentren r醦idamente el camino adecuado.
+              {"Organizamos nuestras soluciones para que colegios, empresas y organizaciones sociales encuentren r\u00e1pidamente el camino adecuado."}
             </p>
           </Reveal>
         </div>
@@ -86,5 +86,3 @@ export const Audiences = () => {
     </section>
   );
 };
-
-

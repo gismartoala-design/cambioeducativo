@@ -2,9 +2,9 @@ import { CircleCheck } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 
 const commitments = [
-  "Desarrollo de las personas: Potenciamos habilidades y competencias pr谩cticas para la educaci贸n",
-  "Innovaci贸n con prop贸sito: Dise帽amos soluciones que responden a necesidades reales.",
-  "Un sue帽o: imaginamos un futuro donde la educaci贸n que cambie vidas.",
+  "Desarrollo de las personas: Potenciamos habilidades y competencias pr\u00e1cticas para la educaci\u00f3n",
+  "Innovaci\u00f3n con prop\u00f3sito: Dise\u00f1amos soluciones que responden a necesidades reales.",
+  "Un sue\u00f1o: imaginamos un futuro donde la educaci\u00f3n cambie vidas.",
 ];
 
 export const Purpose = () => {
@@ -18,10 +18,10 @@ export const Purpose = () => {
             <div className="flex h-full flex-col justify-between rounded-lg bg-primary p-8 text-white md:p-10">
               <div>
                 <span className="text-xs font-black uppercase tracking-[0.28em] text-turquoise">
-                  Qu茅 nos mueve
+                  {"Qu\u00e9 nos mueve"}
                 </span>
                 <p className="mt-6 font-display text-3xl font-black leading-tight md:text-4xl">
-                  Impulsamos una transformaci贸n educativa y social que fortalezca personas, instituciones y comunidades
+                  {"Impulsamos una transformaci\u00f3n educativa y social que fortalezca personas, instituciones y comunidades"}
                 </p>
               </div>
             </div>
@@ -30,7 +30,7 @@ export const Purpose = () => {
           <div className="rounded-lg border border-primary/10 bg-white p-6 shadow-xl shadow-primary/5 md:p-8">
             <Reveal delay={0.12}>
               <p className="font-display text-2xl font-bold leading-relaxed text-slate-800">
-                Te acompa馻mos a generar cambios, a trav閟 del desarrollo de capacidades, la innovaci髇 con prop髎ito y la construcci髇 de soluciones.
+                {"Te acompa\u00f1amos a generar cambios, a trav\u00e9s del desarrollo de capacidades, la innovaci\u00f3n con prop\u00f3sito y la construcci\u00f3n de soluciones."}
               </p>
             </Reveal>
 
@@ -50,4 +50,3 @@ export const Purpose = () => {
     </section>
   );
 };
-

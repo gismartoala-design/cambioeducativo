@@ -9,8 +9,8 @@ const pillars = [
     icon: HeartHandshake,
   },
   {
-    title: "InnovaciÃ³n",
-    desc: "Diseñamos soluciones aplicables y con propósito.",
+    title: "Innovaci\u00f3n",
+    desc: "Dise\u00f1amos soluciones aplicables y con prop\u00f3sito.",
     icon: Lightbulb,
   },
   {
@@ -22,8 +22,8 @@ const pillars = [
 
 const values = [
   {
-    title: "Ã‰tica",
-    desc: "Integridad que construye una sociedad más justa y orientada al bien comÃºn.",
+    title: "\u00c9tica",
+    desc: "Integridad que construye una sociedad m\u00e1s justa y orientada al bien com\u00fan.",
   },
   {
     title: "Sentido humano",
@@ -31,7 +31,7 @@ const values = [
   },
   {
     title: "Esperanza activa",
-    desc: "ConvicciÃ³n de que todas las realidades pueden cambiar.",
+    desc: "Convicci\u00f3n de que todas las realidades pueden cambiar.",
   },
   {
     title: "Coherencia",
@@ -52,15 +52,15 @@ export const About = () => {
         <div className="grid gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
           <div className="lg:sticky lg:top-28">
             <Reveal>
-              <span className="text-xs font-black uppercase tracking-[0.28em] text-turquoise">QuiÃ©nes somos</span>
+              <span className="text-xs font-black uppercase tracking-[0.28em] text-turquoise">{"Qui\u00e9nes somos"}</span>
               <h2 className="mt-4 max-w-2xl text-4xl font-black leading-tight md:text-6xl font-display">
-                EducaciÃ³n con propósito para transformar realidades.
+                {"Educaci\u00f3n con prop\u00f3sito para transformar realidades."}
               </h2>
             </Reveal>
 
             <Reveal delay={0.16}>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-slate-300">
-                Somos una startup social que acompaña procesos de transformación educativa y organizacional a través de la innovación, el aprendizaje y la acción colectiva.
+                {"Somos una startup social que acompa\u00f1a procesos de transformaci\u00f3n educativa y organizacional a trav\u00e9s de la innovaci\u00f3n, el aprendizaje y la acci\u00f3n colectiva."}
               </p>
             </Reveal>
 
@@ -89,7 +89,7 @@ export const About = () => {
               <div className="rounded-lg border border-white/10 bg-white/[0.07] p-6 shadow-2xl shadow-black/10 md:p-8">
                 <span className="text-xs font-black uppercase tracking-[0.24em] text-accent">Nuestra historia</span>
                 <p className="mt-4 text-lg leading-relaxed text-slate-200">
-                  Cambio Educativo nació de una convicción compartida: la educación sí puede transformarlo todo. Unimos experiencia, innovación y propósito para acompañar procesos de cambio que devuelvan a la educación su poder más profundo: transformar vidas y construir mejores futuros.
+                  {"Cambio Educativo naci\u00f3 de una convicci\u00f3n compartida: la educaci\u00f3n s\u00ed puede transformarlo todo. Unimos experiencia, innovaci\u00f3n y prop\u00f3sito para acompa\u00f1ar procesos de cambio que devuelvan a la educaci\u00f3n su poder m\u00e1s profundo: transformar vidas y construir mejores futuros."}
                 </p>
               </div>
             </Reveal>
@@ -97,17 +97,17 @@ export const About = () => {
             <div className="grid gap-5 md:grid-cols-2">
               <Reveal delay={0.18}>
                 <div className="h-full rounded-lg border border-turquoise/25 bg-turquoise/10 p-6">
-                  <span className="text-xs font-black uppercase tracking-[0.24em] text-turquoise">MisiÃ³n</span>
+                  <span className="text-xs font-black uppercase tracking-[0.24em] text-turquoise">{"Misi\u00f3n"}</span>
                   <p className="mt-4 leading-relaxed text-slate-200">
-                    AcompaÃ±amos procesos de transformación social e institucional donde la innovación, la Ã©tica y el sentido humano son motores de impacto sostenible.
+                    {"Acompa\u00f1amos procesos de transformaci\u00f3n social e institucional donde la innovaci\u00f3n, la \u00e9tica y el sentido humano son motores de impacto sostenible."}
                   </p>
                 </div>
               </Reveal>
               <Reveal delay={0.24}>
                 <div className="h-full rounded-lg border border-accent/25 bg-accent/10 p-6">
-                  <span className="text-xs font-black uppercase tracking-[0.24em] text-accent">VisiÃ³n 2035</span>
+                  <span className="text-xs font-black uppercase tracking-[0.24em] text-accent">{"Visi\u00f3n 2035"}</span>
                   <p className="mt-4 leading-relaxed text-slate-200">
-                    Tejer una red latinoamericana de transformación educativa y social con comunidades, instituciones y personas que aprenden y lideran con propósito.
+                    {"Tejer una red latinoamericana de transformaci\u00f3n educativa y social con comunidades, instituciones y personas que aprenden y lideran con prop\u00f3sito."}
                   </p>
                 </div>
               </Reveal>
@@ -133,7 +133,7 @@ export const About = () => {
             <Reveal delay={0.35}>
               <Button asChild size="lg" className="h-14 rounded-lg bg-white px-7 font-bold text-slate-950 hover:bg-turquoise">
                 <a href="#nos-mueve">
-                  QuÃ© nos mueve
+                  {"Qu\u00e9 nos mueve"}
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </a>
               </Button>
@@ -144,5 +144,3 @@ export const About = () => {
     </section>
   );
 };
-
-

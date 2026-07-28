@@ -4,24 +4,24 @@ import { Button } from "@/components/ui/button";
 
 const services = [
   {
-    title: "Acompañamiento para la transformación",
-    desc: "Acompañamos a escuelas, colegios, centros infantiles, institutos y universidades en procesos de innovación, liderazgo y mejora organizacional.",
+    title: "Acompa\u00f1amiento para la transformaci\u00f3n",
+    desc: "Acompa\u00f1amos a escuelas, colegios, centros infantiles, institutos y universidades en procesos de innovaci\u00f3n, liderazgo y mejora organizacional.",
     img: "/images/image-4.jpg",
     audience: "Instituciones educativas",
     result: "Instituciones con una ruta de mejora clara, equipos alineados y capacidades instaladas para sostener el cambio.",
     icon: School,
   },
   {
-    title: "Formación y capacitación",
-    desc: "Diseñamos experiencias de aprendizaje para fortalecer capacidades pedagógicas, tecnológicas, socioemocionales y de liderazgo educativo.",
+    title: "Formaci\u00f3n y capacitaci\u00f3n",
+    desc: "Dise\u00f1amos experiencias de aprendizaje para fortalecer capacidades pedag\u00f3gicas, tecnol\u00f3gicas, socioemocionales y de liderazgo educativo.",
     img: "/images/image-2.jpg",
     audience: "Docentes y directivos",
-    result: "Docentes y líderes con herramientas aplicables para mejorar sus prácticas y acompañar aprendizajes significativos.",
+    result: "Docentes y l\u00edderes con herramientas aplicables para mejorar sus pr\u00e1cticas y acompa\u00f1ar aprendizajes significativos.",
     icon: GraduationCap,
   },
   {
     title: "Aprendizaje organizacional",
-    desc: "Creamos soluciones de formación, cultura e innovación para empresas y organizaciones que quieren desarrollar equipos con propósito.",
+    desc: "Creamos soluciones de formaci\u00f3n, cultura e innovaci\u00f3n para empresas y organizaciones que quieren desarrollar equipos con prop\u00f3sito.",
     img: "/images/image-5.jpg",
     audience: "Crecimiento y desarrollo",
     result: "Equipos fortalecidos, cultura de aprendizaje activa y procesos formativos conectados con objetivos institucionales.",
@@ -32,7 +32,7 @@ const services = [
     desc: "Trabajamos con fundaciones, ONGs, organismos internacionales y comunidades para impulsar capacidades e impacto sostenible.",
     img: "/images/image-3.jpg",
     audience: "ONGs y comunidad",
-    result: "Proyectos con enfoque humano, participación comunitaria y resultados sostenibles en el territorio.",
+    result: "Proyectos con enfoque humano, participaci\u00f3n comunitaria y resultados sostenibles en el territorio.",
     icon: Handshake,
   },
 ];
@@ -44,7 +44,7 @@ export const Services = () => {
       <div className="container relative z-10 mx-auto px-6">
         <div className="mb-14">
           <Reveal>
-            <span className="text-xs font-black uppercase tracking-[0.28em] text-primary">Qué hacemos</span>
+            <span className="text-xs font-black uppercase tracking-[0.28em] text-primary">{"Qu\u00e9 hacemos"}</span>
             <h2 className="mt-4 max-w-3xl font-display text-4xl font-black leading-tight md:text-6xl">Rutas de cambio para cada comunidad</h2>
           </Reveal>
         </div>
@@ -80,4 +80,3 @@ export const Services = () => {
     </section>
   );
 };
-
