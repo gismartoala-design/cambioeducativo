@@ -11,22 +11,28 @@ const actionGallery = [
     number: "1",
     title: "Hacemos conviccion.",
     image: "/images/image-1.jpg",
-    frame: "lg:w-[24%] lg:left-[3%] lg:top-[4rem] lg:z-10",
-    imageHeight: "lg:h-[320px]",
+    frame: "lg:w-[25%] lg:left-[4%] lg:top-[1.5rem] lg:z-10",
+    imageHeight: "lg:h-[230px]",
+    titleClassName: "max-w-[11rem] text-[0.58rem] text-slate-950",
+    badgeClassName: "left-3 bottom-3",
   },
   {
     number: "2",
     title: "Tejemos comunidad.",
-    image: "/images/image-3.jpg",
-    frame: "lg:w-[31%] lg:left-[30%] lg:top-0 lg:z-20",
-    imageHeight: "lg:h-[420px]",
+    image: "/images/ANAI%2010mo.jpeg",
+    frame: "lg:w-[23%] lg:left-[35%] lg:top-[7.2rem] lg:z-20",
+    imageHeight: "lg:h-[180px]",
+    titleClassName: "max-w-[10rem] text-[0.58rem] text-slate-950",
+    badgeClassName: "left-3 bottom-3",
   },
   {
     number: "3",
     title: "Tejemos capacidades.",
-    image: "/images/ANAI%2010mo.jpeg",
-    frame: "lg:w-[24%] lg:right-[4%] lg:top-[2.75rem] lg:z-10",
-    imageHeight: "lg:h-[340px]",
+    image: "/images/image-3.jpg",
+    frame: "lg:w-[25%] lg:right-[5%] lg:top-[0.25rem] lg:z-10",
+    imageHeight: "lg:h-[235px]",
+    titleClassName: "max-w-[11rem] text-[0.58rem] text-slate-950",
+    badgeClassName: "left-3 bottom-3",
   },
 ];
 
@@ -119,22 +125,26 @@ export default function Story() {
               </div>
             </Reveal>
 
-            <div className="relative mx-auto grid max-w-[420px] gap-6 sm:max-w-[560px] lg:h-[470px] lg:max-w-[1220px] lg:block">
+            <div className="relative mx-auto grid max-w-[360px] gap-5 sm:max-w-[520px] lg:h-[320px] lg:max-w-[1080px] lg:block">
               {actionGallery.map((moment, index) => (
                 <motion.article
                   key={moment.number}
-                  className={`group relative overflow-hidden rounded-[1.9rem] border border-slate-200 bg-white shadow-[0_28px_70px_-45px_rgba(15,23,42,0.45)] lg:absolute ${moment.frame}`}
+                  className={`group relative bg-white lg:absolute ${moment.frame}`}
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.25 }}
                   transition={{ duration: 0.65, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
                 >
-                  <div className={`relative h-[320px] overflow-hidden bg-slate-100 ${moment.imageHeight}`}>
+                  <div className={`relative h-[220px] overflow-hidden bg-slate-100 ${moment.imageHeight}`}>
                     <img src={moment.image} alt={moment.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
-                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/85 via-slate-950/15 to-transparent p-6">
-                      <span className="text-sm font-black text-white/85">{moment.number}</span>
-                      <h3 className="mt-2 font-display text-[1.9rem] font-black leading-none text-white md:text-[2.1rem]">{moment.title}</h3>
+                  </div>
+                  <div className="relative bg-white pt-2">
+                    <div className={`absolute flex h-11 w-11 items-center justify-center rounded-[1rem] bg-accent text-2xl font-black leading-none text-white shadow-[0_12px_24px_-14px_rgba(247,140,22,0.9)] ${moment.badgeClassName}`}>
+                      {moment.number}
                     </div>
+                    <h3 className={`pl-2 pt-9 font-black uppercase leading-[1.05] ${moment.titleClassName}`}>
+                      {moment.title}
+                    </h3>
                   </div>
                 </motion.article>
               ))}
