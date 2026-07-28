@@ -8,31 +8,19 @@ import { SectionPatternDivider } from "@/components/ui/SectionPatternDivider";
 
 const actionGallery = [
   {
-    number: "1",
-    title: "Hacemos conviccion.",
     image: "/images/image-1.jpg",
     frame: "lg:w-[25%] lg:left-[4%] lg:top-[1.5rem] lg:z-10",
     imageHeight: "lg:h-[230px]",
-    titleClassName: "max-w-[11rem] text-[0.58rem] text-slate-950",
-    badgeClassName: "left-3 bottom-3",
   },
   {
-    number: "2",
-    title: "Tejemos comunidad.",
     image: "/images/ANAI%2010mo.jpeg",
     frame: "lg:w-[23%] lg:left-[35%] lg:top-[7.2rem] lg:z-20",
     imageHeight: "lg:h-[180px]",
-    titleClassName: "max-w-[10rem] text-[0.58rem] text-slate-950",
-    badgeClassName: "left-3 bottom-3",
   },
   {
-    number: "3",
-    title: "Tejemos capacidades.",
     image: "/images/image-3.jpg",
     frame: "lg:w-[25%] lg:right-[5%] lg:top-[0.25rem] lg:z-10",
     imageHeight: "lg:h-[235px]",
-    titleClassName: "max-w-[11rem] text-[0.58rem] text-slate-950",
-    badgeClassName: "left-3 bottom-3",
   },
 ];
 
@@ -128,7 +116,7 @@ export default function Story() {
             <div className="relative mx-auto grid max-w-[360px] gap-5 sm:max-w-[520px] lg:h-[320px] lg:max-w-[1080px] lg:block">
               {actionGallery.map((moment, index) => (
                 <motion.article
-                  key={moment.number}
+                  key={moment.image}
                   className={`group relative bg-white lg:absolute ${moment.frame}`}
                   initial={{ opacity: 0, y: 24 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -136,15 +124,7 @@ export default function Story() {
                   transition={{ duration: 0.65, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
                 >
                   <div className={`relative h-[220px] overflow-hidden bg-slate-100 ${moment.imageHeight}`}>
-                    <img src={moment.image} alt={moment.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
-                  </div>
-                  <div className="relative bg-white pt-2">
-                    <div className={`absolute flex h-11 w-11 items-center justify-center rounded-[1rem] bg-accent text-2xl font-black leading-none text-white shadow-[0_12px_24px_-14px_rgba(247,140,22,0.9)] ${moment.badgeClassName}`}>
-                      {moment.number}
-                    </div>
-                    <h3 className={`pl-2 pt-9 font-black uppercase leading-[1.05] ${moment.titleClassName}`}>
-                      {moment.title}
-                    </h3>
+                    <img src={moment.image} alt="" aria-hidden="true" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
                   </div>
                 </motion.article>
               ))}
