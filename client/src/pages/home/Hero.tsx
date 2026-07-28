@@ -19,7 +19,7 @@ export const Hero = () => {
           <div className="min-w-0">
             <Reveal delay={0.1}>
               <div className="sm:mt-4 [@media(max-height:720px)]:mt-2">
-                <h1 className="max-w-4xl font-display text-[clamp(1.9rem,5.7vw,4.25rem)] font-black leading-[0.98] text-foreground [@media(max-height:720px)]:text-[clamp(1.65rem,5.1vw,3.45rem)]">Tejemos educación con propósito.</h1>
+                <h1 className="max-w-4xl font-display text-[clamp(1.9rem,5.7vw,4.25rem)] font-black leading-[0.98] text-foreground [@media(max-height:720px)]:text-[clamp(1.65rem,5.1vw,3.45rem)]">Tejemos educación con propósito</h1>
               </div>
             </Reveal>
 
@@ -83,4 +83,5 @@ export const Hero = () => {
     </section>
   );
 };
+
 
