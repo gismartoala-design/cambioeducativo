@@ -20,7 +20,7 @@ export const Navbar = () => {
 
   const navLinks = [
     { name: "Inicio", href: "/#inicio" },
-    { name: "Quiénes somos", href: "/historia" },
+    { name: "Qui\u00e9nes somos", href: "/historia" },
     { name: "Nos mueve", href: "/#nos-mueve" },
     { name: "TEJIDOS", href: "/#tejidos" },
     { name: "Servicios", href: "/#servicios" },
@@ -81,7 +81,7 @@ export const Navbar = () => {
             scrolled ? "bg-white/88 text-foreground" : "bg-slate-950/32 text-white"
           }`}
           onClick={() => setIsOpen(!isOpen)}
-          aria-label={isOpen ? "Cerrar menú" : "Abrir menú"}
+          aria-label={isOpen ? "Cerrar men\u00fa" : "Abrir men\u00fa"}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>

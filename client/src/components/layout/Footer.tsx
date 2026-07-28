@@ -24,8 +24,8 @@ const socialLinks = [
 ];
 
 const footerLinks = [
-  { label: "Quiénes somos", href: "/historia" },
-  { label: "Qué nos mueve", href: "/#nos-mueve" },
+  { label: "Qui\u00e9nes somos", href: "/historia" },
+  { label: "Qu\u00e9 nos mueve", href: "/#nos-mueve" },
   { label: "TEJIDOS", href: "/#tejidos" },
   { label: "Servicios", href: "/#servicios" },
   { label: "Contacto", href: "/#contacto" },
@@ -39,7 +39,7 @@ export const Footer = () => {
           <div>
             <img src="/images/logo.png" alt="Cambio Educativo" className="h-11 w-auto brightness-0 invert" />
             <p className="mt-5 max-w-sm text-sm leading-relaxed">
-              Educación que se teje con propósito para transformar personas, instituciones y comunidades.
+              {"Educaci\u00f3n que se teje con prop\u00f3sito para transformar personas, instituciones y comunidades."}
             </p>
           </div>
 
@@ -73,7 +73,7 @@ export const Footer = () => {
         </div>
 
         <div className="mt-10 border-t border-white/15 pt-6 text-sm text-blue-100">
-          © 2026 Cambio Educativo. Todos los derechos reservados.
+          {"\u00a9 2026 Cambio Educativo. Todos los derechos reservados."}
         </div>
       </div>
     </footer>

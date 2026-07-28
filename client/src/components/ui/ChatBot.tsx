@@ -11,11 +11,11 @@ type Message = {
 
 const replies: Record<string, string> = {
   institution:
-    "Podemos acompa馻r procesos de transformaci髇 institucional, innovaci髇 educativa, liderazgo y fortalecimiento pedag贸gico. Escr铆benos por WhatsApp para agendar una asesor铆a.",
+    "Podemos acompa\u00f1ar procesos de transformaci\u00f3n institucional, innovaci\u00f3n educativa, liderazgo y fortalecimiento pedag\u00f3gico. Escr\u00edbenos por WhatsApp para agendar una asesor\u00eda.",
   training:
-    "Dise馻mos capacitaciones docentes a medida: pedagog铆a, tecnolog铆a educativa, liderazgo, habilidades socioemocionales y aprendizaje activo.",
+    "Dise\u00f1amos capacitaciones docentes a medida: pedagog\u00eda, tecnolog\u00eda educativa, liderazgo, habilidades socioemocionales y aprendizaje activo.",
   organization:
-    "Trabajamos con empresas, fundaciones y ONGs en formaci髇, transformaci髇 cultural, aprendizaje organizacional y proyectos sociales con impacto sostenible.",
+    "Trabajamos con empresas, fundaciones y ONGs en formaci\u00f3n, transformaci\u00f3n cultural, aprendizaje organizacional y proyectos sociales con impacto sostenible.",
 };
 
 export const ChatBot = () => {
@@ -23,7 +23,7 @@ export const ChatBot = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Hola. Soy el asistente de Cambio Educativo. 驴Qu茅 proceso quieres iniciar?",
+      text: "Hola. Soy el asistente de Cambio Educativo. \u00bfQu\u00e9 proceso quieres iniciar?",
       sender: "bot",
     },
   ]);
@@ -90,16 +90,16 @@ export const ChatBot = () => {
             <div className="border-t border-gray-100 bg-white p-4">
               <div className="mb-4 flex flex-wrap gap-2">
                 <button
-                  onClick={() => handleSuggestion("Soy una instituci贸n educativa", "institution")}
+                  onClick={() => handleSuggestion("Soy una instituci\u00f3n educativa", "institution")}
                   className="rounded-lg border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs text-primary transition-colors hover:bg-blue-100"
                 >
-                  Instituci贸n educativa
+                  {"Instituci\u00f3n educativa"}
                 </button>
                 <button
-                  onClick={() => handleSuggestion("Busco capacitaci贸n docente", "training")}
+                  onClick={() => handleSuggestion("Busco capacitaci\u00f3n docente", "training")}
                   className="rounded-lg border border-blue-100 bg-blue-50 px-3 py-1.5 text-xs text-primary transition-colors hover:bg-blue-100"
                 >
-                  Capacitaci贸n docente
+                  {"Capacitaci\u00f3n docente"}
                 </button>
                 <button
                   onClick={() => handleSuggestion("Soy empresa u ONG", "organization")}
@@ -145,4 +145,3 @@ export const ChatBot = () => {
     </div>
   );
 };
-
