@@ -1,91 +1,59 @@
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Eye, HeartHandshake, Scale, ShieldCheck, Sparkles } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
-import { Button } from "@/components/ui/button";
 import { Reveal } from "@/components/ui/Reveal";
 import { SectionPatternDivider } from "@/components/ui/SectionPatternDivider";
 
-const storyMoments = [
-  {
-    number: "1",
-    title: "Nace una convicción.",
-    text: "Cambio Educativo surge de una idea simple y profunda: la educación sí puede transformar realidades cuando se trabaja con propósito.",
-    image: "/images/image-1.jpg",
-    className: "lg:left-[2%] lg:top-[2%] lg:w-[28%]",
-  },
-  {
-    number: "2",
-    title: "Escuchamos el contexto.",
-    text: "Antes de diseñar soluciones, miramos a las personas, las instituciones y las comunidades que sostienen cada proceso.",
-    image: "/images/image-3.jpg",
-    className: "lg:left-[28%] lg:top-[15%] lg:z-20 lg:w-[27%]",
-  },
-  {
-    number: "3",
-    title: "Tejemos capacidades.",
-    text: "Acompañamos formación, innovación y liderazgo para que el cambio no sea un discurso, sino una práctica cotidiana.",
-    image: "/images/ANAI%2010mo.jpeg",
-    className: "lg:left-[62%] lg:top-[1%] lg:w-[27%]",
-  },
-  {
-    number: "4",
-    title: "Activamos comunidad.",
-    text: "Conectamos ideas, equipos y experiencias para construir aprendizaje colectivo con impacto sostenible.",
-    image: "/images/image-4.jpg",
-    className: "lg:left-0 lg:top-[40%] lg:w-[32%]",
-  },
-  {
-    number: "5",
-    title: "Creamos rutas de cambio.",
-    text: "Cada acompañamiento se convierte en una ruta concreta: diagnóstico, diseño, acción, medición y mejora.",
-    image: "/images/image-2.jpg",
-    className: "lg:left-[32%] lg:top-[56%] lg:z-20 lg:w-[27%]",
-  },
-  {
-    number: "6",
-    title: "Miramos hacia adelante.",
-    text: "Nuestra visión es tejer una red latinoamericana de transformación educativa y social con sentido humano.",
-    image: "/images/image-5.jpg",
-    className: "lg:left-[64%] lg:top-[38%] lg:w-[28%]",
-  },
-  {
-    number: "7",
-    title: "Transformamos con propósito.",
-    text: "Cada experiencia deja aprendizajes, vínculos y capacidades instaladas para seguir avanzando.",
-    image: "/images/service-1.jpg",
-    className: "lg:left-[62%] lg:top-[72%] lg:w-[28%]",
-  },
+const actionGallery = [
+  { number: "1", title: "Hacemos conviccion.", image: "/images/image-1.jpg" },
+  { number: "2", title: "Tejemos comunidad.", image: "/images/ANAI%2010mo.jpeg" },
+  { number: "3", title: "Tejemos capacidades.", image: "/images/image-3.jpg" },
 ];
 
-const values = [
-  {
-    title: "Ética",
-    desc: "Integridad que construye una sociedad más justa y orientada al bien común.",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Sentido humano",
-    desc: "Las personas y su dignidad son nuestro centro.",
-    icon: HeartHandshake,
-  },
-  {
-    title: "Esperanza activa",
-    desc: "Convicción de que todas las realidades pueden cambiar.",
-    icon: Sparkles,
-  },
-  {
-    title: "Coherencia",
-    desc: "Alineamos lo que pensamos, decimos y hacemos.",
-    icon: Scale,
-  },
-  {
-    title: "Transparencia",
-    desc: "Claridad en nuestros procesos, resultados y aprendizajes.",
-    icon: Eye,
-  },
+const impactMetrics = [
+  { value: 24, suffix: "", label: "Proyectos de transformacion educativa" },
+  { value: 4200, suffix: "", label: "Personas impactadas" },
+  { value: 120, suffix: "", label: "Recursos pedagogicos" },
+  { value: 1500, suffix: "+", label: "Capacitaciones a docentes" },
+  { value: 50, suffix: "+", label: "Consultorias nacionales e internacionales" },
 ];
+
+const institutionalPrinciples = [
+  "Sentido Humano: Ponemos a las personas en el corazon de cada proceso educativo.",
+  "Esperanza activa: Trabajamos para encender en otros la esperanza en que pueden transformar su realidad.",
+  "Transformacion social: Creemos que toda innovacion solo tiene sentido si contribuye a construir una sociedad mas justa y equitativa.",
+  "Coherencia: Vivimos lo que ensenamos y ensenamos lo que creemos.",
+];
+
+function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
+  const [displayValue, setDisplayValue] = useState(0);
+
+  useEffect(() => {
+    let frame = 0;
+    const totalFrames = 45;
+    const timer = window.setInterval(() => {
+      frame += 1;
+      const progress = frame / totalFrames;
+      setDisplayValue(Math.round(value * progress));
+
+      if (frame >= totalFrames) {
+        window.clearInterval(timer);
+        setDisplayValue(value);
+      }
+    }, 28);
+
+    return () => window.clearInterval(timer);
+  }, [value]);
+
+  return (
+    <span className="font-display text-4xl font-black leading-none text-primary md:text-5xl">
+      {suffix}
+      {displayValue.toLocaleString("en-US")}
+    </span>
+  );
+}
 
 export default function Story() {
   return (
@@ -102,7 +70,7 @@ export default function Story() {
             <div className="grid gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-end">
               <Reveal>
                 <div>
-                  <p className="brand-kicker text-xs text-turquoise">Quiénes somos</p>
+                  <p className="brand-kicker text-xs text-turquoise">Quienes somos</p>
                   <h1 className="mt-5 max-w-5xl font-display text-[clamp(2.55rem,7.4vw,7rem)] font-black leading-[0.88]">
                     <span className="block text-white/78">La</span>
                     <span className="block text-white">Historia</span>
@@ -114,7 +82,7 @@ export default function Story() {
 
               <Reveal delay={0.14}>
                 <p className="max-w-2xl text-lg leading-8 text-white/82 md:text-xl">
-                  Somos una startup social que acompaña procesos de transformación educativa y organizacional a través de la innovación, el aprendizaje y la acción colectiva.
+                  Somos una empresa con horizonte social, que acompana la transformacion de personas, instituciones y organizaciones que quieren tejer educacion con proposito para cambiar el Ecuador, la region y el mundo.
                 </p>
               </Reveal>
             </div>
@@ -126,57 +94,35 @@ export default function Story() {
         <section className="relative overflow-hidden bg-white py-20 md:py-28">
           <div className="container mx-auto px-6">
             <Reveal>
-              <div className="mb-12 max-w-xl lg:mx-auto lg:w-[760px]">
-                <h2 className="font-display text-3xl font-black uppercase leading-[0.9] text-primary md:text-4xl">
-                  Cambio Educativo en acción.
+              <div className="mb-12 max-w-4xl">
+                <h2 className="font-display text-3xl font-black leading-[0.9] text-primary md:text-4xl lg:whitespace-nowrap">
+                  Cambio Educativo en Accion
                 </h2>
               </div>
             </Reveal>
 
-            <div className="relative mx-auto grid max-w-[360px] gap-10 sm:max-w-[560px] lg:h-[1040px] lg:max-w-[1120px] lg:block">
-              {storyMoments.map((moment, index) => (
-                <motion.article
-                  key={moment.number}
-                  className={`group relative max-w-[360px] lg:absolute lg:max-w-none ${moment.className}`}
-                  initial={{ opacity: 0, y: 28, scale: 0.96 }}
-                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                  viewport={{ once: true, amount: 0.25 }}
-                  transition={{ duration: 0.65, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
-                >
-                  <div className="relative aspect-[1.08/1] overflow-hidden bg-slate-100">
-                    <img
-                      src={moment.image}
-                      alt={moment.title}
-                      className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                    />
-                    <div className="absolute inset-x-0 bottom-0 h-1.5 bg-accent" />
-                    <div className="absolute -bottom-2 -left-2 h-20 w-24 md:h-24 md:w-28">
-                      <svg
-                        viewBox="0 0 120 96"
-                        aria-hidden="true"
-                        className="absolute inset-0 h-full w-full drop-shadow-[0_12px_18px_rgba(0,0,0,0.18)]"
-                      >
-                        <path
-                          fill="hsl(var(--accent))"
-                          d="M11 78 47 24c12-18 25-24 42-16 9 4 8 16-1 19-10 3-20 8-26 17l-4 6 33 25c7 5 6 15-1 19-6 3-12 2-17-2L47 72 33 91c-5 7-15 8-21 2-4-4-5-10-1-15Z"
-                        />
-                        <path
-                          fill="hsl(var(--accent))"
-                          d="M48 52c10 7 18 16 25 26l-23-5-10 15c-4 6-13 4-14-3-1-3 0-6 2-8l20-25Z"
-                        />
-                      </svg>
-                      <span className="absolute bottom-4 left-6 font-display text-5xl font-black leading-none text-white [text-shadow:0_5px_16px_rgba(0,0,0,0.82),0_2px_4px_rgba(0,0,0,0.95)] md:text-6xl">
-                        {moment.number}
-                      </span>
+            <div className="grid gap-6 lg:grid-cols-3">
+              {actionGallery.map((moment, index) => (
+                <motion.article key={moment.number} className="group overflow-hidden rounded-[1.75rem] border border-slate-200 bg-white shadow-[0_25px_65px_-45px_rgba(15,23,42,0.5)]" initial={{ opacity: 0, y: 24 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.25 }} transition={{ duration: 0.65, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}>
+                  <div className="relative aspect-[0.95/1] overflow-hidden bg-slate-100">
+                    <img src={moment.image} alt={moment.title} className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
+                    <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/80 via-slate-950/10 to-transparent p-6">
+                      <span className="text-sm font-black uppercase tracking-[0.24em] text-white/80">{moment.number}</span>
+                      <h3 className="mt-2 max-w-[16rem] font-display text-2xl font-black leading-tight text-white">{moment.title}</h3>
                     </div>
                   </div>
-                  <div className="relative z-30 min-h-[3.15rem] bg-white pr-3 pt-2">
-                    <h3 className="max-w-[16rem] text-[0.62rem] font-black uppercase leading-[1.02] text-slate-950 md:text-xs">
-                      {moment.title}
-                    </h3>
-                    <p className="mt-2 text-xs font-bold leading-tight text-slate-600 lg:hidden">{moment.text}</p>
-                  </div>
                 </motion.article>
+              ))}
+            </div>
+
+            <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+              {impactMetrics.map((metric, index) => (
+                <Reveal key={metric.label} delay={0.12 + index * 0.05}>
+                  <article className="rounded-[1.5rem] border border-primary/10 bg-primary/5 p-6 shadow-[0_20px_45px_-35px_rgba(22,78,135,0.55)]">
+                    <AnimatedCounter value={metric.value} suffix={metric.suffix} />
+                    <p className="mt-3 text-sm font-bold leading-relaxed text-slate-700">{metric.label}</p>
+                  </article>
+                </Reveal>
               ))}
             </div>
           </div>
@@ -191,33 +137,20 @@ export default function Story() {
               <Reveal>
                 <div>
                   <p className="brand-kicker text-xs text-turquoise">Valores institucionales</p>
-                  <h2 className="mt-4 max-w-xl font-display text-4xl font-black leading-tight md:text-5xl">
-                    Lo que guía cada proceso que acompañamos.
-                  </h2>
+                  <h2 className="mt-4 max-w-xl font-display text-4xl font-black leading-tight md:text-5xl">Lo que guia cada proceso que acompanamos.</h2>
                 </div>
               </Reveal>
 
-              <div className="grid gap-4 sm:grid-cols-2">
-                {values.map((value, index) => {
-                  const Icon = value.icon;
-
-                  return (
-                    <Reveal key={value.title} delay={index * 0.05}>
-                      <article className={`h-full rounded-lg border p-5 ${
-                        index === 4
-                          ? "border-turquoise/25 bg-turquoise/10 sm:col-span-2"
-                          : "border-white/10 bg-white/[0.06]"
-                      }`}>
-                        <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-primary text-white shadow-lg shadow-primary/20">
-                          <Icon className="h-5 w-5" />
-                        </div>
-                        <h3 className="font-display text-xl font-black text-white">{value.title}</h3>
-                        <p className="mt-2 text-sm leading-relaxed text-slate-300">{value.desc}</p>
-                      </article>
-                    </Reveal>
-                  );
-                })}
-              </div>
+              <Reveal delay={0.08}>
+                <ul className="space-y-4 rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-6 text-base leading-relaxed text-slate-200 shadow-[0_24px_70px_-50px_rgba(0,0,0,0.75)] md:p-8">
+                  {institutionalPrinciples.map((item) => (
+                    <li key={item} className="flex gap-3">
+                      <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-turquoise" />
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Reveal>
             </div>
           </div>
         </section>
@@ -229,23 +162,13 @@ export default function Story() {
             <Reveal>
               <div>
                 <p className="text-xs font-black uppercase tracking-[0.28em] text-primary">Lo que creemos</p>
-                <h2 className="mt-4 max-w-3xl font-display text-4xl font-black leading-tight md:text-5xl">
-                  El cambio se sostiene cuando las personas aprenden, lideran y actúan juntas.
-                </h2>
+                <h2 className="mt-4 max-w-3xl font-display text-4xl font-black leading-tight md:text-5xl">El cambio se sostiene cuando las personas aprenden, lideran y actuan juntas.</h2>
               </div>
             </Reveal>
 
             <Reveal delay={0.12}>
               <div className="rounded-lg border border-primary/10 bg-white p-6 shadow-xl shadow-primary/5 md:p-8">
-                <p className="text-lg leading-relaxed text-slate-700">
-                  Nuestra misión es acompañar procesos de transformación social e institucional donde la innovación, la ética y el sentido humano son motores de impacto sostenible.
-                </p>
-                <Button asChild className="mt-7 h-12 rounded-lg bg-primary px-6 font-black text-white hover:bg-primary/90">
-                  <a href="/#contacto">
-                    Conversemos
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
-                </Button>
+                <p className="text-lg leading-relaxed text-slate-700">Nuestra mision es impulsar procesos de transformacion colectiva a traves de la educacion con sentido, la innovacion con proposito y la justicia como base de toda accion.</p>
               </div>
             </Reveal>
           </div>
