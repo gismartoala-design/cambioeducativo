@@ -1,17 +1,23 @@
 import { AnimatePresence, motion } from "framer-motion";
-import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, Users } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const slides = [
   "/images/image-1.jpg",
-  "/images/image-3.jpg",
-  "/images/image-4.jpg",
-  "/images/ANAI%2010mo.jpeg",
+  "/images/IMG_1761.jpeg",
+  "/images/IMG_1768.jpeg",
+  "/images/PHOTO-2026-03-16-14-39-51.jpg",
+  "/images/PHOTO-2026-06-23-17-59-47.jpg",
+  "/images/PHOTO-2026-06-23-17-59-50.jpg",
+  "/images/PHOTO-2026-06-23-17-59-53.jpg",
+  "/images/PHOTO-2026-06-3-17-59-47.jpg",
 ];
 
+const getRandomStartIndex = () => Math.floor(Math.random() * slides.length);
+
 export const IntroCarousel = () => {
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] = useState(getRandomStartIndex);
 
   useEffect(() => {
     slides.forEach((slide) => {
@@ -47,7 +53,7 @@ export const IntroCarousel = () => {
             aria-hidden="true"
             loading="eager"
             decoding="async"
-            fetchPriority={index === 0 ? "high" : "auto"}
+            fetchPriority={index === current ? "high" : "auto"}
             className="absolute inset-0 h-full w-full object-cover object-center"
             initial={false}
             animate={{
@@ -79,21 +85,35 @@ export const IntroCarousel = () => {
       </button>
 
       <motion.div
-        className="absolute bottom-24 left-6 z-20 sm:left-10 md:bottom-28"
+        className="absolute bottom-20 left-6 z-20 sm:left-10 md:bottom-24"
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.45, ease: "easeOut" }}
       >
-        <Button
-          asChild
-          size="lg"
-          className="h-13 rounded-lg bg-accent px-6 text-sm font-black text-white shadow-2xl shadow-black/35 transition-transform hover:-translate-y-0.5 hover:bg-accent/90 sm:h-14 sm:px-7 sm:text-base"
-        >
-          <a href="/historia">
-            Conoce nuestra historia
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </a>
-        </Button>
+        <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+          <Button
+            asChild
+            size="lg"
+            className="h-13 rounded-lg bg-accent px-6 text-sm font-black text-white shadow-2xl shadow-black/35 transition-transform hover:-translate-y-0.5 hover:bg-accent/90 sm:h-14 sm:px-7 sm:text-base"
+          >
+            <a href="/historia">
+              Conoce nuestra historia
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </a>
+          </Button>
+
+          <Button
+            asChild
+            size="lg"
+            variant="outline"
+            className="h-13 rounded-lg border-white/60 bg-white/8 px-6 text-sm font-black text-white shadow-2xl shadow-black/20 backdrop-blur transition-transform hover:-translate-y-0.5 hover:bg-white hover:text-primary sm:h-14 sm:px-7 sm:text-base"
+          >
+            <a href="/equipo">
+              Conoce al equipo
+              <Users className="ml-2 h-5 w-5" />
+            </a>
+          </Button>
+        </div>
       </motion.div>
 
       <div className="absolute bottom-8 left-0 right-0 z-20 flex justify-center px-6">

@@ -51,7 +51,7 @@ export default function Home() {
               <Purpose />
               <SectionPatternDivider tone="blue" />
               <WhyUs />
-              <SectionPatternDivider tone="turquoise" />
+              <SectionPatternDivider tone="orange" />
               <Ecosystem />
               <SectionPatternDivider tone="orange" />
               <ImpactPortfolio />

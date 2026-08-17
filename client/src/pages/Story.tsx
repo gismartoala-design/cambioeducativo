@@ -9,18 +9,58 @@ import { SectionPatternDivider } from "@/components/ui/SectionPatternDivider";
 const actionGallery = [
   {
     image: "/images/image-1.jpg",
-    frame: "lg:w-[25%] lg:left-[4%] lg:top-[1.5rem] lg:z-10",
-    imageHeight: "lg:h-[230px]",
+    frame: "lg:w-[17%] lg:left-[1%] lg:top-[1rem] lg:z-20",
+    imageHeight: "lg:h-[220px]",
+  },
+  {
+    image: "/images/IMG_1761.jpeg",
+    frame: "lg:w-[15%] lg:left-[12%] lg:top-[13rem] lg:z-30",
+    imageHeight: "lg:h-[175px]",
   },
   {
     image: "/images/ANAI%2010mo.jpeg",
-    frame: "lg:w-[23%] lg:left-[35%] lg:top-[7.2rem] lg:z-20",
-    imageHeight: "lg:h-[180px]",
+    frame: "lg:w-[18%] lg:left-[26%] lg:top-[4.5rem] lg:z-20",
+    imageHeight: "lg:h-[220px]",
+  },
+  {
+    image: "/images/PHOTO-2026-06-23-17-59-47.jpg",
+    frame: "lg:w-[14%] lg:left-[38%] lg:top-[0.5rem] lg:z-10",
+    imageHeight: "lg:h-[190px]",
   },
   {
     image: "/images/image-3.jpg",
-    frame: "lg:w-[25%] lg:right-[5%] lg:top-[0.25rem] lg:z-10",
-    imageHeight: "lg:h-[235px]",
+    frame: "lg:w-[17%] lg:left-[47%] lg:top-[11rem] lg:z-20",
+    imageHeight: "lg:h-[210px]",
+  },
+  {
+    image: "/images/IMG_1768.jpeg",
+    frame: "lg:w-[16%] lg:left-[56%] lg:top-[2rem] lg:z-30",
+    imageHeight: "lg:h-[250px]",
+  },
+  {
+    image: "/images/PHOTO-2026-03-16-14-39-51.jpg",
+    frame: "lg:w-[18%] lg:right-[12%] lg:top-[7rem] lg:z-20",
+    imageHeight: "lg:h-[245px]",
+  },
+  {
+    image: "/images/image-4.jpg",
+    frame: "lg:w-[14%] lg:right-[2%] lg:top-[1.5rem] lg:z-10",
+    imageHeight: "lg:h-[195px]",
+  },
+  {
+    image: "/images/PHOTO-2026-06-23-17-59-50.jpg",
+    frame: "lg:w-[16%] lg:right-[0.5%] lg:top-[16rem] lg:z-30",
+    imageHeight: "lg:h-[185px]",
+  },
+  {
+    image: "/images/WhatsApp%20Image%202026-01-28%20at%2007.59.52%20(4).jpeg",
+    frame: "lg:w-[15%] lg:left-[31%] lg:top-[18rem] lg:z-10",
+    imageHeight: "lg:h-[180px]",
+  },
+  {
+    image: "/images/WhatsApp%20Image%202026-01-28%20at%2007.59.56.jpeg",
+    frame: "lg:w-[15%] lg:left-[68%] lg:top-[18.5rem] lg:z-20",
+    imageHeight: "lg:h-[180px]",
   },
 ];
 
@@ -113,7 +153,7 @@ export default function Story() {
               </div>
             </Reveal>
 
-            <div className="relative mx-auto grid max-w-[360px] gap-5 sm:max-w-[520px] lg:h-[320px] lg:max-w-[1080px] lg:block">
+            <div className="relative mx-auto grid max-w-[360px] gap-5 sm:max-w-[520px] lg:h-[640px] lg:max-w-[1360px] lg:block">
               {actionGallery.map((moment, index) => (
                 <motion.article
                   key={moment.image}
