@@ -13,8 +13,8 @@ const valuePoints = [
 
 export const Hero = () => {
   return (
-    <section id="propuesta" className="relative h-[100svh] overflow-hidden bg-white text-slate-950">
-      <div className="container relative z-10 mx-auto flex h-full items-center px-4 pb-5 pt-24 sm:px-6 sm:pb-6 lg:pb-8 lg:pt-28 [@media(max-height:720px)]:pt-20">
+    <section id="propuesta" className="relative min-h-[100svh] bg-white text-slate-950">
+      <div className="container relative z-10 mx-auto flex min-h-[100svh] items-center px-4 pb-5 pt-24 sm:px-6 sm:pb-6 lg:pb-8 lg:pt-28 [@media(max-height:720px)]:pt-20">
         <div className="grid w-full items-center gap-5 lg:grid-cols-[1.05fr_0.95fr] xl:gap-10">
           <div className="min-w-0">
             <Reveal delay={0.1}>
@@ -43,7 +43,7 @@ export const Hero = () => {
             </Reveal>
 
             <Reveal delay={0.34}>
-              <div className="mt-4 flex max-w-3xl flex-wrap gap-3 [@media(max-height:680px)]:hidden">
+              <div className="mt-4 flex max-w-3xl flex-wrap gap-3">
                 {audiences.map((audience) => (
                   <div key={audience} className="inline-flex min-h-[3rem] items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-3 text-sm font-extrabold text-slate-700 shadow-[0_14px_30px_-24px_rgba(15,23,42,0.45)]">
                     <CheckCircle2 className="h-4 w-4 shrink-0 text-turquoise" />
