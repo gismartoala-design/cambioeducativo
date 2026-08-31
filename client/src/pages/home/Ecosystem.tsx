@@ -3,11 +3,11 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 
 const ecosystemPhotos = [
-  "/images/image-1.jpg",
-  "/images/image-2.jpg",
-  "/images/image-3.jpg",
-  "/images/image-4.jpg",
-  "/images/image-5.jpg",
+  "/images/IMG_1768.jpeg",
+  "/images/PHOTO-2026-06-23-17-59-47.jpg",
+  "/images/PHOTO-2026-06-23-17-59-53.jpg",
+  "/images/PHOTO-2026-06-3-17-59-47.jpg",
+  "/images/WhatsApp Image 2026-01-28 at 07.59.52 (4).jpeg",
 ];
 
 export const Ecosystem = () => {
@@ -38,17 +38,32 @@ export const Ecosystem = () => {
           </Reveal>
           <Reveal delay={0.12}>
             <p className="mt-5 max-w-4xl text-lg leading-relaxed text-muted-foreground md:text-xl">{"Espacios donde tejemos la educaci\u00f3n que so\u00f1amos."}</p>
-            <p className="mt-4 max-w-4xl text-lg leading-relaxed text-muted-foreground">{"Promovemos comunidades que aprenden juntas, instituciones que lideran con coherencia y personas que encuentran en la educaci\u00f3n una oportunidad para construir su futuro con dignidad y esperanza."}</p>
+            <p className="mt-4 max-w-4xl text-lg leading-relaxed text-muted-foreground">
+              {"Promovemos comunidades que aprenden juntas, instituciones que lideran con coherencia y personas que encuentran en la educaci\u00f3n una oportunidad para construir su futuro con dignidad y esperanza."}
+            </p>
           </Reveal>
         </div>
 
         <Reveal delay={0.18}>
           <div className="mt-12 overflow-hidden rounded-[2rem] border border-primary/10 bg-primary/5 p-4 shadow-[0_35px_90px_-55px_rgba(22,78,135,0.5)] md:p-5">
-            <div className="relative overflow-hidden rounded-[1.5rem]">
+            <div className="relative overflow-hidden rounded-[1.5rem] bg-slate-100">
               <div className="flex transition-transform duration-700 ease-out" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
                 {ecosystemPhotos.map((photo) => (
-                  <div key={photo} className="min-w-full">
-                    <img src={photo} alt={"Escenas del ecosistema de transformaci\u00f3n educativa"} className="h-[280px] w-full object-cover md:h-[420px]" />
+                  <div key={photo} className="relative min-w-full">
+                    <img
+                      src={photo}
+                      alt=""
+                      aria-hidden="true"
+                      className="absolute inset-0 h-full w-full scale-110 object-cover object-center blur-2xl"
+                    />
+                    <div className="absolute inset-0 bg-white/20" />
+                    <div className="relative flex h-[280px] items-center justify-center md:h-[420px]">
+                      <img
+                        src={photo}
+                        alt={"Escenas del ecosistema de transformaci\u00f3n educativa"}
+                        className="max-h-full w-full object-contain object-center"
+                      />
+                    </div>
                   </div>
                 ))}
               </div>
@@ -56,15 +71,31 @@ export const Ecosystem = () => {
               <div className="absolute inset-x-0 bottom-0 flex items-center justify-between bg-gradient-to-t from-slate-950/70 to-transparent p-4 md:p-6">
                 <div className="flex gap-2">
                   {ecosystemPhotos.map((photo, index) => (
-                    <button key={photo} type="button" onClick={() => setActiveIndex(index)} className={`h-2.5 rounded-full transition-all ${activeIndex === index ? "w-10 bg-white" : "w-2.5 bg-white/50"}`} aria-label={`Ir a la foto ${index + 1}`} />
+                    <button
+                      key={photo}
+                      type="button"
+                      onClick={() => setActiveIndex(index)}
+                      className={`h-2.5 rounded-full transition-all ${activeIndex === index ? "w-10 bg-white" : "w-2.5 bg-white/50"}`}
+                      aria-label={`Ir a la foto ${index + 1}`}
+                    />
                   ))}
                 </div>
 
                 <div className="flex gap-2">
-                  <button type="button" onClick={goToPrevious} className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-primary transition hover:bg-white" aria-label="Foto anterior">
+                  <button
+                    type="button"
+                    onClick={goToPrevious}
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-primary transition hover:bg-white"
+                    aria-label="Foto anterior"
+                  >
                     <ChevronLeft className="h-5 w-5" />
                   </button>
-                  <button type="button" onClick={goToNext} className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-primary transition hover:bg-white" aria-label="Foto siguiente">
+                  <button
+                    type="button"
+                    onClick={goToNext}
+                    className="flex h-10 w-10 items-center justify-center rounded-full bg-white/90 text-primary transition hover:bg-white"
+                    aria-label="Foto siguiente"
+                  >
                     <ChevronRight className="h-5 w-5" />
                   </button>
                 </div>

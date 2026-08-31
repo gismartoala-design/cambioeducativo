@@ -29,11 +29,11 @@ export const Contact = () => {
               <div>
                 <span className="text-xs font-black uppercase tracking-[0.28em] text-turquoise">Trabajemos juntos</span>
                 <h2 className="mt-5 max-w-2xl font-display text-4xl font-black leading-tight md:text-6xl">
-                  Empecemos a tejer tu próximo cambio
+                  {"Empecemos a tejer tu pr\u00f3ximo cambio"}
                 </h2>
               </div>
               <p className="mt-10 max-w-xl text-lg leading-relaxed text-blue-50">
-                D�janos tus datos y cu�ntanos c�mo crees que podemos acompa�arte.
+                {"D\u00e9janos tus datos y cu\u00e9ntanos c\u00f3mo crees que podemos acompa\u00f1arte."}
               </p>
             </div>
           </Reveal>
@@ -59,8 +59,8 @@ export const Contact = () => {
 
                 <div className="grid gap-4 sm:grid-cols-2">
                   <label className="grid gap-2 text-sm font-bold text-blue-50">
-                    Institución / Empresa
-                    <input name="institucion" required className="h-12 rounded-lg border border-white/10 bg-slate-950 px-4 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-turquoise" placeholder="Nombre de la organización" />
+                    {"Instituci\u00f3n / Empresa"}
+                    <input name="institucion" required className="h-12 rounded-lg border border-white/10 bg-slate-950 px-4 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-turquoise" placeholder={"Nombre de la organizaci\u00f3n"} />
                   </label>
                   <label className="grid gap-2 text-sm font-bold text-blue-50">
                     Correo corporativo
@@ -69,8 +69,8 @@ export const Contact = () => {
                 </div>
 
                 <label className="grid gap-2 text-sm font-bold text-blue-50">
-                  ¿Qué deseas lograr junto a Cambio Educativo?
-                  <textarea name="proyecto" required rows={5} className="resize-none rounded-lg border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-turquoise" placeholder="Cuéntanos qué reto, objetivo o proceso te gustaría impulsar." />
+                  {"\u00bfQu\u00e9 deseas lograr junto a Cambio Educativo?"}
+                  <textarea name="proyecto" required rows={5} className="resize-none rounded-lg border border-white/10 bg-slate-950 px-4 py-3 text-white outline-none transition-colors placeholder:text-slate-500 focus:border-turquoise" placeholder={"Cu\u00e9ntanos qu\u00e9 reto, objetivo o proceso te gustar\u00eda impulsar."} />
                 </label>
 
                 <Button type="submit" size="lg" className="mt-2 h-14 rounded-lg bg-accent px-7 font-black text-white hover:bg-accent/90">
@@ -106,4 +106,3 @@ export const Contact = () => {
     </section>
   );
 };
-

@@ -43,9 +43,9 @@ export const Hero = () => {
             </Reveal>
 
             <Reveal delay={0.34}>
-              <div className="mt-4 grid max-w-2xl gap-2 sm:grid-cols-3 [@media(max-height:680px)]:hidden">
+              <div className="mt-4 flex max-w-3xl flex-wrap gap-3 [@media(max-height:680px)]:hidden">
                 {audiences.map((audience) => (
-                  <div key={audience} className="flex items-center gap-2 rounded-lg border border-white/80 bg-white/82 px-3 py-2 text-sm font-extrabold text-slate-700 shadow-sm backdrop-blur">
+                  <div key={audience} className="inline-flex min-h-[3rem] items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-3 text-sm font-extrabold text-slate-700 shadow-[0_14px_30px_-24px_rgba(15,23,42,0.45)]">
                     <CheckCircle2 className="h-4 w-4 shrink-0 text-turquoise" />
                     <span>{audience}</span>
                   </div>

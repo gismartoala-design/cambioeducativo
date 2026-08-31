@@ -6,7 +6,7 @@ const services = [
   {
     title: "Acompa\u00f1amiento para la transformaci\u00f3n",
     desc: "Acompa\u00f1amos a escuelas, colegios, centros infantiles, institutos y universidades en procesos de innovaci\u00f3n, liderazgo y mejora organizacional.",
-    img: "/images/image-4.jpg",
+    img: "/images/PHOTO-2026-03-16-14-39-51.jpg",
     audience: "Instituciones educativas",
     result: "Instituciones con una ruta de mejora clara, equipos alineados y capacidades instaladas para sostener el cambio.",
     icon: School,
@@ -14,7 +14,7 @@ const services = [
   {
     title: "Formaci\u00f3n y capacitaci\u00f3n",
     desc: "Dise\u00f1amos experiencias de aprendizaje para fortalecer capacidades pedag\u00f3gicas, tecnol\u00f3gicas, socioemocionales y de liderazgo educativo.",
-    img: "/images/image-2.jpg",
+    img: "/images/IMG_1761.jpeg",
     audience: "Docentes y directivos",
     result: "Docentes y l\u00edderes con herramientas aplicables para mejorar sus pr\u00e1cticas y acompa\u00f1ar aprendizajes significativos.",
     icon: GraduationCap,
@@ -22,7 +22,7 @@ const services = [
   {
     title: "Aprendizaje organizacional",
     desc: "Creamos soluciones de formaci\u00f3n, cultura e innovaci\u00f3n para empresas y organizaciones que quieren desarrollar equipos con prop\u00f3sito.",
-    img: "/images/image-5.jpg",
+    img: "/images/PHOTO-2026-06-3-17-59-47.jpg",
     audience: "Crecimiento y desarrollo",
     result: "Equipos fortalecidos, cultura de aprendizaje activa y procesos formativos conectados con objetivos institucionales.",
     icon: Building2,
@@ -30,7 +30,7 @@ const services = [
   {
     title: "Proyectos sociales y comunitarios",
     desc: "Trabajamos con fundaciones, ONGs, organismos internacionales y comunidades para impulsar capacidades e impacto sostenible.",
-    img: "/images/image-3.jpg",
+    img: "/images/PHOTO-2026-06-23-17-59-50.jpg",
     audience: "ONGs y comunidad",
     result: "Proyectos con enfoque humano, participaci\u00f3n comunitaria y resultados sostenibles en el territorio.",
     icon: Handshake,
@@ -80,3 +80,4 @@ export const Services = () => {
     </section>
   );
 };
+
