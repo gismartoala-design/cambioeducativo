@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+﻿import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -9,17 +9,17 @@ import { Button } from "@/components/ui/button";
 
 const teamMembers = [
   { name: "Cinthya Game", image: "/images/equipo-cambioeducativo/CINTHYA%20GAME.jpg" },
-  { name: "Claudia Sanchez", image: "/images/equipo-cambioeducativo/Claudia%20S%C3%A1nchez_.png" },
+  { name: "Claudia Sánchez", image: "/images/equipo-cambioeducativo/Claudia%20S%C3%A1nchez_.png" },
   { name: "Cyntia Banegas", image: "/images/equipo-cambioeducativo/CYNTIA%20BANEGAS.png" },
-  { name: "Daniel Calderon", image: "/images/equipo-cambioeducativo/DANIEL%20CALDERON.png" },
-  { name: "Hector Cedeno", image: "/images/equipo-cambioeducativo/H%C3%A9ctor%20Cede%C3%B1o.png" },
+  { name: "Daniel Calderón", image: "/images/equipo-cambioeducativo/DANIEL%20CALDERON.png" },
+  { name: "Héctor Cedeño", image: "/images/equipo-cambioeducativo/H%C3%A9ctor%20Cede%C3%B1o.png" },
   { name: "Jimmy Zambrano", image: "/images/equipo-cambioeducativo/Jimmy%20Zambrano%20R_.jpg" },
   { name: "Johanna Pozo", image: "/images/equipo-cambioeducativo/Johanna%20Pozo.jpg" },
-  { name: "Jose Ango", image: "/images/equipo-cambioeducativo/Jos%C3%A9%20Ango.jpg" },
+  { name: "José Ango", image: "/images/equipo-cambioeducativo/Jos%C3%A9%20Ango.jpg" },
   { name: "Lorena Salazar", image: "/images/equipo-cambioeducativo/Lorena%20Salazar.png" },
-  { name: "Maria Elena Perez", image: "/images/equipo-cambioeducativo/MAR%C3%8DA%20ELENA%20P%C3%89REZ.jpg" },
+  { name: "María Elena Pérez", image: "/images/equipo-cambioeducativo/MAR%C3%8DA%20ELENA%20P%C3%89REZ.jpg" },
   { name: "Nelson Villegas", image: "/images/equipo-cambioeducativo/Nelson%20Villegas.jpeg" },
-  { name: "Sofia Litardo", image: "/images/equipo-cambioeducativo/Sof%C3%ADa%20Litardo_.jpg" },
+  { name: "Sofía Litardo", image: "/images/equipo-cambioeducativo/Sof%C3%ADa%20Litardo_.jpg" },
 ];
 
 const principles = [

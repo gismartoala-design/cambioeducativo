@@ -7,7 +7,6 @@ const ecosystemPhotos = [
   "/images/PHOTO-2026-06-23-17-59-47.jpg",
   "/images/PHOTO-2026-06-23-17-59-53.jpg",
   "/images/PHOTO-2026-06-3-17-59-47.jpg",
-  "/images/WhatsApp Image 2026-01-28 at 07.59.52 (4).jpeg",
 ];
 
 export const Ecosystem = () => {
