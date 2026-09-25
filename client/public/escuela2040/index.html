@@ -574,11 +574,11 @@ footer .nav-logo{justify-content:center;color:#fff;margin-bottom:10px;}
       <p>Dos minutos para entender por qué esta experiencia es distinta a cualquier capacitación que hayas tomado.</p>
     </div>
     <div class="video-wrap" data-reveal id="videoWrap">
-      <iframe id="ytFrame" src="" title="Video de presentación Escuela 2040" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
+      <iframe id="ytFrame" src="" title="Ver video" referrerpolicy="strict-origin-when-cross-origin" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen" allowfullscreen></iframe>
       <div class="video-placeholder" id="videoPlaceholder">
-        <a class="play-btn" id="videoOpenBtn" href="https://youtu.be/MsFl0DXlQ8Q" target="_blank" rel="noopener noreferrer" aria-label="Ver video de Jostin en YouTube"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></a>
-        <h3 id="videoPlaceholderTitle">Video de presentación</h3>
-        <p id="videoPlaceholderText">Haz clic para ver el video.</p>
+        <a class="play-btn" id="videoOpenBtn" href="https://youtu.be/MsFl0DXlQ8Q" target="_blank" rel="noopener noreferrer" aria-label="Ver video"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></a>
+        <h3 id="videoPlaceholderTitle">Ver video</h3>
+        <p id="videoPlaceholderText"></p>
       </div>
     </div>
   </div>
@@ -864,19 +864,28 @@ const CONFIG = {
     const placeholderTitle = document.getElementById("videoPlaceholderTitle");
     const placeholderText = document.getElementById("videoPlaceholderText");
     const watchUrl = "https://youtu.be/" + CONFIG.youtubeVideoId;
+    const embedParams = new URLSearchParams({
+      rel: "0",
+      modestbranding: "1",
+      playsinline: "1"
+    });
+
+    if(location.origin && location.origin !== "null"){
+      embedParams.set("origin", location.origin);
+    }
 
     if(openBtn) openBtn.href = watchUrl;
+    if(placeholderTitle) placeholderTitle.textContent = "Ver video";
+    if(placeholderText) placeholderText.textContent = "";
 
     if(location.protocol === "http:" || location.protocol === "https:"){
-      frame.src = "https://www.youtube.com/embed/" + CONFIG.youtubeVideoId + "?rel=0";
+      frame.src = "https://www.youtube-nocookie.com/embed/" + CONFIG.youtubeVideoId + "?" + embedParams.toString();
       frame.style.display = "block";
       placeholder.style.display = "none";
     } else {
       frame.removeAttribute("src");
       frame.style.display = "none";
       placeholder.style.display = "flex";
-      if(placeholderTitle) placeholderTitle.textContent = "Ver video de Jostin";
-      if(placeholderText) placeholderText.textContent = "La vista previa local no permite embeber YouTube. Haz clic para abrir el video.";
     }
   }
 
