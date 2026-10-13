@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -8,68 +7,50 @@ import { SectionPatternDivider } from "@/components/ui/SectionPatternDivider";
 
 const actionGallery = [
   {
-    image: "/images/image-1.jpg",
-    frame: "lg:w-[17%] lg:left-[1%] lg:top-[1rem] lg:z-20",
-    imageHeight: "lg:h-[220px]",
+    image: "/images/carousel-2026/grupal-03.jpg",
+    className: "col-span-2 row-span-2 md:col-span-4 md:row-span-2",
+    collageClass: "-rotate-[1.2deg]",
   },
   {
-    image: "/images/IMG_1761.jpeg",
-    frame: "lg:w-[15%] lg:left-[12%] lg:top-[13rem] lg:z-30",
-    imageHeight: "lg:h-[175px]",
-  },
-  {
-    image: "/images/ANAI%2010mo.jpeg",
-    frame: "lg:w-[18%] lg:left-[26%] lg:top-[4.5rem] lg:z-20",
-    imageHeight: "lg:h-[220px]",
+    image: "/images/carousel-2026/taller-02.jpg",
+    className: "col-span-2 row-span-2 md:col-span-2 md:row-span-2",
+    collageClass: "rotate-[1deg] md:translate-y-3",
   },
   {
     image: "/images/PHOTO-2026-06-23-17-59-47.jpg",
-    frame: "lg:w-[14%] lg:left-[38%] lg:top-[0.5rem] lg:z-10",
-    imageHeight: "lg:h-[190px]",
+    className: "col-span-2 row-span-2 md:col-span-2 md:row-span-2",
+    collageClass: "-rotate-[0.8deg] md:-translate-y-2",
   },
   {
-    image: "/images/image-3.jpg",
-    frame: "lg:w-[17%] lg:left-[47%] lg:top-[11rem] lg:z-20",
-    imageHeight: "lg:h-[210px]",
-  },
-  {
-    image: "/images/IMG_1768.jpeg",
-    frame: "lg:w-[16%] lg:left-[56%] lg:top-[2rem] lg:z-30",
-    imageHeight: "lg:h-[250px]",
-  },
-  {
-    image: "/images/PHOTO-2026-03-16-14-39-51.jpg",
-    frame: "lg:w-[18%] lg:right-[12%] lg:top-[7rem] lg:z-20",
-    imageHeight: "lg:h-[245px]",
-  },
-  {
-    image: "/images/image-4.jpg",
-    frame: "lg:w-[14%] lg:right-[2%] lg:top-[1.5rem] lg:z-10",
-    imageHeight: "lg:h-[195px]",
+    image: "/images/IMG_1761.jpeg",
+    className: "col-span-2 row-span-2 md:col-span-2 md:row-span-2",
+    collageClass: "rotate-[1.1deg]",
   },
   {
     image: "/images/PHOTO-2026-06-23-17-59-50.jpg",
-    frame: "lg:w-[16%] lg:right-[0.5%] lg:top-[16rem] lg:z-30",
-    imageHeight: "lg:h-[185px]",
+    className: "col-span-2 row-span-2 md:col-span-3 md:row-span-2",
+    collageClass: "-rotate-[1deg] md:translate-y-2",
   },
   {
-    image: "/images/WhatsApp%20Image%202026-01-28%20at%2007.59.52%20(4).jpeg",
-    frame: "lg:w-[15%] lg:left-[31%] lg:top-[18rem] lg:z-10",
-    imageHeight: "lg:h-[180px]",
+    image: "/images/PHOTO-2026-06-23-17-59-53.jpg",
+    className: "col-span-2 row-span-2 md:col-span-3 md:row-span-2",
+    collageClass: "rotate-[1deg]",
   },
   {
-    image: "/images/WhatsApp%20Image%202026-01-28%20at%2007.59.56.jpeg",
-    frame: "lg:w-[15%] lg:left-[68%] lg:top-[18.5rem] lg:z-20",
-    imageHeight: "lg:h-[180px]",
+    image: "/images/carousel-2026/grupal-02.jpg",
+    className: "col-span-2 row-span-2 md:col-span-4 md:row-span-2",
+    collageClass: "rotate-[0.8deg] md:-translate-y-1",
   },
-];
-
-const impactMetrics = [
-  { value: 24, suffix: "", label: "Proyectos de transformaci\u00f3n educativa" },
-  { value: 4200, suffix: "", label: "Personas impactadas" },
-  { value: 120, suffix: "", label: "Recursos pedag\u00f3gicos" },
-  { value: 1500, suffix: "+", label: "Capacitaciones a docentes" },
-  { value: 50, suffix: "+", label: "Consultor\u00edas nacionales e internacionales" },
+  {
+    image: "/images/carousel-2026/taller-01.jpg",
+    className: "col-span-2 row-span-2 md:col-span-2 md:row-span-2",
+    collageClass: "-rotate-[1.1deg] md:translate-y-3",
+  },
+  {
+    image: "/images/carousel-2026/grupal-01.jpg",
+    className: "col-span-2 row-span-2 md:col-span-2 md:row-span-2",
+    collageClass: "rotate-[1deg]",
+  },
 ];
 
 const institutionalPrinciples = [
@@ -79,34 +60,6 @@ const institutionalPrinciples = [
   "Coherencia: Vivimos lo que ense\u00f1amos y ense\u00f1amos lo que creemos.",
 ];
 
-function AnimatedCounter({ value, suffix }: { value: number; suffix: string }) {
-  const [displayValue, setDisplayValue] = useState(0);
-
-  useEffect(() => {
-    let frame = 0;
-    const totalFrames = 45;
-    const timer = window.setInterval(() => {
-      frame += 1;
-      const progress = frame / totalFrames;
-      setDisplayValue(Math.round(value * progress));
-
-      if (frame >= totalFrames) {
-        window.clearInterval(timer);
-        setDisplayValue(value);
-      }
-    }, 28);
-
-    return () => window.clearInterval(timer);
-  }, [value]);
-
-  return (
-    <span className="font-display text-4xl font-black leading-none text-primary md:text-5xl">
-      {suffix}
-      {displayValue.toLocaleString("en-US")}
-    </span>
-  );
-}
-
 export default function Story() {
   return (
     <div className="min-h-screen bg-white font-sans text-foreground selection:bg-primary/20">
@@ -114,7 +67,7 @@ export default function Story() {
       <main>
         <section className="relative flex min-h-[100svh] items-center overflow-hidden bg-slate-950 py-28 text-white md:py-32">
           <div className="absolute inset-0 pointer-events-none">
-            <img src="/images/image-4.jpg" alt="" aria-hidden="true" className="h-full w-full object-cover opacity-28" />
+            <img src="/images/carousel-2026/taller-02.jpg" alt="" aria-hidden="true" className="h-full w-full object-cover opacity-28" />
             <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,6,23,0.92),rgba(2,6,23,0.76),rgba(2,6,23,0.48))]" />
           </div>
 
@@ -127,14 +80,14 @@ export default function Story() {
                     <span className="block text-white/78">La</span>
                     <span className="block text-white">Historia</span>
                     <span className="block text-primary">de Cambio</span>
-                    <span className="block text-white">Educativo.</span>
+                    <span className="block text-white">Educativo</span>
                   </h1>
                 </div>
               </Reveal>
 
               <Reveal delay={0.14}>
                 <p className="max-w-2xl text-lg leading-8 text-white/82 md:text-xl">
-                  {"Somos una empresa con horizonte social, que acompa\u00f1a la transformaci\u00f3n de personas, instituciones y organizaciones que quieren tejer educaci\u00f3n con prop\u00f3sito para cambiar el Ecuador, la regi\u00f3n y el mundo."}
+                  {"Somos una empresa con horizonte social, que acompa\u00f1a la transformaci\u00f3n de personas, instituciones y organizaciones que quieren tejer educaci\u00f3n con prop\u00f3sito para cambiar el Ecuador, la regi\u00f3n y el mundo"}
                 </p>
               </Reveal>
             </div>
@@ -147,38 +100,32 @@ export default function Story() {
           <div className="container mx-auto px-6">
             <Reveal>
               <div className="mb-12 max-w-4xl">
-                <h2 className="font-display text-3xl font-black leading-[0.9] text-primary md:text-4xl lg:whitespace-nowrap">
+                <h2 className="font-display text-3xl font-black leading-tight text-primary md:text-4xl">
                   {"Cambio Educativo en Acci\u00f3n"}
                 </h2>
               </div>
             </Reveal>
 
-            <div className="relative mx-auto grid max-w-[360px] gap-5 sm:max-w-[520px] lg:h-[640px] lg:max-w-[1360px] lg:block">
-              {actionGallery.map((moment, index) => (
-                <motion.article
-                  key={moment.image}
-                  className={`group relative bg-white lg:absolute ${moment.frame}`}
-                  initial={{ opacity: 0, y: 24 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, amount: 0.25 }}
-                  transition={{ duration: 0.65, delay: index * 0.05, ease: [0.16, 1, 0.3, 1] }}
-                >
-                  <div className={`relative h-[220px] overflow-hidden bg-slate-100 ${moment.imageHeight}`}>
-                    <img src={moment.image} alt="" aria-hidden="true" className="h-full w-full object-cover transition duration-700 group-hover:scale-105" />
-                  </div>
-                </motion.article>
-              ))}
-            </div>
-
-            <div className="mt-12 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
-              {impactMetrics.map((metric, index) => (
-                <Reveal key={metric.label} delay={0.12 + index * 0.05}>
-                  <article className="rounded-[1.5rem] border border-primary/10 bg-primary/5 p-6 shadow-[0_20px_45px_-35px_rgba(22,78,135,0.55)]">
-                    <AnimatedCounter value={metric.value} suffix={metric.suffix} />
-                    <p className="mt-3 text-sm font-bold leading-relaxed text-slate-700">{metric.label}</p>
-                  </article>
-                </Reveal>
-              ))}
+            <div className="relative -mx-1 overflow-hidden bg-primary/[0.03] px-2 py-5 md:px-5 md:py-8">
+              <div className="grid auto-rows-[132px] grid-cols-2 gap-x-4 gap-y-6 sm:auto-rows-[156px] md:grid-cols-8 md:gap-x-5 md:gap-y-7 lg:auto-rows-[176px]">
+                {actionGallery.map((moment, index) => (
+                  <motion.article
+                    key={moment.image}
+                    className={`relative overflow-visible ${moment.className}`}
+                    initial={{ opacity: 0, y: 24 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, amount: 0.18 }}
+                    transition={{ duration: 0.55, delay: index * 0.025, ease: [0.16, 1, 0.3, 1] }}
+                  >
+                    <div className={`group relative h-full w-full overflow-visible rounded-lg bg-white p-2 shadow-[0_22px_44px_-30px_rgba(15,23,42,0.5)] ring-1 ring-slate-200/80 transition-transform duration-300 hover:z-20 hover:rotate-0 hover:scale-[1.018] ${moment.collageClass}`}>
+                      <span className="absolute left-1/2 top-0 z-10 h-4 w-14 -translate-x-1/2 -translate-y-1/2 rotate-1 bg-accent/20 shadow-sm backdrop-blur-sm" aria-hidden="true" />
+                      <div className="h-full w-full overflow-hidden rounded-md bg-slate-100">
+                        <img src={moment.image} alt="" aria-hidden="true" className="h-full w-full object-cover object-center transition duration-700 group-hover:scale-105" />
+                      </div>
+                    </div>
+                  </motion.article>
+                ))}
+              </div>
             </div>
           </div>
         </section>
@@ -192,12 +139,12 @@ export default function Story() {
               <Reveal>
                 <div>
                   <p className="brand-kicker text-xs text-turquoise">Valores institucionales</p>
-                  <h2 className="mt-4 max-w-xl font-display text-4xl font-black leading-tight md:text-5xl">{"Lo que gu\u00eda cada proceso que acompa\u00f1amos."}</h2>
+                  <h2 className="mt-4 max-w-xl font-display text-4xl font-black leading-tight md:text-5xl">{"Lo que gu\u00eda cada proceso que acompa\u00f1amos"}</h2>
                 </div>
               </Reveal>
 
               <Reveal delay={0.08}>
-                <ul className="space-y-4 rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-6 text-base leading-relaxed text-slate-200 shadow-[0_24px_70px_-50px_rgba(0,0,0,0.75)] md:p-8">
+                <ul className="space-y-4 rounded-lg border border-white/10 bg-white/[0.04] p-6 text-base leading-relaxed text-slate-200 shadow-[0_24px_70px_-50px_rgba(0,0,0,0.75)] md:p-8">
                   {institutionalPrinciples.map((item) => (
                     <li key={item} className="flex gap-3">
                       <span className="mt-2 h-2.5 w-2.5 shrink-0 rounded-full bg-turquoise" />
@@ -217,13 +164,13 @@ export default function Story() {
             <Reveal>
               <div>
                 <p className="text-xs font-black uppercase tracking-[0.28em] text-primary">Lo que creemos</p>
-                <h2 className="mt-4 max-w-3xl font-display text-4xl font-black leading-tight md:text-5xl">{"El cambio se sostiene cuando las personas aprenden, lideran y act\u00faan juntas."}</h2>
+                <h2 className="mt-4 max-w-3xl font-display text-4xl font-black leading-tight md:text-5xl">{"El cambio se sostiene cuando las personas aprenden, lideran y act\u00faan juntas"}</h2>
               </div>
             </Reveal>
 
             <Reveal delay={0.12}>
               <div className="rounded-lg border border-primary/10 bg-white p-6 shadow-xl shadow-primary/5 md:p-8">
-                <p className="text-lg leading-relaxed text-slate-700">{"Nuestra misi\u00f3n es impulsar procesos de transformaci\u00f3n colectiva a trav\u00e9s de la educaci\u00f3n con sentido, la innovaci\u00f3n con prop\u00f3sito y la justicia como base de toda acci\u00f3n."}</p>
+                <p className="text-lg leading-relaxed text-slate-700">{"Nuestra misi\u00f3n es impulsar procesos de transformaci\u00f3n colectiva a trav\u00e9s de la educaci\u00f3n con sentido, la innovaci\u00f3n con prop\u00f3sito y la justicia como base de toda acci\u00f3n"}</p>
               </div>
             </Reveal>
           </div>

@@ -21,8 +21,7 @@ export const Navbar = () => {
   const navLinks = [
     { name: "Inicio", href: "/#inicio" },
     { name: "Qui\u00e9nes somos", href: "/historia" },
-    { name: "Nos mueve", href: "/#nos-mueve" },
-    { name: "TEJIDOS", href: "/#tejidos" },
+    { name: "Equipo", href: "/equipo" },
     { name: "Servicios", href: "/#servicios" },
   ];
 

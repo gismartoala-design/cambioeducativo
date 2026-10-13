@@ -1,12 +1,14 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Reveal } from "@/components/ui/Reveal";
 
 const ecosystemPhotos = [
   "/images/IMG_1768.jpeg",
-  "/images/PHOTO-2026-06-23-17-59-47.jpg",
-  "/images/PHOTO-2026-06-23-17-59-53.jpg",
-  "/images/PHOTO-2026-06-3-17-59-47.jpg",
+  "/images/PHOTO-2026-06-23-17-59-50.jpg",
+  "/images/carousel-2026/grupal-02.jpg",
+  "/images/carousel-2026/taller-02.jpg",
+  "/images/carousel-2026/taller-04.jpg",
+  "/images/image-3.jpg",
 ];
 
 export const Ecosystem = () => {
@@ -31,20 +33,8 @@ export const Ecosystem = () => {
   return (
     <section id="ecosistema" className="relative overflow-hidden bg-white py-24 md:py-28">
       <div className="container relative z-10 mx-auto px-6">
-        <div className="max-w-4xl">
-          <Reveal>
-            <span className="text-xs font-black uppercase tracking-[0.28em] text-primary">{"Ecosistema de transformaci\u00f3n educativa"}</span>
-          </Reveal>
-          <Reveal delay={0.12}>
-            <p className="mt-5 max-w-4xl text-lg leading-relaxed text-muted-foreground md:text-xl">{"Espacios donde tejemos la educaci\u00f3n que so\u00f1amos."}</p>
-            <p className="mt-4 max-w-4xl text-lg leading-relaxed text-muted-foreground">
-              {"Promovemos comunidades que aprenden juntas, instituciones que lideran con coherencia y personas que encuentran en la educaci\u00f3n una oportunidad para construir su futuro con dignidad y esperanza."}
-            </p>
-          </Reveal>
-        </div>
-
-        <Reveal delay={0.18}>
-          <div className="mt-12 overflow-hidden rounded-[2rem] border border-primary/10 bg-primary/5 p-4 shadow-[0_35px_90px_-55px_rgba(22,78,135,0.5)] md:p-5">
+        <Reveal>
+          <div className="overflow-hidden rounded-[2rem] border border-primary/10 bg-primary/5 p-4 shadow-[0_35px_90px_-55px_rgba(22,78,135,0.5)] md:p-5">
             <div className="relative overflow-hidden rounded-[1.5rem] bg-slate-100">
               <div className="flex transition-transform duration-700 ease-out" style={{ transform: `translateX(-${activeIndex * 100}%)` }}>
                 {ecosystemPhotos.map((photo) => (

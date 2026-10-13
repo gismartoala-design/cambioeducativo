@@ -30,7 +30,7 @@ const services = [
   {
     title: "Proyectos sociales y comunitarios",
     desc: "Trabajamos con fundaciones, ONGs, organismos internacionales y comunidades para impulsar capacidades e impacto sostenible.",
-    img: "/images/PHOTO-2026-06-23-17-59-50.jpg",
+    img: "/images/carousel-2026/grupal-02.jpg",
     audience: "ONGs y comunidad",
     result: "Proyectos con enfoque humano, participaci\u00f3n comunitaria y resultados sostenibles en el territorio.",
     icon: Handshake,

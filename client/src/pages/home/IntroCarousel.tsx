@@ -4,14 +4,11 @@ import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const slides = [
-  "/images/image-1.jpg",
-  "/images/IMG_1761.jpeg",
-  "/images/IMG_1768.jpeg",
-  "/images/PHOTO-2026-03-16-14-39-51.jpg",
-  "/images/PHOTO-2026-06-23-17-59-47.jpg",
-  "/images/PHOTO-2026-06-23-17-59-50.jpg",
-  "/images/PHOTO-2026-06-23-17-59-53.jpg",
-  "/images/PHOTO-2026-06-3-17-59-47.jpg",
+  "/images/carousel-2026/grupal-02.jpg",
+  "/images/carousel-2026/taller-02.jpg",
+  "/images/carousel-2026/grupal-01.jpg",
+  "/images/carousel-2026/taller-01.jpg",
+  "/images/carousel-2026/grupal-03.jpg",
 ];
 
 const getRandomStartIndex = () => Math.floor(Math.random() * slides.length);

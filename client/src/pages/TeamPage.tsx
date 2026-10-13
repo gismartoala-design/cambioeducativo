@@ -1,4 +1,4 @@
-﻿import { ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
@@ -7,36 +7,119 @@ import { Reveal } from "@/components/ui/Reveal";
 import { SectionPatternDivider } from "@/components/ui/SectionPatternDivider";
 import { Button } from "@/components/ui/button";
 
-const teamMembers = [
-  { name: "Cinthya Game", image: "/images/equipo-cambioeducativo/CINTHYA%20GAME.jpg" },
-  { name: "Claudia Sánchez", image: "/images/equipo-cambioeducativo/Claudia%20S%C3%A1nchez_.png" },
-  { name: "Cyntia Banegas", image: "/images/equipo-cambioeducativo/CYNTIA%20BANEGAS.png" },
-  { name: "Daniel Calderón", image: "/images/equipo-cambioeducativo/DANIEL%20CALDERON.png" },
-  { name: "Héctor Cedeño", image: "/images/equipo-cambioeducativo/H%C3%A9ctor%20Cede%C3%B1o.png" },
-  { name: "Jimmy Zambrano", image: "/images/equipo-cambioeducativo/Jimmy%20Zambrano%20R_.jpg" },
-  { name: "Johanna Pozo", image: "/images/equipo-cambioeducativo/Johanna%20Pozo.jpg" },
-  { name: "José Ango", image: "/images/equipo-cambioeducativo/Jos%C3%A9%20Ango.jpg" },
-  { name: "Lorena Salazar", image: "/images/equipo-cambioeducativo/Lorena%20Salazar.png" },
-  { name: "María Elena Pérez", image: "/images/equipo-cambioeducativo/MAR%C3%8DA%20ELENA%20P%C3%89REZ.jpg" },
-  { name: "Nelson Villegas", image: "/images/equipo-cambioeducativo/Nelson%20Villegas.jpeg" },
-  { name: "Sofía Litardo", image: "/images/equipo-cambioeducativo/Sof%C3%ADa%20Litardo_.jpg" },
+const teamSections = [
+  {
+    title: "Dirección general",
+    members: [
+      {
+        name: "Daniel Calderón Zevallos",
+        role: "Presidente Ejecutivo",
+        image: "/images/equipo-cambioeducativo/DANIEL%20CALDERON.png",
+      },
+      {
+        name: "Nelson Villegas Pinargote",
+        role: "Gerente General",
+        image: "/images/equipo-cambioeducativo/NELSON%20VILLEGAS.png",
+      },
+    ],
+  },
+  {
+    title: "Equipo técnico",
+    members: [
+      {
+        name: "Cyntia Banegas Quiñones",
+        role: "Líder de Transformación Educativa",
+        image: "/images/equipo-cambioeducativo/CYNTIA%20BANEGAS.png",
+      },
+      {
+        name: "Lorena Salazar Suquilanda",
+        role: "Líder de Proyectos Socioeducativos",
+        image: "/images/equipo-cambioeducativo/Lorena%20Salazar.png",
+      },
+    ],
+  },
+  {
+    title: "Equipo estratégico",
+    members: [
+      {
+        name: "María Elena Pérez Dávalos",
+        role: "Responsable de Comunicación y Relaciones Públicas",
+        image: "/images/equipo-cambioeducativo/MARIA%20ELENA%20PEREZ.png",
+      },
+      {
+        name: "Héctor Cedeño Lucas",
+        role: "Responsable de Marketing y Ventas",
+        image: "/images/equipo-cambioeducativo/Hector%20Cedeno.png",
+      },
+      {
+        name: "Jostin Duarte Larrea",
+        role: "Responsable de Tecnologías de la Información",
+        image: "/images/equipo-cambioeducativo/JOSTIN%20DUARTE.png",
+      },
+    ],
+  },
+  {
+    title: "Representantes regionales",
+    members: [
+      {
+        name: "Sofía Litardo Rocho",
+        role: "Representante Regional",
+        image: "/images/equipo-cambioeducativo/Sofia%20Litardo.jpg",
+      },
+      {
+        name: "Claudia Sánchez Bastidas",
+        role: "Representante Regional",
+        image: "/images/equipo-cambioeducativo/Claudia%20Sanchez.png",
+      },
+      {
+        name: "Paulina Salazar Guevara",
+        role: "Representante Regional",
+      },
+    ],
+  },
+  {
+    title: "Comité científico",
+    members: [
+      {
+        name: "Cinthya Game Varas",
+        role: "Comité Científico",
+        image: "/images/equipo-cambioeducativo/CINTHYA%20GAME.png",
+      },
+      {
+        name: "Johanna Pozo Neira",
+        role: "Comité Científico",
+        image: "/images/equipo-cambioeducativo/JOHANNA%20POZO.png",
+      },
+      {
+        name: "Jimmy Zambrano Ramírez",
+        role: "Comité Científico",
+        image: "/images/equipo-cambioeducativo/Jimmy%20Zambrano%20R.jpeg",
+      },
+      {
+        name: "Richar Posso Pacheco",
+        role: "Comité Científico",
+      },
+    ],
+  },
 ];
 
-const principles = [
-  "Escuchamos antes de proponer, porque todo cambio educativo real nace del contexto y de las personas.",
-  "Trabajamos desde la colaboracion para convertir ideas en procesos sostenibles de aprendizaje y transformacion.",
-  "Creemos en una educacion con proposito, capaz de fortalecer comunidades, liderazgos y futuros compartidos.",
-];
+const getInitials = (name: string) =>
+  name
+    .split(" ")
+    .filter(Boolean)
+    .slice(0, 2)
+    .map((part) => part[0])
+    .join("");
 
 export default function TeamPage() {
   return (
     <div className="min-h-screen bg-white font-sans text-foreground selection:bg-primary/20">
       <Navbar />
       <main>
-        <section className="relative flex min-h-[92svh] items-center overflow-hidden bg-slate-950 py-28 text-white md:py-32">
+        <section className="relative flex min-h-[88svh] items-center overflow-hidden bg-slate-950 py-28 text-white md:py-32">
           <div className="absolute inset-0 pointer-events-none">
-            <img src="/images/PHOTO-2026-06-23-17-59-50.jpg" alt="" aria-hidden="true" className="h-full w-full object-cover opacity-30" />
-            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,6,23,0.95),rgba(2,6,23,0.78),rgba(2,6,23,0.58))]" />
+            <img src="/images/carousel-2026/grupal-02.jpg" alt="" aria-hidden="true" className="h-full w-full object-cover opacity-32" />
+            <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(2,6,23,0.94),rgba(2,6,23,0.76),rgba(2,6,23,0.5))]" />
           </div>
 
           <div className="container relative z-10 mx-auto px-6">
@@ -44,22 +127,22 @@ export default function TeamPage() {
               <Reveal>
                 <div>
                   <p className="brand-kicker text-xs text-turquoise">Equipo de trabajo</p>
-                  <h1 className="mt-5 max-w-5xl font-display text-[clamp(2.45rem,7vw,6.4rem)] font-black leading-[0.9]">
-                    <span className="block text-white/75">Las personas</span>
-                    <span className="block text-white">que impulsan</span>
-                    <span className="block text-primary">Cambio</span>
-                    <span className="block text-white">Educativo.</span>
+                  <h1 className="mt-5 max-w-5xl font-display text-[clamp(3rem,8vw,7rem)] font-black leading-[0.88]">
+                    Conoce al equipo
                   </h1>
+                  <p className="mt-5 max-w-3xl text-xl font-black leading-tight text-white/78 md:text-3xl">
+                    Personas que tejen procesos de aprendizaje, innovación y transformación
+                  </p>
                 </div>
               </Reveal>
 
               <Reveal delay={0.12}>
                 <div className="max-w-2xl space-y-5 text-lg leading-8 text-white/84 md:text-xl">
                   <p>
-                    Nuestro equipo acompana procesos de cambio educativo desde la conviccion de que transformar la educacion tambien es transformar relaciones, practicas y oportunidades.
+                    Nuestro equipo reúne distintas experiencias, conocimientos y formas de mirar la educación. Esa diversidad es la que nos permite conectar ideas, sumar capacidades y crear soluciones que respondan a los desafíos de cada realidad.
                   </p>
                   <p>
-                    Cada integrante aporta experiencia, sensibilidad y compromiso para construir caminos de aprendizaje con sentido humano, innovacion y accion compartida.
+                    Trabajamos de manera colaborativa, porque creemos que las mejores posibilidades aparecen cuando las personas comparten lo que saben, aprenden juntas y ponen sus capacidades al servicio de un propósito común.
                   </p>
                 </div>
               </Reveal>
@@ -69,68 +152,52 @@ export default function TeamPage() {
 
         <SectionPatternDivider tone="brand" />
 
-        <section className="relative overflow-hidden bg-[#fff9f2] py-20 md:py-28">
-          <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(90deg,rgba(255,130,36,0.1)_1px,transparent_1px),linear-gradient(180deg,rgba(22,78,135,0.06)_1px,transparent_1px)] bg-[size:84px_84px]" />
-          <div className="container relative z-10 mx-auto px-6">
-            <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
-              <Reveal>
-                <div className="rounded-[2rem] bg-primary p-8 text-white shadow-[0_28px_80px_-45px_rgba(22,78,135,0.75)] md:p-10">
-                  <p className="brand-kicker text-xs text-turquoise">Como trabajamos</p>
-                  <h2 className="mt-5 font-display text-3xl font-black leading-tight md:text-4xl">
-                    El cambio educativo se construye en equipo, con escucha, confianza y vision compartida.
-                  </h2>
-                </div>
-              </Reveal>
-
-              <div className="grid gap-4">
-                {principles.map((principle, index) => (
-                  <Reveal key={principle} delay={0.1 + index * 0.05}>
-                    <article className="rounded-[1.5rem] border border-primary/10 bg-white p-6 shadow-[0_18px_45px_-35px_rgba(22,78,135,0.45)]">
-                      <p className="text-base leading-8 text-slate-700 md:text-lg">{principle}</p>
-                    </article>
-                  </Reveal>
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <SectionPatternDivider tone="orange" />
-
         <section className="relative overflow-hidden bg-white py-20 md:py-28">
           <div className="container mx-auto px-6">
-            <Reveal>
-              <div className="mx-auto mb-14 max-w-3xl text-center">
-                <p className="brand-kicker text-xs text-primary">Conoce al equipo</p>
-                <h2 className="mt-4 font-display text-3xl font-black leading-tight text-slate-950 md:text-5xl">
-                  Personas que tejen procesos de aprendizaje, innovacion y transformacion.
-                </h2>
-              </div>
-            </Reveal>
-
-            <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
-              {teamMembers.map((member, index) => (
-                <Reveal key={member.name} delay={0.06 * (index % 6)}>
-                  <motion.article
-                    className="group overflow-hidden rounded-[1.9rem] border border-primary/10 bg-white shadow-[0_24px_70px_-44px_rgba(15,23,42,0.35)]"
-                    whileHover={{ y: -4 }}
-                    transition={{ duration: 0.22, ease: "easeOut" }}
-                  >
-                    <div className="relative aspect-[4/4.8] overflow-hidden bg-slate-100">
-                      <img
-                        src={member.image}
-                        alt={member.name}
-                        className="h-full w-full object-cover transition duration-700 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.02)_0%,rgba(15,23,42,0.72)_100%)]" />
-                      <div className="absolute bottom-0 left-0 right-0 p-6">
-                        <h3 className="font-display text-2xl font-black leading-tight text-white">{member.name}</h3>
-                        <p className="mt-2 text-xs font-black uppercase tracking-[0.24em] text-turquoise">
-                          Equipo Cambio Educativo
-                        </p>
-                      </div>
+            <div className="space-y-16">
+              {teamSections.map((section, sectionIndex) => (
+                <Reveal key={section.title} delay={0.04 * sectionIndex}>
+                  <section aria-labelledby={`team-${sectionIndex}`}>
+                    <div className="mb-6 flex flex-col gap-3 border-b border-primary/12 pb-4 md:flex-row md:items-end md:justify-between">
+                      <h2 id={`team-${sectionIndex}`} className="font-display text-2xl font-black leading-tight text-primary md:text-3xl">
+                        {section.title}
+                      </h2>
+                      <span className="text-xs font-black uppercase tracking-[0.2em] text-slate-500">
+                        Cambio Educativo
+                      </span>
                     </div>
-                  </motion.article>
+
+                    <div className="grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+                      {section.members.map((member, index) => (
+                        <motion.article
+                          key={member.name}
+                          className="group overflow-hidden rounded-lg border border-primary/10 bg-white shadow-[0_24px_70px_-44px_rgba(15,23,42,0.35)]"
+                          whileHover={{ y: -4 }}
+                          transition={{ duration: 0.22, ease: "easeOut" }}
+                        >
+                          <div className="relative aspect-[4/4.7] overflow-hidden bg-primary/8">
+                            {member.image ? (
+                              <img
+                                src={member.image}
+                                alt={member.name}
+                                className="h-full w-full object-cover object-top transition duration-700 group-hover:scale-105"
+                              />
+                            ) : (
+                              <div className="flex h-full w-full items-center justify-center bg-[linear-gradient(135deg,rgba(22,78,135,0.14),rgba(255,130,36,0.16))]">
+                                <span className="font-display text-6xl font-black text-primary/45">{getInitials(member.name)}</span>
+                              </div>
+                            )}
+                            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(15,23,42,0.0)_34%,rgba(15,23,42,0.78)_100%)]" />
+                            <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
+                              <h3 className="font-display text-2xl font-black leading-tight">{member.name}</h3>
+                              <p className="mt-2 text-sm font-extrabold leading-snug text-turquoise">{member.role}</p>
+                              {!member.image && <p className="mt-2 text-xs font-bold text-white/72">Foto pendiente</p>}
+                            </div>
+                          </div>
+                        </motion.article>
+                      ))}
+                    </div>
+                  </section>
                 </Reveal>
               ))}
             </div>
@@ -139,24 +206,26 @@ export default function TeamPage() {
 
         <SectionPatternDivider tone="turquoise" />
 
-        <section className="bg-primary/5 py-18 md:py-24">
-          <div className="container mx-auto grid gap-8 px-6 lg:grid-cols-[1fr_0.85fr] lg:items-center">
+        <section className="relative overflow-hidden bg-primary py-20 text-white md:py-24">
+          <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(90deg,rgba(255,255,255,0.055)_1px,transparent_1px),linear-gradient(180deg,rgba(255,255,255,0.04)_1px,transparent_1px)] bg-[size:80px_80px]" />
+          <div className="container relative z-10 mx-auto grid gap-8 px-6 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
             <Reveal>
               <div>
-                <p className="brand-kicker text-xs text-primary">Sigamos conversando</p>
+                <p className="brand-kicker text-xs text-turquoise">Sigamos construyendo</p>
                 <h2 className="mt-4 max-w-3xl font-display text-4xl font-black leading-tight md:text-5xl">
-                  Cuando un equipo cree en el cambio, la educacion encuentra nuevas posibilidades.
+                  Las ideas toman fuerza cuando se convierten en acción
                 </h2>
               </div>
             </Reveal>
 
             <Reveal delay={0.12}>
-              <div className="rounded-[1.75rem] border border-primary/10 bg-white p-6 shadow-xl shadow-primary/5 md:p-8">
-                <p className="text-lg leading-relaxed text-slate-700">
-                  Si quieres conocer mas sobre nuestro trabajo o explorar un proceso de acompanamiento, podemos conversar contigo y tu institucion.
+              <div className="max-w-2xl text-lg leading-8 text-white/84 md:text-xl">
+                <p>
+                  En Cambio Educativo ponemos conocimiento, experiencia y distintas perspectivas al servicio de cada desafío. Trabajamos contigo para comprender tu realidad, identificar oportunidades y construir caminos que generen capacidades e impacto.
                 </p>
-                <div className="mt-6">
-                  <Button asChild size="lg" className="h-12 rounded-lg bg-primary px-6 text-sm font-black text-white shadow-xl shadow-primary/20 hover:bg-primary/90 sm:text-base">
+                <p className="mt-5 font-black text-white">¿Tienes un desafío en tu institución? Conversemos</p>
+                <div className="mt-7">
+                  <Button asChild size="lg" className="h-12 rounded-lg bg-accent px-6 text-sm font-black text-white shadow-xl shadow-black/20 hover:bg-accent/90 sm:text-base">
                     <a href="/#contacto">
                       Hablemos de tu proceso
                       <ArrowRight className="ml-2 h-5 w-5" />
